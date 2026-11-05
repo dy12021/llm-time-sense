@@ -273,3 +273,9 @@ python harness\runner.py --mock --repeats 2 --out raw\mock_records.jsonl --fresh
     （`connector__matrix__audios_understand`，音频问答而非转写），
     并做「真含该字」/「不含该字」两组对照；**同一链路的重试不能拿来仲裁**，它的偏差会自洽。
     本项目就靠这一步确认成片里的「Gemma 4」没有多念一个 B。
+
+---
+
+## License
+
+[MIT](LICENSE) © 2026 DONG YANG
