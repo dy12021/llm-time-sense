@@ -170,15 +170,25 @@ Phase C        harness/phase_c.py            过程时间感（短/长规格）
 
 ## 视频
 
-《我解决了大模型的时间感》（1920×1080，4 分 53 秒 / 293.2 秒，H.264 + AAC）：
+《我解决了大模型的时间感》（1920×1080，5 分 10 秒 / 310.2 秒，H.264 + AAC）：
 
 - 成片 `out/video/final.mp4` —— **不入库**（体积大），本地脚本可完全复现
 - 幻灯片 `out/video/demo.html` —— 自包含单文件（图表内嵌 base64），可直接打开
 - 封面 `out/video/cover.png`、元数据 `out/video/meta.json`
 
+**结构（10 段）**：主线只讲**成功的三招** —— ① 事前注入速率 ② 事后预估
+③ 长思考状态换算到「工作单元」。之前失败的两次尝试（云端速率抖动导致
+「注入速率无效」；长思考里模型编等差数列）整体下沉到第 9 段「备注」页，
+只留数字与一句「不是拍脑袋，是被这两个坑逼出来的」。
+
 ```powershell
+# 旁白 → 排期（时长按解码后的 PCM 实际长度算，不按容器时长）
+python  local\make_voice_script.py      # 旁白脚本（数字全部从 out/*.json 取）
+python  local\tts.py --script local\voice_script.json --outdir out\voice
+python  local\make_video_plan.py
+
 # 幻灯片
-python local\make_demo_page.py
+python  local\make_demo_page.py
 
 # 视频：抓帧(CDP 直连 Chrome) → 分段合成 → 拼旁白 → 响度标准化
 node    local\capture_frames.js
@@ -200,9 +210,11 @@ local/          本地 LM Studio 实验（视频主体）
   analyze_tps.py        标定分析（merged/warm/steady 三层）
   analyze_used_rate.py  思维链「有没有真的用速率」
   demo.py               现场演示
-  make_charts.py        3 张图 → out/video/figs/
+  make_charts.py        4 张图 → out/video/figs/（本机稳定性 / 云端抖动 / 剂量反应 / 过程时间感）
   make_demo_page.py     演示页 → out/video/demo.html
-  make_voice_script.py  旁白脚本 → local/voice_script.json
+  make_voice_script.py  旁白脚本 → local/voice_script.json（唯一真源，别手改 json）
+  callcount.py          调用次数统计（全项目共用一份口径）
+  make_video_plan.py    逐段时长排期 → out/video/plan.json
   tts.py                MiniMax TTS（speech-02-hd）
   capture_frames.js     CDP 直连 Chrome 抓帧（Node ≥ 22，零依赖）
   build_final.py        分段合成 → out/video/final.mp4
@@ -268,7 +280,13 @@ python harness\runner.py --mock --repeats 2 --out raw\mock_records.jsonl --fresh
   `local\tts_probe.py` 负责合成那半边（转写那半边走 STT）。本项目实测：
   - MiniMax TTS 对 `Gemma 4 E2B` **真的念成「412B」**（两条独立 ASR 链路一致）→ 改成说「Google Gemma 4 这个模型」；
   - 对「待写量」发音含糊（一条链路听成「代谢量」、另一条听成「带血量」）→ 改成「一个明确的目标，比如还要写多少字」；
-  - **反过来，STT 也会造字**：转写链路会把「Gemma 4」补成「Gemma 4B」、把「根因」写成「原因」。
+  - **同音字会被 TTS 换掉**：本项目实测「也**救不回来**」被念成「也**就补回来**」——
+    「救不 / 就补」同音，语义正好相反，转写回来才发现。改用没有歧义的「**也不管用**」。
+  - **上游 ASR 的过滤器会误伤整段音频**：44 秒的一整段旁白丢给两条链路都被截断并回
+    「blocked by filters」，**拆成两半分别测就都正常** —— 遇到这种情况先分段复测，
+    不要直接判定音频坏了，更不要因此重做视频。
+  - **反过来，STT 也会造字**：转写链路会把「Gemma 4」补成「Gemma 4B」、把「根因」写成「原因」、
+    把「尺子」写成「池子」、「秒数」写成「描述」。
     这类是**转写端假阳性**，不是音频错了 —— 判定时**必须用第二条独立链路仲裁**
     （`connector__matrix__audios_understand`，音频问答而非转写），
     并做「真含该字」/「不含该字」两组对照；**同一链路的重试不能拿来仲裁**，它的偏差会自洽。

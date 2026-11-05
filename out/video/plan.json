@@ -5,103 +5,114 @@
       "sec": 1,
       "id": "s1",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s1.mp3",
-      "container_dur": 12.1,
-      "voice_dur": 12.1,
+      "container_dur": 12.028,
+      "voice_dur": 12.028,
       "gap": 0.35,
-      "clip_dur": 12.45,
-      "still_dur": 9.75
+      "clip_dur": 12.378,
+      "still_dur": 9.678
     },
     {
       "idx": 1,
       "sec": 2,
       "id": "s2",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s2.mp3",
-      "container_dur": 22.284,
-      "voice_dur": 22.267,
+      "container_dur": 17.064,
+      "voice_dur": 17.047,
       "gap": 0.35,
-      "clip_dur": 22.617,
-      "still_dur": 19.917
+      "clip_dur": 17.397,
+      "still_dur": 14.697
     },
     {
       "idx": 2,
       "sec": 3,
       "id": "s3",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s3.mp3",
-      "container_dur": 23.04,
-      "voice_dur": 23.023,
+      "container_dur": 28.368,
+      "voice_dur": 28.351,
       "gap": 0.35,
-      "clip_dur": 23.373,
-      "still_dur": 20.673
+      "clip_dur": 28.701,
+      "still_dur": 26.001
     },
     {
       "idx": 3,
       "sec": 4,
       "id": "s4",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s4.mp3",
-      "container_dur": 47.952,
-      "voice_dur": 47.935,
+      "container_dur": 43.092,
+      "voice_dur": 43.075,
       "gap": 0.35,
-      "clip_dur": 48.285,
-      "still_dur": 45.585
+      "clip_dur": 43.425,
+      "still_dur": 40.725
     },
     {
       "idx": 4,
       "sec": 5,
       "id": "s5",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s5.mp3",
-      "container_dur": 47.484,
-      "voice_dur": 47.467,
+      "container_dur": 47.7,
+      "voice_dur": 47.683,
       "gap": 0.35,
-      "clip_dur": 47.817,
-      "still_dur": 45.117
+      "clip_dur": 48.033,
+      "still_dur": 45.333
     },
     {
       "idx": 5,
       "sec": 6,
       "id": "s6",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s6.mp3",
-      "container_dur": 45.648,
-      "voice_dur": 45.631,
+      "container_dur": 49.104,
+      "voice_dur": 49.087,
       "gap": 0.35,
-      "clip_dur": 45.981,
-      "still_dur": 43.281
+      "clip_dur": 49.437,
+      "still_dur": 46.737
     },
     {
       "idx": 6,
       "sec": 7,
       "id": "s7",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s7.mp3",
-      "container_dur": 46.08,
-      "voice_dur": 46.063,
+      "container_dur": 18.9,
+      "voice_dur": 18.883,
       "gap": 0.35,
-      "clip_dur": 46.413,
-      "still_dur": 43.713
+      "clip_dur": 19.233,
+      "still_dur": 16.533
     },
     {
       "idx": 7,
       "sec": 8,
       "id": "s8",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s8.mp3",
-      "container_dur": 32.544,
-      "voice_dur": 32.527,
+      "container_dur": 31.824,
+      "voice_dur": 31.807,
       "gap": 0.35,
-      "clip_dur": 32.877,
-      "still_dur": 30.177
+      "clip_dur": 32.157,
+      "still_dur": 29.457
     },
     {
       "idx": 8,
       "sec": 9,
       "id": "s9",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s9.mp3",
-      "container_dur": 13.4,
-      "voice_dur": 13.4,
+      "container_dur": 44.028,
+      "voice_dur": 44.011,
+      "gap": 0.35,
+      "clip_dur": 44.361,
+      "still_dur": 41.661
+    },
+    {
+      "idx": 9,
+      "sec": 10,
+      "id": "s10",
+      "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s10.mp3",
+      "container_dur": 15.093,
+      "voice_dur": 15.093,
       "gap": 0.0,
-      "clip_dur": 13.4,
-      "still_dur": 10.7
+      "clip_dur": 15.093,
+      "still_dur": 12.393
     }
   ],
-  "total_voice": 290.413,
-  "total_clip": 293.213,
+  "total_voice": 307.065,
+  "total_clip": 310.215,
   "reveal": 2.7,
   "gap": 0.35
 }

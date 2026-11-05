@@ -3,6 +3,10 @@
 
 页面按段落自动推进，动画用 CSS/JS 实现，录屏时直接录这一页。
 数据全部从 out/*.json 读，不手抄。
+
+v2（2026-11-05 重做）：10 段。
+主线只讲成功的三招（① 事前注入速率 ② 事后预估 ③ 长思考换算到工作单元），
+之前失败的两次尝试整体下沉到第 9 段「备注」页。
 """
 from __future__ import annotations
 
@@ -40,11 +44,11 @@ p{font-size:32px;line-height:1.6;color:var(--mute);max-width:1200px;opacity:0;
 .card .val{font-size:64px;font-weight:700;color:var(--acc)}
 .card .val.bad{color:var(--bad)}
 .card .val.amb{color:var(--acc2)}
-.card .sub{font-size:22px;color:var(--mute);margin-top:10px}
-img.chart{display:block;max-width:1180px;max-height:46vh;border-radius:14px;margin:10px auto 6px;
+.card .sub{font-size:22px;color:var(--mute);margin-top:10px;line-height:1.5}
+img.chart{display:block;max-width:1180px;max-height:36vh;border-radius:14px;margin:8px auto 4px;
  box-shadow:0 12px 40px rgba(0,0,0,.45)}
 .two{display:flex;gap:36px;align-items:flex-start;margin-top:20px}
-.two .left{flex:1.3}
+.two .left{flex:1.25}
 .two .right{flex:1}
 pre.term{background:#05080f;border:1px solid rgba(94,234,212,.22);border-radius:12px;
  padding:22px 26px;font-family:Consolas,"Courier New",monospace;font-size:19px;
@@ -56,15 +60,19 @@ th,td{padding:14px 26px;text-align:left;border-bottom:1px solid rgba(255,255,255
 th{color:var(--mute);font-weight:400;font-size:24px}
 td.good{color:var(--acc);font-weight:700}
 td.bad{color:var(--bad)}
-.bar{height:34px;border-radius:8px;background:var(--acc);width:0;animation:grow 1.1s .8s forwards;
- transform-origin:left}
-.bar.amb{background:var(--acc2)}.bar.bad{background:var(--bad)}
+td.amb{color:var(--acc2)}
+.quote{border-left:5px solid var(--acc);background:rgba(94,234,212,.07);
+ padding:20px 28px;border-radius:0 14px 14px 0;margin-top:28px;font-size:26px;
+ line-height:1.55;color:var(--ink);opacity:0;animation:fade .7s 1.15s forwards}
+.quote .qm{color:var(--acc);font-size:21px;margin-bottom:8px;letter-spacing:1px}
 .rowline{display:flex;align-items:center;gap:20px;margin:16px 0;opacity:0;animation:fade .5s forwards}
 .rowline .lbl{width:300px;font-size:26px;color:var(--ink)}
 .rowline .trk{flex:1;height:34px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden}
 .foot{position:absolute;bottom:4vh;left:8vw;right:8vw;display:flex;justify-content:space-between;
  font-size:22px;color:#5b6780}
 .tag{color:var(--acc2)}
+.note .card{border-color:rgba(255,196,87,.30)}
+.note h2{font-size:50px}
 #prog{position:absolute;left:0;bottom:0;height:5px;width:0;background:var(--acc);
  box-shadow:0 0 18px rgba(94,234,212,.6)}
 @keyframes fade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
@@ -91,26 +99,14 @@ def chart_b64(name: str) -> str | None:
         return "data:image/png;base64," + base64.b64encode(f.read()).decode("ascii")
 
 
-def bar(label, value, maxv, cls="", delay=0.6):
-    pct = max(2.0, min(100.0, value / maxv * 100))
-    return (f'<div class="rowline" style="animation-delay:{delay}s">'
-            f'<div class="lbl">{label}</div>'
-            f'<div class="trk"><div class="bar {cls}" style="--w:{pct:.1f}%"></div></div>'
-            f'<div style="width:190px;font-size:26px">{value}</div></div>')
-
-
 def main():
     tps = load("local_tps_summary.json")
     pre = load("local_pre_summary.json")
     post = load("local_posthoc_summary.json")
     proc = load("local_process_summary.json")
-    proc2 = load("local_process2_summary.json")
     proc_opt = load("local_process_opt_summary.json")
     if not (tps or pre or post or proc):
         raise SystemExit("缺少实验产物，先跑实验与分析")
-
-    # 每段时长在 S 构造完之后按段数计算（见下方），保证 DURS.length == 段数
-    durations = []
 
     S = []
 
@@ -123,46 +119,53 @@ def main():
 </section>""")
 
     # ---------- 2 问题 ----------
-    S.append(f"""
+    if pre:
+        base = (pre.get("arms") or {}).get("base") or {}
+        est = base.get("median_est")
+        act = base.get("median_actual")
+        ratio = base.get("median_ratio")
+        S.append(f"""
 <section id="s2">
   <div class="kicker">问题</div>
   <h2>模型不知道自己有多快</h2>
-  <p>让它预估「这条回复要写多久」，结果全是喊数字：目标放大 10 倍，它写出来的时长几乎不变。</p>
+  <p>让它预估「这条回复要写多久」，不给任何提示的时候，它只能喊一个数字。</p>
   <div class="row">
-    <div class="card" style="animation-delay:.7s"><div class="lab">云端 API 上（450 轮 + 长程 148 次）</div>
-      <div class="val bad">注入 TPS 无效</div>
-      <div class="sub">但原因不是「模型不会用速率」</div></div>
-    <div class="card" style="animation-delay:.9s"><div class="lab">真正的物理前提</div>
-      <div class="val amb">速率要稳</div>
-      <div class="sub">云端同一台机器测出 2.39× 的波动</div></div>
+    <div class="card" style="animation-delay:.7s"><div class="lab">它的预估（中位）</div>
+      <div class="val bad">{est:.1f} 秒</div>
+      <div class="sub">真实耗时 {act:.1f} 秒</div></div>
+    <div class="card" style="animation-delay:.9s"><div class="lab">时间被少算了</div>
+      <div class="val bad">{1.0 / ratio:.0f} 倍</div>
+      <div class="sub">估/实际 = {ratio:.2f}×（理想 1.00×）</div></div>
+    <div class="card" style="animation-delay:1.1s"><div class="lab">它为什么算不准</div>
+      <div class="val" style="font-size:42px">不知道自己<br>一秒能吐几个 token</div>
+      <div class="sub">心里没有「每秒多少 token」这个数</div></div>
   </div>
 </section>""")
 
-    # ---------- 3 稳定性 ----------
+    # ---------- 3 先把尺子测准 ----------
     if tps:
         st = tps.get("steady") or {}
-        mg = tps.get("merged") or {}
-        mx = tps.get("minimax_reference") or {}
         img = chart_b64("chart_stability.png")
         S.append(f"""
 <section id="s3">
-  <div class="kicker">第一步 · 把尺子校准</div>
-  <h2>换到本机：速率真的稳了</h2>
+  <div class="kicker">第一步 · 先把尺子测准</div>
+  <h2>本机 LM Studio：速率真的稳了</h2>
   {f'<img class="chart" src="{img}"/>' if img else ''}
-  <div class="row">
-    <div class="card" style="animation-delay:.6s"><div class="lab">云端 API 请求间波动</div>
-      <div class="val bad">{mx.get('max_over_min', 2.39):.2f}×</div>
-      <div class="sub">CV {mx.get('between_cv', 0.92):.3f} · 后端路由到不同吞吐的轨道</div></div>
-    <div class="card" style="animation-delay:.85s"><div class="lab">本机稳态波动</div>
-      <div class="val">{st.get('max_over_min', 0):.2f}×</div>
-      <div class="sub">CV {st.get('between_cv', 0):.3f} · {st.get('n', 0)} 次采样</div></div>
-    <div class="card" style="animation-delay:1.1s"><div class="lab">稳态速率</div>
+  <div class="row" style="margin-top:26px">
+    <div class="card" style="animation-delay:.6s"><div class="lab">稳态速率中位</div>
       <div class="val">{st.get('median', 0):.0f}</div>
-      <div class="sub">token / 秒（冷启动那次只有 {(tps.get('warm') or {}).get('cold_first_run_tps', 0):.0f}）</div></div>
+      <div class="sub">token / 秒</div></div>
+    <div class="card" style="animation-delay:.85s"><div class="lab">稳态波动 max/min</div>
+      <div class="val">{st.get('max_over_min', 0):.2f}×</div>
+      <div class="sub">{st.get('n', 0)} 次采样 · CV {st.get('between_cv', 0):.3f}</div></div>
+    <div class="card" style="animation-delay:1.1s"><div class="lab">冷启动那一次</div>
+      <div class="val amb">{(tps.get('warm') or {}).get('cold_first_run_tps', 0):.1f}</div>
+      <div class="sub">token / 秒（前两次预热已排除）</div></div>
   </div>
+  <p style="margin-top:22px">同一套协议，只换了个机器：每轮清空上下文，严格串行，不开并发。</p>
 </section>""")
 
-    # ---------- 4 剂量-反应 ----------
+    # ---------- 4 方法一：事前注入速率 ----------
     if pre:
         arms = (pre.get("arms") or {})
         dose = (pre.get("dose") or {})
@@ -182,15 +185,18 @@ def main():
         b = dose.get("loglog_slope")
         S.append(f"""
 <section id="s4">
-  <div class="kicker">第二步 · 注入速率，看它动不动</div>
+  <div class="kicker">方法一 · 事前注入速率</div>
   <h2>速率这个数，真的进了它的判断</h2>
   <table><tr><th>实验臂</th><th>模型预估（中位）</th><th>真实耗时</th><th>估/实际</th></tr>
   {''.join(rows)}</table>
-  <p style="margin-top:32px">Spearman(注入速率, 预估值) = {sp:+.3f}，log-log 斜率 b = {b:+.3f}
-     <span class="tag">（云端同一测量是 −0.033 / +0.043，等于「没用」）</span></p>
+  <p style="margin-top:28px">Spearman(注入速率, 预估值) = {sp:+.3f}，log-log 斜率 b = {b:+.3f}
+     —— 注入的速率越高，它预估的时长就越短。</p>
+  <div class="quote"><div class="qm">思维链原文（注入 158.5 token/秒那一轮）</div>
+     「3500 / 158.5 ≈ 22 seconds」 → 它回答 <b>25 秒</b>，真实耗时 <b>25.5 秒</b>；
+     不注入速率那轮写的是「A few seconds」，回答 8 秒，真实 26.9 秒。</div>
 </section>""")
 
-    # ---------- 5 事后预估 ----------
+    # ---------- 5 方法二：事后预估 ----------
     if post:
         arms = (post.get("arms") or {})
         ds = post.get("duration_span") or {}
@@ -210,11 +216,11 @@ def main():
                         f"{sp:+.3f}</td></tr>")
         S.append(f"""
 <section id="s5">
-  <div class="kicker">第三步 · 让它回看自己刚写的东西</div>
+  <div class="kicker">方法二 · 让它回看自己刚写的东西</div>
   <h2>这次它能算准了</h2>
   <table><tr><th>实验臂</th><th>估/实际</th><th>误差倍数</th><th>对数误差</th><th>跨轮相关(预估,真实耗时)</th></tr>
   {''.join(rows)}</table>
-  <p style="margin-top:32px">长度从 {ds.get('words_min', 500)} 字拉到 {ds.get('words_max', 3000)} 字，
+  <p style="margin-top:30px">长度从 {ds.get('words_min', 500)} 字拉到 {ds.get('words_max', 3000)} 字，
      真实耗时从 {ds.get('actual_min_s', 0):.1f} 秒涨到 {ds.get('actual_max_s', 0):.1f} 秒（{ds.get('time_ratio', 0):.1f} 倍）——
      它报出的数字跟着真实耗时一起动，才算「有感觉」，而不是喊一个常数。<br>
      <span class="tag">误差倍数 = e^对数误差，就是旁白里说的「差 X 倍」；
@@ -223,49 +229,12 @@ def main():
      靠的是 2.5× → 1.3× → 1.1×，不是秩相关。</span></p>
 </section>""")
 
-    # ---------- 6 过程时间感 ----------
-    if proc:
-        arms = (proc.get("arms") or {})
-        rows = []
-        for arm, label in (("base", "不注入"), ("speed", "注入稳定速率"),
-                           ("speed_len", "注入速率 + 字符/token 换算")):
-            a = arms.get(arm)
-            if not a:
-                continue
-            sp = a.get("median_within_spearman")
-            lr = a.get("median_last_ratio")
-            sl = a.get("median_slope")
-            rows.append(f"<tr><td>{label}</td><td>{a.get('n_marks_median', 0):.0f} 个</td>"
-                        f"<td class='amb'>{sp:+.3f}</td>"
-                        f"<td class='bad'>{lr:.1f}×</td>"
-                        f"<td class='bad'>{sl:.1f}</td></tr>")
-        S.append(f"""
-<section id="s6">
-  <div class="kicker">第四步 · 长思考状态</div>
-  <h2>边写边报时间？它只是在编节拍</h2>
-  <table><tr><th>实验臂</th><th>标记数</th><th>轮内相关</th><th>末标记/真实</th><th>节拍斜率</th></tr>
-  {''.join(rows)}</table>
-  <p style="margin-top:26px">轮内相关全是 1.0，斜率却高达 15–22（理想是 1.0）：
-     标记是条完美等差数列，R² = 0.998 —— 比真实时间规律得多，是编的。<br>
-     思维链占掉约 <b>26%</b> 的真实时间，而模型看不见自己想了多久。</p>
-</section>""")
-
-    # ---------- 6b 优化 ----------
+    # ---------- 6 方法三：长思考状态 ----------
     if proc_opt:
-        arms = (proc_opt.get("arms") or {})
-        rows = []
-        for arm, label in (("speed_unit", "速率 + 每单元产出量"),
-                           ("speed_unit_think", "再补上思考阶段耗时")):
-            a = arms.get(arm)
-            if not a:
-                continue
-            lr = a.get("median_last_ratio")
-            sl = a.get("median_slope")
-            ic = a.get("median_intercept")
-            rows.append(f"<tr><td>{label}</td>"
-                        f"<td class='{'good' if lr and 0.5 <= lr <= 2.0 else 'bad'}'>{lr:.2f}×</td>"
-                        f"<td class='{'good' if sl and 0.5 <= sl <= 1.6 else 'amb'}'>{sl:.2f}</td>"
-                        f"<td>{ic:.1f} 秒</td></tr>")
+        a = (proc_opt.get("arms") or {}).get("speed_unit") or {}
+        lr = a.get("median_last_ratio")
+        sl = a.get("median_slope")
+        ic = a.get("median_intercept")
         # 现场演示的真实输出（终端样式）
         term = ""
         tp = os.path.join(OUT, "video", "demo_output.txt")
@@ -279,35 +248,66 @@ def main():
             for ln in raw.splitlines():
                 if "步骤 3" in ln:
                     started = True
+                # 「→ 对照：只给速率…」讲的是失败臂，按新结构沉到第 9 段备注页，
+                # 这里只留成功臂的证据（完整原始输出仍在 out/video/demo_output.txt）
+                if ln.strip().startswith("→ 对照"):
+                    break
                 if started:
                     keep.append(ln)
             txt = "\n".join(keep[:26])
             txt = (txt.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
             term = f"<pre class='term'>{txt}</pre>"
         S.append(f"""
-<section id="s6b">
-  <div class="kicker">第五步 · 怎么修</div>
-  <h2>尺子要换算到「工作单元」上</h2>
+<section id="s6">
+  <div class="kicker">方法三 · 长思考状态</div>
+  <h2>把速率换算到「工作单元」上</h2>
   <div class="two">
     <div class="left">
-      <table><tr><th>实验臂</th><th>末标记/真实</th><th>节拍斜率</th><th>截距</th></tr>
-      {''.join(rows)}</table>
-      <p style="margin-top:20px">速率只告诉模型「我多快」，不告诉它「写到哪了」。
-         补一句「每写完一个小节大约产出 N 个 token」，模型只要会数小节，
-         就能自己推出来大概过了多久。</p>
+      <div class="row" style="margin-top:6px">
+        <div class="card" style="animation-delay:.6s"><div class="lab">末标记 / 真实耗时</div>
+          <div class="val">{lr:.2f}×</div><div class="sub">理想 1.00×</div></div>
+        <div class="card" style="animation-delay:.8s"><div class="lab">节拍斜率</div>
+          <div class="val">{sl:.2f}</div><div class="sub">理想 1.00</div></div>
+      </div>
+      <p style="margin-top:24px">速率只告诉模型「我多快」，不告诉它「写到哪了」。<br>
+         补一句「每写完一个小节约产出 122 个 token」，模型只要会数自己写到第几个小节，
+         就能用这个换算推出大概过了多久。</p>
     </div>
     <div class="right">{term}</div>
   </div>
 </section>""")
 
-    # ---------- 7 结论 ----------
-    S.append(f"""
+    # ---------- 7 边界：残余偏移 ----------
+    if proc_opt:
+        a = (proc_opt.get("arms") or {}).get("speed_unit") or {}
+        ic = a.get("median_intercept")
+        share = a.get("median_think_share_of_time")
+        S.append(f"""
 <section id="s7">
+  <div class="kicker">边界 · 剩下的这点误差从哪来</div>
+  <h2>还差 {abs(ic):.0f} 秒，而且是个固定偏移</h2>
+  <div class="row">
+    <div class="card" style="animation-delay:.7s"><div class="lab">截距（固定偏移）</div>
+      <div class="val amb">{ic:.1f} 秒</div>
+      <div class="sub">每一段都从零开始数，少这么多</div></div>
+    <div class="card" style="animation-delay:.9s"><div class="lab">思维链占真实时间</div>
+      <div class="val amb">{share * 100:.0f}%</div>
+      <div class="sub">模型看不见自己想了多久</div></div>
+    <div class="card" style="animation-delay:1.1s"><div class="lab">结论</div>
+      <div class="val" style="font-size:42px">模型感知的<br>硬边界</div>
+      <div class="sub">不是提示词能补的</div></div>
+  </div>
+  <p style="margin-top:30px">它从正文开始计时，把正文前那段思考整个漏掉了 ——
+     这是模型自己看不到的那部分。</p>
+</section>""")
+
+    # ---------- 8 工程建议 ----------
+    S.append(f"""
+<section id="s8">
   <div class="kicker">结论</div>
   <h2>速率是尺子，不是时钟</h2>
   <p>但尺子必须准。<br>
-     云端 API 的速率 2.39× 波动，尺子本身就是坏的，量什么都不准；<br>
-     本机稳态 1.15×，同一把尺子量出来的时间就有用了。</p>
+     优先给绝对量；确要用速率，就先把它测稳，再配一个明确的待写量。</p>
   <div class="row">
     <div class="card" style="animation-delay:.7s"><div class="lab">工程做法</div>
       <div class="val" style="font-size:40px">给绝对量</div>
@@ -315,11 +315,46 @@ def main():
     <div class="card" style="animation-delay:.9s"><div class="lab">确要用速率</div>
       <div class="val" style="font-size:40px">先测稳</div>
       <div class="sub">滑动窗口累计平均 + 报区间，并配明确待写量</div></div>
+    <div class="card" style="animation-delay:1.1s"><div class="lab">长任务里自报时间</div>
+      <div class="val" style="font-size:40px">换算到<br>工作单元</div>
+      <div class="sub">让它能数着自己写到第几节</div></div>
   </div>
 </section>""")
 
+    # ---------- 9 备注：之前踩过的两个坑 ----------
+    if tps and proc:
+        mx = tps.get("minimax_reference") or {}
+        parms = list((proc.get("arms") or {}).values())
+        slopes = [a.get("median_slope") or 0 for a in parms]
+        r2 = max((a.get("median_r2") or 0) for a in parms)
+        think_lr = ((proc_opt or {}).get("arms") or {}).get("speed_unit_think") or {}
+        think_sl = think_lr.get("median_slope")
+        S.append(f"""
+<section id="s9" class="note">
+  <div class="kicker" style="color:var(--acc2)">备注 · 之前踩过的两个坑</div>
+  <h2>为什么这版视频这么讲</h2>
+  <div class="two">
+    <div class="left">
+      <div class="card" style="animation-delay:.6s"><div class="lab">坑 1 · 云端 API 上的那一轮</div>
+        <div class="val bad">{mx.get('max_over_min', 0):.2f}×</div>
+        <div class="sub">同一台机器的速率波动 · CV {mx.get('between_cv', 0):.2f}<br>
+           后端路由到吞吐相差一倍的轨道 → 尺子本身是坏的<br>
+           所以「注入速率无效」那个结论其实不成立</div></div>
+    </div>
+    <div class="right">
+      <div class="card" style="animation-delay:.8s"><div class="lab">坑 2 · 长思考里只给速率</div>
+        <div class="val bad">斜率 {min(slopes):.0f}–{max(slopes):.0f}</div>
+        <div class="sub">轮内相关 1.000 · R² {r2:.3f}（理想斜率 1）<br>
+           标记是一条编出来的等差数列</div></div>
+    </div>
+  </div>
+  <p style="margin-top:26px">{f"再补一句思考阶段耗时也救不回来，末标记反而是 {think_lr['median_last_ratio']:.2f} 倍、斜率 {think_sl:.2f}。" if think_lr.get('median_last_ratio') else ""}
+     所以「工作单元换算」不是拍脑袋 —— 是被这两个坑逼出来的。</p>
+</section>""")
+
+    # ---------- 10 开源 ----------
     S.append(f"""
-<section id="s8">
+<section id="s10">
   <div class="kicker">完</div>
   <h1>代码 · 数据 · 报告<br>全部开源</h1>
   <p>每一轮都有原始记录（raw/*.jsonl），数字由脚本自动生成，没有手抄。<br>

@@ -86,6 +86,8 @@ class CDP {
 }
 
 (async () => {
+  // 先清空：段数变了会留下上一版的旧帧
+  fs.rmSync(OUTDIR, { recursive: true, force: true });
   fs.mkdirSync(OUTDIR, { recursive: true });
   fs.mkdirSync(PROFILE, { recursive: true });
 
@@ -140,7 +142,9 @@ class CDP {
     if (vp.w !== W || vp.h !== H) {
       throw new Error(`视口不对: ${vp.w}x${vp.h} != ${W}x${H}`);
     }
-    if (vp.n !== 9) throw new Error(`段数不对: ${vp.n} != 9`);
+    // 段数从旁白脚本推导，别写死 —— 页面段数必须与配音段数一致
+    const expected = require(path.join(ROOT, 'local', 'voice_script.json')).length;
+    if (vp.n !== expected) throw new Error(`段数不对: 页面 ${vp.n} 段 != 旁白 ${expected} 段`);
 
     const manifest = [];
     for (let i = 0; i < vp.n; i++) {

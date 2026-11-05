@@ -24,9 +24,9 @@ BIN = os.path.dirname(shutil.which("ffmpeg") or "")
 FF = os.environ.get("FFMPEG") or shutil.which("ffmpeg") or "ffmpeg"
 FFPROBE = os.environ.get("FFPROBE") or shutil.which("ffprobe") or "ffprobe"
 
-COLS, ROWS = 3, 3
 TW, TH = 620, 349
 PAD, LAB = 10, 26
+COLS = 3
 
 
 def run(args):
@@ -46,6 +46,7 @@ def grab(t, name):
 
 def main():
     plan = json.load(open(os.path.join(VDIR, "plan.json"), encoding="utf-8"))["plan"]
+    ROWS = (len(plan) + COLS - 1) // COLS
     canvas = Image.new("RGB", (COLS * TW + PAD * (COLS + 1),
                                ROWS * (TH + LAB) + PAD * (ROWS + 1)), (10, 14, 24))
     from PIL import ImageDraw, ImageFont
@@ -71,11 +72,14 @@ def main():
     canvas.save(sheet)
     print(f"verify sheet -> {sheet}")
 
-    # --- 慢推是否真的在动：比较第 1 段定格段首尾两帧 ---
-    a = np.asarray(Image.open(grab(3.2, "zoom_a.png")).convert("L"), np.int16)
-    b = np.asarray(Image.open(grab(12.0, "zoom_b.png")).convert("L"), np.int16)
+    # --- 慢推是否真的在动：比较第 1 段定格段首尾两帧（时刻由 plan 推，不写死） ---
+    first = plan[0]
+    t_a = 3.2
+    t_b = max(t_a + 1.0, first["clip_dur"] - 0.6)
+    a = np.asarray(Image.open(grab(t_a, "zoom_a.png")).convert("L"), np.int16)
+    b = np.asarray(Image.open(grab(t_b, "zoom_b.png")).convert("L"), np.int16)
     diff = float(np.abs(a - b).mean())
-    print(f"zoompan 检查：sec1 定格段首尾帧平均像素差 = {diff:.3f} "
+    print(f"zoompan 检查：sec1 定格段首尾帧（{t_a:.1f}s vs {t_b:.1f}s）平均像素差 = {diff:.3f} "
           f"({'有推进' if diff > 0.5 else '没有推进（异常）'})")
 
     # --- 流信息 ---

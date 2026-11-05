@@ -104,15 +104,23 @@ def main():
     ap.add_argument("--voice", default="Chinese (Mandarin)_Warm_Girl")
     ap.add_argument("--speed", type=float, default=1.0)
     ap.add_argument("--model", default=MODEL)
+    ap.add_argument("--force", action="store_true",
+                    help="已存在的音频也重新合成（覆盖写，不删文件）")
+    ap.add_argument("--only", default="",
+                    help="逗号分隔的段 id，只处理这些段（配合 --force 使用）")
     args = ap.parse_args()
 
     if args.script:
         items = json.load(open(args.script, encoding="utf-8"))
         outdir = args.outdir or "out/voice"
         os.makedirs(outdir, exist_ok=True)
+        only = {s.strip() for s in args.only.split(",") if s.strip()}
         for it in items:
+            if only and it["id"] not in only:
+                continue
             out = os.path.join(outdir, f"{it['id']}.mp3")
-            if os.path.exists(out) and os.path.getsize(out) > 1000:
+            if (not args.force and os.path.exists(out)
+                    and os.path.getsize(out) > 1000):
                 print(f"  skip {it['id']} (已存在)")
                 continue
             msg = tts(it["text"], out, voice_id=args.voice, speed=args.speed,

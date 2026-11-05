@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """生成视频用的图表 PNG（matplotlib，中文字体走微软雅黑）。
 
-1. chart_stability.png  云端 API vs 本机：18 次标定的速率分布对比
+1. chart_stability.png  本机 LM Studio：18 次标定的速率分布（稳态 1.15×）
+1b. chart_cloud.png     云端 API：速率是抽签出来的（2.39×）
 2. chart_dose.png       剂量-反应：注入速率 vs 预估耗时
 3. chart_process.png    过程时间感：模型自报值 vs 真实流逝
 """
@@ -57,24 +58,52 @@ def load(name):
 
 
 def chart_stability():
+    """本机 LM Studio 的速率标定：18 次串行采样，前两次预热单独标色。"""
     tps = load("local_tps_summary.json")
     if not tps:
         return None
-    mx = tps.get("minimax_reference") or {}
     st = tps.get("steady") or {}
-    merged = tps.get("merged") or {}
     runs = []
     for mode, v in (tps.get("by_mode") or {}).items():
         for r in v["runs"]:
             runs.append(r["tps"])
+    if not runs:
+        return None
 
-    fig, axes = plt.subplots(1, 2, figsize=(13, 5.2), facecolor="#0b0f1a")
-    for ax in axes:
-        style(ax)
+    fig, ax = plt.subplots(figsize=(9.6, 5.0), facecolor="#0b0f1a")
+    style(ax)
+    xs = list(range(1, len(runs) + 1))
+    ax.plot(xs, runs, "-", color=ACC, alpha=.30, lw=1.6, zorder=2)
+    ax.scatter(xs[2:], runs[2:], s=95, color=ACC, zorder=3, label="稳态采样")
+    if len(runs) > 2:
+        ax.scatter(xs[:2], runs[:2], s=95, color=ACC2, zorder=4,
+                   label="预热（不计入稳态）")
+    ax.axhline(st.get("median", 0), color=ACC, ls="--", lw=1.5, alpha=.7)
+    ax.text(len(runs) * 0.40, st.get("median", 0) + 4,
+            f"稳态中位 {st.get('median', 0):.1f} token/秒",
+            color=ACC, fontsize=13, va="bottom")
+    ax.set_title(f"本机 LM Studio：{len(runs)} 次串行采样，稳态波动只有 "
+                 f"{st.get('max_over_min', 0):.2f}×",
+                 color=INK, fontsize=17, pad=14)
+    ax.set_xlabel("第几次采样（串行、清空上下文）")
+    ax.set_ylabel("生成速率 token/秒")
+    ax.set_ylim(0, max(runs) * 1.3)
+    leg = ax.legend(fontsize=13, facecolor="#1b2338", edgecolor=(1, 1, 1, 0.15),
+                    loc="lower right")
+    for t in leg.get_texts():
+        t.set_color(INK)
+    fig.tight_layout()
+    os.makedirs(FIG, exist_ok=True)
+    p = os.path.join(FIG, "chart_stability.png")
+    fig.savefig(p, dpi=110, facecolor="#0b0f1a")
+    plt.close(fig)
+    print("chart ->", p)
+    return p
 
-    # 左：云端 API 速率分布（用上一轮真实记录的**原始顺序**，不排序——
-    #      排序会把「抽签」伪装成「趋势」，那是误导）
-    cloud, cloud_modes = [], []
+
+def _cloud_series():
+    """云端 API 的真实采样序列（按原始顺序，不排序 —— 排序会把「抽签」伪装成「趋势」）。"""
+    cloud, modes = [], []
     for fn, mode in (("tps_long_items.jsonl", "items"), ("tps_long.jsonl", "longform")):
         p = os.path.join(ROOT, "raw", fn)
         if not os.path.exists(p):
@@ -84,46 +113,45 @@ def chart_stability():
             if not line:
                 continue
             r = json.loads(line)
-            tps = (r.get("metrics") or {}).get("tps")
-            if tps:
-                cloud.append(tps)
-                cloud_modes.append(mode)
+            t = (r.get("metrics") or {}).get("tps")
+            if t:
+                cloud.append(t)
+                modes.append(mode)
+    return cloud, modes
+
+
+def chart_cloud():
+    """云端 API 的速率标定：同一台机器波动 2.39×（后端路由到不同吞吐的轨道）。"""
+    tps = load("local_tps_summary.json")
+    if not tps:
+        return None
+    mx = tps.get("minimax_reference") or {}
+    cloud, modes = _cloud_series()
     if not cloud:
-        cloud = [47.1, 51.7, 53.8, 55.7, 58.0, 76.5, 76.6, 106.1, 106.6, 110.7, 112.6, 117.5]
-        cloud_modes = ["items"] * len(cloud)
-    ax = axes[0]
-    ax.scatter(range(1, len(cloud) + 1), cloud, s=90, color=BAD, zorder=3)
-    ax.plot(range(1, len(cloud) + 1), cloud, "-", color=BAD, alpha=.35, lw=1.4, zorder=2)
-    ax.axhline(76.5, color=BAD, ls="--", lw=1.5, alpha=.7)
-    ax.text(1, 80, "云端 API 中位 76.5", color=BAD, fontsize=13, va="bottom")
-    # 两个数据集的分界
-    if "longform" in cloud_modes:
-        b = cloud_modes.index("longform")
+        return None
+
+    fig, ax = plt.subplots(figsize=(9.6, 5.0), facecolor="#0b0f1a")
+    style(ax)
+    xs = list(range(1, len(cloud) + 1))
+    ax.plot(xs, cloud, "-", color=BAD, alpha=.35, lw=1.4, zorder=2)
+    ax.scatter(xs, cloud, s=90, color=BAD, zorder=3)
+    ax.axhline(mx.get("median", 0), color=BAD, ls="--", lw=1.5, alpha=.7)
+    ax.text(1, mx.get("median", 0) + 4, f"云端 API 中位 {mx.get('median', 0):.1f}",
+            color=BAD, fontsize=13, va="bottom")
+    if "longform" in modes:
+        b = modes.index("longform")
         if 0 < b < len(cloud):
             ax.axvline(b + 0.5, color=(1, 1, 1, 0.25), ls=":", lw=1.2)
             ax.text(b + 0.7, max(cloud) * 0.92, "← items 数据集 → longform",
                     color=(1, 1, 1, 0.45), fontsize=12)
-    ax.set_title("云端 API：速率是抽签出来的（2.39×，同一分钟内快慢交替）",
-                 color=INK, fontsize=17, pad=14)
+    ax.set_title(f"云端 API：速率是抽签出来的（{mx.get('max_over_min', 0):.2f}×，"
+                 "同一分钟内快慢交替）", color=INK, fontsize=17, pad=14)
     ax.set_xlabel("第几次采样（串行、清空上下文）")
     ax.set_ylabel("生成速率 token/秒")
     ax.set_ylim(0, max(cloud) * 1.25)
-
-    # 右：本地模型
-    ax = axes[1]
-    ax.scatter(range(1, len(runs) + 1), runs, s=90, color=ACC, zorder=3)
-    ax.axhline(st.get("median", 0), color=ACC, ls="--", lw=1.5, alpha=.7)
-    ax.text(1, st.get("median", 0) + 3, f"本机稳态中位 {st.get('median', 0):.1f}",
-            color=ACC, fontsize=13, va="bottom")
-    ax.set_title(f"本机 LM Studio：稳态只有 {st.get('max_over_min', 0):.2f}× 波动",
-                 color=INK, fontsize=17, pad=14)
-    ax.set_xlabel("第几次采样（串行、清空上下文）")
-    ax.set_ylabel("生成速率 token/秒")
-    ax.set_ylim(0, max(runs) * 1.25)
-
     fig.tight_layout()
     os.makedirs(FIG, exist_ok=True)
-    p = os.path.join(FIG, "chart_stability.png")
+    p = os.path.join(FIG, "chart_cloud.png")
     fig.savefig(p, dpi=110, facecolor="#0b0f1a")
     plt.close(fig)
     print("chart ->", p)
@@ -251,5 +279,6 @@ def chart_process():
 
 if __name__ == "__main__":
     chart_stability()
+    chart_cloud()
     chart_dose()
     chart_process()

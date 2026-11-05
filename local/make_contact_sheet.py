@@ -2,6 +2,7 @@
 """把 9 段的首张成品帧拼成 3x3 联络表，方便一次性目检。"""
 from __future__ import annotations
 
+import json
 import os
 import sys
 
@@ -13,10 +14,16 @@ ROOT = os.environ.get("LTS_ROOT") or os.path.dirname(os.path.dirname(os.path.abs
 FDIR = os.path.join(ROOT, "out", "video", "frames")
 DST = os.path.join(ROOT, "out", "video", "contact_sheet.png")
 
-COLS, ROWS = 3, 3
 TW, TH = 620, 349  # 缩略图尺寸（16:9）
 PAD = 10
 LAB = 26
+
+# 段数从 shot_times.json 取（不写死 9）
+_manifest = json.load(open(os.path.join(ROOT, "out", "video", "shot_times.json"),
+                           encoding="utf-8"))
+N = len(_manifest["manifest"])
+COLS = 3
+ROWS = (N + COLS - 1) // COLS
 
 canvas = Image.new("RGB", (COLS * TW + PAD * (COLS + 1),
                            ROWS * (TH + LAB) + PAD * (ROWS + 1)),
@@ -27,7 +34,7 @@ try:
 except Exception:
     font = None
 
-for i in range(9):
+for i in range(N):
     p = os.path.join(FDIR, f"s{i + 1:02d}_f07.png")
     if not os.path.exists(p):
         continue
