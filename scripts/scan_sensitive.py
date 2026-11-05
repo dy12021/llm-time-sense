@@ -10,9 +10,17 @@
   5. 私有数据目录（.db / data/ 等不该进远端的东西）
 
 用法：
-    python scripts\\scan_sensitive.py            # 扫全仓
-    python scripts\\scan_sensitive.py --staged   # 只扫 git 已跟踪的文件
+    python scripts\\scan_sensitive.py            # 扫「将要发布的内容」= 已跟踪 + 未跟踪但未被 ignore
+    python scripts\\scan_sensitive.py --staged   # 只扫 git 已跟踪文件
 退出码：有命中 = 1。
+
+三个曾经踩过的盲区（现已堵上，别再退回去）：
+  * git ls-files 默认把非 ASCII 路径转义成八进制，路径拼不出来 → 文件被静默跳过。
+    现在统一用 -z 取原始字节。
+  * 非 UTF-8 文件（如 UTF-16）直接跳过 → 同样假阴性。
+    现在按 BOM/编码逐个尝试解码，且解不开的文件会打印出来，不再静默。
+  * 默认模式以前遍历整个目录，会把 gitignore 的草稿也扫进来，
+    噪音盖住真问题。现在默认模式 = 跟踪文件 + 未跟踪但未被 ignore 的文件。
 """
 from __future__ import annotations
 
@@ -49,30 +57,51 @@ RULES: list[tuple[str, str, str]] = [
 ]
 
 
+def git_ls(args: list[str]) -> list[str]:
+    """用 -z 取原始路径（git 默认会把非 ASCII 路径转义成八进制，导致文件被静默跳过）。"""
+    out = subprocess.run(["git", "ls-files", "-z"] + args, cwd=ROOT, capture_output=True)
+    return [x for x in out.stdout.decode("utf-8").split("\0") if x]
+
+
 def iter_files(staged: bool):
+    """返回 (文件列表, 缺失列表)。缺失 = 路径拿到但文件不在，绝不静默丢弃。"""
+    files, missing = [], []
     if staged:
-        out = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True,
-                             text=True, encoding="utf-8")
-        for rel in out.stdout.splitlines():
-            p = os.path.join(ROOT, rel)
-            if os.path.isfile(p):
-                yield rel, p
-        return
-    for dirpath, dirnames, filenames in os.walk(ROOT):
-        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
-        for fn in filenames:
-            p = os.path.join(dirpath, fn)
-            ext = os.path.splitext(fn)[1].lower()
-            if ext in SKIP_EXT:
-                continue
-            if any(part in SKIP_DIRS for part in os.path.relpath(p, ROOT).split(os.sep)):
-                continue
+        rels = git_ls(["--cached"])
+    else:
+        # 「将要发布的内容」= 已跟踪 + 未跟踪但未被 ignore
+        rels = git_ls(["--cached", "--others", "--exclude-standard"])
+    for rel in rels:
+        p = os.path.join(ROOT, rel)
+        if not os.path.isfile(p):
+            missing.append(rel)
+            continue
+        if os.path.splitext(rel)[1].lower() in SKIP_EXT:
+            continue  # 媒体/二进制，按设计就是二进制，不算异常
+        files.append((rel, p))
+    return files, missing
+
+
+def decode(raw: bytes):
+    """返回 (文本, 编码名)；解不了返回 (None, 原因)。"""
+    if raw.startswith(b"\xef\xbb\xbf"):
+        return raw[3:].decode("utf-8", errors="replace"), "utf-8-sig"
+    if raw.startswith((b"\xff\xfe", b"\xfe\xff")):
+        return raw.decode("utf-16", errors="replace"), "utf-16"
+    if b"\x00" in raw[:BIN_HINT]:
+        return None, "binary"
+    for enc in ("utf-8", "gb18030"):
+        try:
+            return raw.decode(enc), enc
+        except UnicodeDecodeError:
+            continue
+    if len(raw) % 2 == 0:
+        for enc in ("utf-16-le", "utf-16-be"):
             try:
-                if os.path.getsize(p) > 4 * 1024 * 1024:
-                    continue
-            except OSError:
+                return raw.decode(enc), enc
+            except UnicodeDecodeError:
                 continue
-            yield os.path.relpath(p, ROOT), p
+    return None, "undecodable"
 
 
 def main():
@@ -80,20 +109,22 @@ def main():
     ap.add_argument("--staged", action="store_true", help="只扫 git 已跟踪文件")
     args = ap.parse_args()
 
+    files, missing = iter_files(args.staged)
     hits = []
-    nfiles = 0
-    for rel, p in iter_files(args.staged):
+    enc_count: dict[str, int] = {}
+    skipped = []
+
+    for rel, p in files:
         try:
             raw = open(p, "rb").read()
         except OSError:
+            skipped.append((rel, "read-failed"))
             continue
-        if b"\x00" in raw[:BIN_HINT]:
-            continue  # 二进制
-        try:
-            text = raw.decode("utf-8")
-        except UnicodeDecodeError:
+        text, enc = decode(raw)
+        if text is None:
+            skipped.append((rel, enc))
             continue
-        nfiles += 1
+        enc_count[enc] = enc_count.get(enc, 0) + 1
         for i, line in enumerate(text.splitlines(), 1):
             for name, pat, why in RULES:
                 for m in re.finditer(pat, line):
@@ -103,7 +134,18 @@ def main():
                         continue
                     hits.append((rel, i, name, why, frag[:60]))
 
-    print(f"扫描 {nfiles} 个文件")
+    mode = "已跟踪文件" if args.staged else "将要发布的内容（跟踪 + 未跟踪未忽略）"
+    encs = "，".join(f"{k} {v}" for k, v in sorted(enc_count.items()))
+    print(f"扫描 {len(files)} 个文件（{mode}，编码分布：{encs}）")
+    if missing:
+        print(f"⚠️  {len(missing)} 个路径在磁盘上找不到（已跳过，需检查）：")
+        for m in missing[:10]:
+            print("      ", m)
+    if skipped:
+        print(f"⚠️  {len(skipped)} 个文件未能解码（已跳过，可能藏内容）：")
+        for rel, why in skipped[:10]:
+            print(f"       {rel}  [{why}]")
+
     if not hits:
         print("0 命中 —— 干净 ✅")
         return 0
