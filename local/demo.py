@@ -150,8 +150,8 @@ def main():
 
     print("=" * 64, flush=True)
     print("  本地模型时间感 · 现场演示", flush=True)
-    print(f"  模型：{os.environ.get('LMSTUDIO_MODEL', 'google/gemma-4-e2b')}  @  "
-          f"{os.environ.get('LMSTUDIO_BASE', 'http://127.0.0.1:1234/v1')}", flush=True)
+    # 只印模型名，不印端点地址 —— 局域网地址属于本机信息，不该进公开仓库
+    print(f"  模型：{os.environ.get('LMSTUDIO_MODEL', 'google/gemma-4-e2b')}", flush=True)
     print("=" * 64, flush=True)
 
     client = LocalClient()
