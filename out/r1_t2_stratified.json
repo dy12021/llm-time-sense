@@ -1,0 +1,164 @@
+{
+  "stratified": {
+    "3": {
+      "base": {
+        "n": 6,
+        "median_abs_hit_err": 1.436432133312337,
+        "median_gen_s": 7.309296399937011,
+        "median_out_tokens": 163.0
+      },
+      "speed": {
+        "n": 6,
+        "median_abs_hit_err": 0.9430293499996576,
+        "median_gen_s": 5.829088049998973,
+        "median_out_tokens": 264.0
+      },
+      "speed_count": {
+        "n": 6,
+        "median_abs_hit_err": 0.6077291500211383,
+        "median_gen_s": 3.4876072999904864,
+        "median_out_tokens": 209.5
+      },
+      "speed_cum": {
+        "n": 6,
+        "median_abs_hit_err": 1.3355258333225113,
+        "median_gen_s": 5.990028849977534,
+        "median_out_tokens": 213.0
+      },
+      "elapsed": {
+        "n": 6,
+        "median_abs_hit_err": 0.29238013333330554,
+        "median_gen_s": 3.8771403999999166,
+        "median_out_tokens": 241.0
+      }
+    },
+    "8": {
+      "base": {
+        "n": 6,
+        "median_abs_hit_err": 0.2875667437474476,
+        "median_gen_s": 5.699466050020419,
+        "median_out_tokens": 250.5
+      },
+      "speed": {
+        "n": 6,
+        "median_abs_hit_err": 0.5769872687524185,
+        "median_gen_s": 3.3841018499806523,
+        "median_out_tokens": 269.0
+      },
+      "speed_count": {
+        "n": 6,
+        "median_abs_hit_err": 0.5601513312503812,
+        "median_gen_s": 4.848133750027046,
+        "median_out_tokens": 315.5
+      },
+      "speed_cum": {
+        "n": 6,
+        "median_abs_hit_err": 0.7428528437521891,
+        "median_gen_s": 2.0571772499824874,
+        "median_out_tokens": 174.0
+      },
+      "elapsed": {
+        "n": 6,
+        "median_abs_hit_err": 0.5448047437457717,
+        "median_gen_s": 3.6415620500338264,
+        "median_out_tokens": 326.0
+      }
+    },
+    "20": {
+      "base": {
+        "n": 6,
+        "median_abs_hit_err": 0.6444896100030746,
+        "median_gen_s": 7.219831649970729,
+        "median_out_tokens": 373.0
+      },
+      "speed": {
+        "n": 6,
+        "median_abs_hit_err": 0.8156706250010757,
+        "median_gen_s": 5.33243389998097,
+        "median_out_tokens": 452.5
+      },
+      "speed_count": {
+        "n": 6,
+        "median_abs_hit_err": 0.7134579275007127,
+        "median_gen_s": 5.730841449985746,
+        "median_out_tokens": 547.5
+      },
+      "speed_cum": {
+        "n": 6,
+        "median_abs_hit_err": 0.6988429800025187,
+        "median_gen_s": 6.023140399949625,
+        "median_out_tokens": 430.0
+      },
+      "elapsed": {
+        "n": 6,
+        "median_abs_hit_err": 0.6864564549992793,
+        "median_gen_s": 6.270870900014415,
+        "median_out_tokens": 363.5
+      }
+    }
+  },
+  "responsiveness": {
+    "base": {
+      "gen_s_by_target": {
+        "3": 7.309296399937011,
+        "8": 5.699466050020419,
+        "20": 7.219831649970729
+      },
+      "spearman_target_vs_gen_s": -0.10491859671528449
+    },
+    "speed": {
+      "gen_s_by_target": {
+        "3": 5.829088049998973,
+        "8": 3.3841018499806523,
+        "20": 5.33243389998097
+      },
+      "spearman_target_vs_gen_s": -0.0655741229470528
+    },
+    "speed_count": {
+      "gen_s_by_target": {
+        "3": 3.4876072999904864,
+        "8": 4.848133750027046,
+        "20": 5.730841449985746
+      },
+      "spearman_target_vs_gen_s": 0.3541002639140851
+    },
+    "speed_cum": {
+      "gen_s_by_target": {
+        "3": 5.990028849977534,
+        "8": 2.0571772499824874,
+        "20": 6.023140399949625
+      },
+      "spearman_target_vs_gen_s": -0.0655741229470528
+    },
+    "elapsed": {
+      "gen_s_by_target": {
+        "3": 3.8771403999999166,
+        "8": 3.6415620500338264,
+        "20": 6.270870900014415
+      },
+      "spearman_target_vs_gen_s": -0.07868894753646336
+    }
+  },
+  "pooled": {
+    "base": {
+      "n": 18,
+      "median_abs_hit_err": 0.5339095787523547
+    },
+    "speed": {
+      "n": 18,
+      "median_abs_hit_err": 0.7696834537549876
+    },
+    "speed_count": {
+      "n": 18,
+      "median_abs_hit_err": 0.6515144008493128
+    },
+    "speed_cum": {
+      "n": 18,
+      "median_abs_hit_err": 0.7428528437521891
+    },
+    "elapsed": {
+      "n": 18,
+      "median_abs_hit_err": 0.5406303299998398
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+ "n_records": 30,
+ "arms": {
+  "speed_low": {
+   "n": 6,
+   "median_log_err": 0.4726853645454885,
+   "ci_log_err": [
+    0.1755651533330061,
+    0.9428437239539278
+   ],
+   "median_est": 15.0,
+   "median_actual": 25.33762280002702,
+   "median_ratio": 0.6236949062888326,
+   "injected_rate": 79.27353912600098,
+   "actual_tps_median": 157.68376526311823,
+   "vs_base_delta_logerr": -0.9283000102587373,
+   "vs_base_p": 0.04169791510424479
+  },
+  "speed_true": {
+   "n": 6,
+   "median_log_err": 1.0136587122923892,
+   "ci_log_err": [
+    0.12684899258213395,
+    1.9202119946512335
+   ],
+   "median_est": 10.0,
+   "median_actual": 25.00639629998477,
+   "median_ratio": 0.4119592505891264,
+   "injected_rate": 158.54707825200197,
+   "actual_tps_median": 158.24003377435685,
+   "vs_base_delta_logerr": -0.38732666251183656,
+   "vs_base_p": 0.3389830508474576
+  },
+  "speed_high": {
+   "n": 6,
+   "median_log_err": 0.5665203367933387,
+   "ci_log_err": [
+    0.42357578863838674,
+    1.6861324227329417
+   ],
+   "median_est": 13.0,
+   "median_actual": 26.44858414999908,
+   "median_ratio": 0.6064786541980546,
+   "injected_rate": 253.67532520320316,
+   "actual_tps_median": 156.72616241897842,
+   "vs_base_delta_logerr": -0.8344650380108871,
+   "vs_base_p": 0.28368581570921453
+  },
+  "elapsed": {
+   "n": 6,
+   "median_log_err": 0.3611323862791242,
+   "ci_log_err": [
+    0.18530754451765669,
+    0.590191034924286
+   ],
+   "median_est": 35.0,
+   "median_actual": 24.395774049975444,
+   "median_ratio": 1.3292273480771422,
+   "injected_rate": null,
+   "actual_tps_median": 157.29851571011898,
+   "vs_base_delta_logerr": -1.0398529885251016,
+   "vs_base_p": 0.020598970051497426
+  },
+  "base": {
+   "n": 6,
+   "median_log_err": 1.4009853748042258,
+   "ci_log_err": [
+    0.2546312778043688,
+    1.631634752738672
+   ],
+   "median_est": 6.5,
+   "median_actual": 25.30420630000299,
+   "median_ratio": 0.25066098906644596,
+   "injected_rate": null,
+   "actual_tps_median": 157.89018394504922
+  }
+ },
+ "reasoning_quotes": [
+  {
+   "arm": "speed_low",
+   "rep": 1,
+   "quote": "*   **Timing Feedback:** The user provided a performance metric (79.3 tokens/second). I need to estimate the time for generating 200 complex sentences."
+  },
+  {
+   "arm": "speed_true",
+   "rep": 2,
+   "quote": "*   **Timing Information:** The user provided a performance metric (158.5 tokens/sec). I need to estimate the time for 200 sentences."
+  },
+  {
+   "arm": "speed_true",
+   "rep": 2,
+   "quote": "*   Estimated token count: ~3000 tokens (including numbering and structure)."
+  },
+  {
+   "arm": "speed_true",
+   "rep": 2,
+   "quote": "*   Speed: 158.5 tokens/second."
+  },
+  {
+   "arm": "speed_low",
+   "rep": 3,
+   "quote": "*   **Timing Feedback:** The user provided a performance metric (approx. 79.3 tokens/sec). I need to estimate the time for 200 complex sentences."
+  },
+  {
+   "arm": "speed_high",
+   "rep": 5,
+   "quote": "*   **Timing Feedback:** The user provided a performance metric (approx. 253.7 tokens/sec). I need to estimate the time for 200 complex sentences."
+  }
+ ],
+ "dose": {
+  "doses": [
+   {
+    "rate": 79.27353912600098,
+    "median_est": 15.0
+   },
+   {
+    "rate": 158.54707825200197,
+    "median_est": 10.0
+   },
+   {
+    "rate": 253.67532520320316,
+    "median_est": 13.0
+   }
+  ],
+  "spearman_rate_vs_est": -0.5,
+  "loglog_slope": -0.15780871976553776
+ }
+}

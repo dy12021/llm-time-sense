@@ -1,0 +1,20 @@
+[
+  {
+    "name": "A_minimax_cn_nonstream",
+    "status": 429,
+    "elapsed_s": 0.4,
+    "err": "{\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)\",\"http_code\":\"429\"},\"request_id\":\"0737d1b12694606c3a5115e42a7b68d8\"}\n"
+  },
+  {
+    "name": "B_mavis_proxy_anthropic",
+    "status": 401,
+    "elapsed_s": 0.16,
+    "err": "{\"code\":401,\"message\":\"auth failed\"}"
+  },
+  {
+    "name": "C_lmstudio",
+    "status": "EXC",
+    "elapsed_s": 2.04,
+    "err": "URLError(ConnectionRefusedError(10061, '由于目标计算机积极拒绝，无法连接。', None, 10061, None))"
+  }
+]

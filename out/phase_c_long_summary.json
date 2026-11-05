@@ -1,0 +1,148 @@
+{
+  "rows": [
+    {
+      "arm": "base",
+      "trial": 1,
+      "spec": "long3min",
+      "gen_s": 170.53920810006093,
+      "out_tokens": 14472,
+      "content_tokens": 14058,
+      "think_tokens": 414,
+      "chars": 23343,
+      "tps": 84.86025097236762,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": null,
+      "injected_elapsed_s": null,
+      "pairs": [
+        {
+          "t": 17.09250947368422,
+          "v": 125.0,
+          "char_end": 1726
+        },
+        {
+          "t": 31.418598500000012,
+          "v": 245.0,
+          "char_end": 3642
+        },
+        {
+          "t": 46.12869000000002,
+          "v": 365.0,
+          "char_end": 5737
+        },
+        {
+          "t": 60.90312360000001,
+          "v": 485.0,
+          "char_end": 7781
+        },
+        {
+          "t": 75.58389444444447,
+          "v": 605.0,
+          "char_end": 9720
+        },
+        {
+          "t": 89.3663530769232,
+          "v": 725.0,
+          "char_end": 11660
+        },
+        {
+          "t": 103.8049890000001,
+          "v": 845.0,
+          "char_end": 13802
+        },
+        {
+          "t": 115.34158000000008,
+          "v": 965.0,
+          "char_end": 15526
+        },
+        {
+          "t": 128.9032900000001,
+          "v": 1085.0,
+          "char_end": 17464
+        },
+        {
+          "t": 142.75350764705894,
+          "v": 1205.0,
+          "char_end": 19386
+        },
+        {
+          "t": 155.6738980000004,
+          "v": 1325.0,
+          "char_end": 21193
+        },
+        {
+          "t": 170.32347000000036,
+          "v": 1545.0,
+          "char_end": 23343
+        }
+      ],
+      "mark_positions_rel": [
+        0.0739407959559611,
+        0.156021076982393,
+        0.24576960973311057,
+        0.3333333333333333,
+        0.4163989204472433,
+        0.499507346956261,
+        0.5912693312770424,
+        0.665124448442788,
+        0.7481471961615902,
+        0.8304845135586686,
+        0.9078953005183567,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9260592040440389,
+      "implied_rate": 15.10873786407767,
+      "actual_rate": 136.87761459701338,
+      "rate_ratio": 0.11038136446605884,
+      "rate_logerr": 2.2038139595137656,
+      "slope_t": 8.951147849728454,
+      "slope_c": 0.06331795891791442,
+      "r2_t": 0.9958134762870722,
+      "r2_c": 0.9965729339502389,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": 0.2,
+      "const_frac": 0.0,
+      "last_logerr": 2.203813959513765,
+      "last_ratio": 9.05950025928054,
+      "last_mark": 1545.0,
+      "first_mark": 125.0,
+      "implied_tps": 9.099029126213592,
+      "expect_s_from_rate": null,
+      "reasoning": "We need produce enormous 12*1920 Chinese chars = 23k chars, likely beyond token? Need comply. Could output ~30k Chinese chars maybe token 30k, budget unknown. We have 8k juice but final can be long. Need each section 1920 Chinese chars. That's huge. 12 sections around 24k Chinese chars = maybe 30k tokens. System context perhaps permits. We need only body. Time markers integers cumulative. Must ensure each section >=1920 Chinese chars. That's huge. 12 sections around 24k Chinese chars = maybe 30k tokens. System context perhaps permits. We need generate. Need count approximate. Better each section 2200 Chinese chars. 12 = 26k chars. Let's draft coherent. Time markers perhaps 120, 240 increments. Must exact format. No title. Need only article. Let's do around 2000 Chinese characters per section, quite long. Be cautious each section substantial, maybe ~2500 Chinese chars. 12 sections. Could maybe meet using paragraphs.\n\nNeed not include extra headings beyond numbered section. Let's formulate detailed popular science narrative. Ensure markers each. Avoid premature ending. The final section can conclude but user says don't prematurely wrap. Fine.\n\nWe need track each section ends marker. "
+    }
+  ],
+  "arms": {
+    "base": {
+      "n": 1,
+      "median_gen_s": 170.53920810006093,
+      "median_marks": 12,
+      "median_slope_t": 8.951147849728454,
+      "median_r2_t": 0.9958134762870722,
+      "median_r2_c": 0.9965729339502389,
+      "median_d_spearman": 0.2,
+      "median_const_frac": 0.0,
+      "median_last_ratio": 9.05950025928054,
+      "median_last_logerr": 2.203813959513765,
+      "median_inline_frac": 0.8333333333333334,
+      "median_rate_ratio": 0.11038136446605884,
+      "n_zero_marks": 0,
+      "n_runs": 1,
+      "n_marks_total": 12,
+      "median_marked_over_real": 9.05950025928054,
+      "median_implied_tps": 9.099029126213592,
+      "median_implied_vs_injected_tps": null,
+      "median_used_rate_ratio": null,
+      "median_used_elapsed_ratio": null
+    }
+  },
+  "cross_run": {},
+  "implied_rate": {},
+  "transport": {
+    "(未标注=旧代理)": {
+      "n": 1
+    }
+  },
+  "compare": {}
+}

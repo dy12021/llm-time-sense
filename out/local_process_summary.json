@@ -1,0 +1,85 @@
+{
+ "n_records": 18,
+ "arms": {
+  "speed": {
+   "n": 6,
+   "n_marks_median": 12.0,
+   "zero_mark_runs": 0,
+   "median_gen_s": 12.72092315001646,
+   "median_think_tokens": 525.5,
+   "median_think_share_of_time": 0.27148098701703605,
+   "median_last_ratio": 16.362822058104825,
+   "ci_last_ratio": [
+    13.501315156172659,
+    81.67969887075044
+   ],
+   "median_within_spearman": 1.0,
+   "within_spearman_list": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "median_within_abs_log": 2.526174350859079,
+   "median_slope": 22.286771043144363,
+   "median_intercept": -89.69327698306668,
+   "median_r2": 0.9978800354524688,
+   "cross_run_spearman_gen_vs_lastmark": 0.3714285714285715
+  },
+  "speed_len": {
+   "n": 6,
+   "n_marks_median": 12.0,
+   "zero_mark_runs": 0,
+   "median_gen_s": 14.06988895003451,
+   "median_think_tokens": 499.5,
+   "median_think_share_of_time": 0.2584957487400824,
+   "median_last_ratio": 14.927456410172155,
+   "ci_last_ratio": [
+    13.317088466097394,
+    82.3010756633614
+   ],
+   "median_within_spearman": 1.0,
+   "within_spearman_list": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "median_within_abs_log": 2.437047031566186,
+   "median_slope": 21.32457253912262,
+   "median_intercept": -96.48534757274678,
+   "median_r2": 0.9984349851419264,
+   "cross_run_spearman_gen_vs_lastmark": 0.2
+  },
+  "base": {
+   "n": 6,
+   "n_marks_median": 12.0,
+   "zero_mark_runs": 0,
+   "median_gen_s": 13.318327900022268,
+   "median_think_tokens": 503.5,
+   "median_think_share_of_time": 0.2567545570112182,
+   "median_last_ratio": 11.307791575796333,
+   "ci_last_ratio": [
+    6.911755217655545,
+    12.92818376318276
+   ],
+   "median_within_spearman": 1.0,
+   "within_spearman_list": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "median_within_abs_log": 2.1820118002529734,
+   "median_slope": 15.838194778919327,
+   "median_intercept": -64.06225122725077,
+   "median_r2": 0.9988610958343992,
+   "cross_run_spearman_gen_vs_lastmark": 0.5428571428571429
+  }
+ }
+}

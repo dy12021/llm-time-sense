@@ -1,0 +1,32 @@
+# ---- 视频产出的大件（不入库）----
+out/video/final.mp4
+out/video/frames/
+out/video/_work/
+out/video/_chromeprof/
+out/video/contact_sheet.png
+out/video/verify_sheet.png
+out/video/_screencast_test.html
+*.mp4
+
+# ---- 一次性开发草稿（_ 前缀的临时脚本）----
+harness/_*.py
+local/_*.py
+raw/_*.py
+raw/*.py
+raw/feedback_selftest.txt
+raw/quota_ready.json
+
+# ---- mock / 冒烟 / 日志 ----
+raw/mock_*
+raw/smoke_*
+raw/*.log
+out/_*.log
+out/_*.err
+out/REPORT_mock_example.md
+out/panel_body_*.txt
+out/summary.txt.log
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/

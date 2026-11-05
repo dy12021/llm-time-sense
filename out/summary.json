@@ -1,0 +1,2066 @@
+{
+  "t1": {
+    "base": {
+      "name": "T1/base",
+      "n": 35,
+      "median_ratio": 0.7223957416690833,
+      "mean_ratio": 1.2743275479781466,
+      "median_logerr": 0.5005521115035746,
+      "mean_logerr": 0.7656472472531408,
+      "bias_log": -0.23210102766806087,
+      "spearman": -0.025001721940973904,
+      "ratio_ci": [
+        0.6477599779728711,
+        1.074368003902269
+      ]
+    },
+    "elapsed": {
+      "name": "T1/elapsed",
+      "n": 36,
+      "median_ratio": 0.8798707772741755,
+      "mean_ratio": 1.3507410719684703,
+      "median_logerr": 0.5152048483520932,
+      "mean_logerr": 0.6685620843272172,
+      "bias_log": -0.07073027362388508,
+      "spearman": -0.11553035814610917,
+      "ratio_ci": [
+        0.7790662773367047,
+        1.1173068299666036
+      ]
+    },
+    "speed": {
+      "name": "T1/speed",
+      "n": 36,
+      "median_ratio": 0.7709717554802635,
+      "mean_ratio": 1.668533251172068,
+      "median_logerr": 0.7069671752572868,
+      "mean_logerr": 0.7712167797870432,
+      "bias_log": 0.054752035730948986,
+      "spearman": -0.03655673862013062,
+      "ratio_ci": [
+        0.594022717675046,
+        1.8340078049986213
+      ]
+    },
+    "speed_count": {
+      "name": "T1/speed_count",
+      "n": 36,
+      "median_ratio": 0.8309846079324211,
+      "mean_ratio": 2.611617202364042,
+      "median_logerr": 0.9218872770974937,
+      "mean_logerr": 1.0104602270087155,
+      "bias_log": 0.3082154375189745,
+      "spearman": -0.7362536069064652,
+      "ratio_ci": [
+        0.6553073935731114,
+        2.6551944565036347
+      ]
+    },
+    "speed_cum": {
+      "name": "T1/speed_cum",
+      "n": 36,
+      "median_ratio": 0.9461552361233456,
+      "mean_ratio": 2.655717319873225,
+      "median_logerr": 0.5057466899484564,
+      "mean_logerr": 0.8540929368110598,
+      "bias_log": 0.3744938850671056,
+      "spearman": -0.2096570151379386,
+      "ratio_ci": [
+        0.7572180293986003,
+        1.8789979792140488
+      ]
+    }
+  },
+  "t3": {
+    "base": {
+      "name": "T3/base",
+      "n": 18,
+      "median_ratio": 0.8389047806222962,
+      "mean_ratio": 0.895937751685325,
+      "median_logerr": 0.4019601594660183,
+      "mean_logerr": 0.3807669649119827,
+      "bias_log": -0.20201082984619564,
+      "spearman": 0.33553998492873566,
+      "ratio_ci": [
+        0.6395407527963746,
+        1.0579716927564764
+      ]
+    },
+    "elapsed": {
+      "name": "T3/elapsed",
+      "n": 18,
+      "median_ratio": 1.0097807784500898,
+      "mean_ratio": 0.9907460775666771,
+      "median_logerr": 0.27773279436469656,
+      "mean_logerr": 0.3582297063072459,
+      "bias_log": -0.1034203472356976,
+      "spearman": 0.4219761603881656,
+      "ratio_ci": [
+        0.7300010674594419,
+        1.1987670438639793
+      ]
+    },
+    "speed": {
+      "name": "T3/speed",
+      "n": 18,
+      "median_ratio": 1.0666084538808682,
+      "mean_ratio": 1.6396463982361966,
+      "median_logerr": 0.5521286974213082,
+      "mean_logerr": 0.6710273157589723,
+      "bias_log": 0.08430873533690109,
+      "spearman": 0.2707876815114226,
+      "ratio_ci": [
+        0.5805618908656058,
+        1.4708198025334536
+      ]
+    },
+    "speed_count": {
+      "name": "T3/speed_count",
+      "n": 18,
+      "median_ratio": 1.2624504514895256,
+      "mean_ratio": 1.4458005743268127,
+      "median_logerr": 0.6339787477602531,
+      "mean_logerr": 0.6483203160867622,
+      "bias_log": 0.11121295092224334,
+      "spearman": 0.3347589857956091,
+      "ratio_ci": [
+        0.8014124719954292,
+        1.8017414200355821
+      ]
+    },
+    "speed_cum": {
+      "name": "T3/speed_cum",
+      "n": 18,
+      "median_ratio": 1.2905709560490264,
+      "mean_ratio": 1.5973734210392354,
+      "median_logerr": 0.7944515445496059,
+      "mean_logerr": 0.9256939487608047,
+      "bias_log": -0.05567965478790141,
+      "spearman": 0.14174743773139759,
+      "ratio_ci": [
+        0.571657054596257,
+        1.679734853715921
+      ]
+    }
+  },
+  "t2": {
+    "base": {
+      "n": 9,
+      "median_abs_hit_err": 0.4234918600006495,
+      "median_gen_s": 7.993812899920158,
+      "median_tokens": 349,
+      "rows": [
+        {
+          "target_s": 3,
+          "gen_s": 7.993812899920158,
+          "duration_s": 8.702935299952514,
+          "tokens": 201,
+          "out_tokens": 120,
+          "think_tokens": 81,
+          "tps": 25.14444640079174,
+          "hit_err": 1.664604299973386
+        },
+        {
+          "target_s": 8,
+          "gen_s": 7.39175680000335,
+          "duration_s": 8.056390500045381,
+          "tokens": 345,
+          "out_tokens": 291,
+          "think_tokens": 54,
+          "tps": 46.67361350414608,
+          "hit_err": -0.07603039999958128
+        },
+        {
+          "target_s": 20,
+          "gen_s": 18.838876299909316,
+          "duration_s": 19.841810799902305,
+          "tokens": 796,
+          "out_tokens": 780,
+          "think_tokens": 16,
+          "tps": 42.253050942525256,
+          "hit_err": -0.0580561850045342
+        },
+        {
+          "target_s": 3,
+          "gen_s": 21.79770389990881,
+          "duration_s": 22.49625169998035,
+          "tokens": 449,
+          "out_tokens": 367,
+          "think_tokens": 82,
+          "tps": 20.598499826483025,
+          "hit_err": 6.265901299969603
+        },
+        {
+          "target_s": 8,
+          "gen_s": 7.207648699986748,
+          "duration_s": 9.440970499999821,
+          "tokens": 349,
+          "out_tokens": 309,
+          "think_tokens": 40,
+          "tps": 48.42078388207817,
+          "hit_err": -0.09904391250165645
+        },
+        {
+          "target_s": 20,
+          "gen_s": 28.689084900077432,
+          "duration_s": 29.631549600046128,
+          "tokens": 1470,
+          "out_tokens": 1438,
+          "think_tokens": 32,
+          "tps": 51.23899926121493,
+          "hit_err": 0.43445424500387164
+        },
+        {
+          "target_s": 3,
+          "gen_s": 7.331740399939008,
+          "duration_s": 8.377332299947739,
+          "tokens": 271,
+          "out_tokens": 229,
+          "think_tokens": 42,
+          "tps": 36.96257439805894,
+          "hit_err": 1.443913466646336
+        },
+        {
+          "target_s": 8,
+          "gen_s": 5.135982900043018,
+          "duration_s": 5.820610800059512,
+          "tokens": 287,
+          "out_tokens": 287,
+          "think_tokens": 0,
+          "tps": 55.88024835472021,
+          "hit_err": -0.35800213749462273
+        },
+        {
+          "target_s": 20,
+          "gen_s": 11.53016279998701,
+          "duration_s": 12.932661900063977,
+          "tokens": 613,
+          "out_tokens": 613,
+          "think_tokens": 0,
+          "tps": 53.16490414174296,
+          "hit_err": -0.4234918600006495
+        }
+      ]
+    },
+    "elapsed": {
+      "n": 9,
+      "median_abs_hit_err": 0.367898615001468,
+      "median_gen_s": 8.988011299981736,
+      "median_tokens": 369,
+      "rows": [
+        {
+          "target_s": 3,
+          "gen_s": 3.1957078999839723,
+          "duration_s": 4.107233299990185,
+          "tokens": 170,
+          "out_tokens": 98,
+          "think_tokens": 72,
+          "tps": 53.19635126879169,
+          "hit_err": 0.0652359666613241
+        },
+        {
+          "target_s": 8,
+          "gen_s": 3.7547102000098675,
+          "duration_s": 4.443609800073318,
+          "tokens": 365,
+          "out_tokens": 309,
+          "think_tokens": 56,
+          "tps": 97.21123084254033,
+          "hit_err": -0.5306612249987666
+        },
+        {
+          "target_s": 20,
+          "gen_s": 16.091981400037184,
+          "duration_s": 16.773574899998493,
+          "tokens": 928,
+          "out_tokens": 876,
+          "think_tokens": 52,
+          "tps": 57.66847331788835,
+          "hit_err": -0.1954009299981408
+        },
+        {
+          "target_s": 3,
+          "gen_s": 12.459773499984294,
+          "duration_s": 15.724290099926293,
+          "tokens": 369,
+          "out_tokens": 304,
+          "think_tokens": 65,
+          "tps": 29.615305607318234,
+          "hit_err": 3.153257833328098
+        },
+        {
+          "target_s": 8,
+          "gen_s": 8.612783699994907,
+          "duration_s": 9.302396399900317,
+          "tokens": 507,
+          "out_tokens": 464,
+          "think_tokens": 43,
+          "tps": 58.865985453727326,
+          "hit_err": 0.07659796249936335
+        },
+        {
+          "target_s": 20,
+          "gen_s": 12.64202769997064,
+          "duration_s": 13.289434199919924,
+          "tokens": 771,
+          "out_tokens": 723,
+          "think_tokens": 48,
+          "tps": 60.987051942766314,
+          "hit_err": -0.367898615001468
+        },
+        {
+          "target_s": 3,
+          "gen_s": 25.293396699940786,
+          "duration_s": 25.90899119991809,
+          "tokens": 249,
+          "out_tokens": 212,
+          "think_tokens": 37,
+          "tps": 9.844466639017405,
+          "hit_err": 7.431132233313595
+        },
+        {
+          "target_s": 8,
+          "gen_s": 7.175374399987049,
+          "duration_s": 7.912467300076969,
+          "tokens": 340,
+          "out_tokens": 305,
+          "think_tokens": 35,
+          "tps": 47.384287013735985,
+          "hit_err": -0.10307820000161882
+        },
+        {
+          "target_s": 20,
+          "gen_s": 8.988011299981736,
+          "duration_s": 9.832034900086,
+          "tokens": 604,
+          "out_tokens": 583,
+          "think_tokens": 21,
+          "tps": 67.20062757389138,
+          "hit_err": -0.5505994350009132
+        }
+      ]
+    },
+    "speed": {
+      "n": 9,
+      "median_abs_hit_err": 0.5735317800019402,
+      "median_gen_s": 6.984003699966706,
+      "median_tokens": 516,
+      "rows": [
+        {
+          "target_s": 3,
+          "gen_s": 10.924662600038573,
+          "duration_s": 11.802330499980599,
+          "tokens": 342,
+          "out_tokens": 304,
+          "think_tokens": 38,
+          "tps": 31.305314637249527,
+          "hit_err": 2.6415542000128576
+        },
+        {
+          "target_s": 8,
+          "gen_s": 6.632309000007808,
+          "duration_s": 7.546003800001927,
+          "tokens": 724,
+          "out_tokens": 505,
+          "think_tokens": 219,
+          "tps": 109.16258575997404,
+          "hit_err": -0.17096137499902397
+        },
+        {
+          "target_s": 20,
+          "gen_s": 34.76232840004377,
+          "duration_s": 35.55546609999146,
+          "tokens": 1102,
+          "out_tokens": 1073,
+          "think_tokens": 29,
+          "tps": 31.700983527864388,
+          "hit_err": 0.7381164200021886
+        },
+        {
+          "target_s": 3,
+          "gen_s": 6.984003699966706,
+          "duration_s": 7.587441600044258,
+          "tokens": 231,
+          "out_tokens": 175,
+          "think_tokens": 56,
+          "tps": 33.075583851867265,
+          "hit_err": 1.3280012333222355
+        },
+        {
+          "target_s": 8,
+          "gen_s": 5.1782076000235975,
+          "duration_s": 5.980933399987407,
+          "tokens": 336,
+          "out_tokens": 251,
+          "think_tokens": 85,
+          "tps": 64.8873173795637,
+          "hit_err": -0.3527240499970503
+        },
+        {
+          "target_s": 20,
+          "gen_s": 14.12414319999516,
+          "duration_s": 14.793085099896416,
+          "tokens": 805,
+          "out_tokens": 784,
+          "think_tokens": 21,
+          "tps": 56.99460764460925,
+          "hit_err": -0.293792840000242
+        },
+        {
+          "target_s": 3,
+          "gen_s": 6.761804900015704,
+          "duration_s": 7.358453700086102,
+          "tokens": 297,
+          "out_tokens": 253,
+          "think_tokens": 44,
+          "tps": 43.92318388235517,
+          "hit_err": 1.2539349666719015
+        },
+        {
+          "target_s": 8,
+          "gen_s": 5.938178599928506,
+          "duration_s": 7.140031599905342,
+          "tokens": 516,
+          "out_tokens": 470,
+          "think_tokens": 46,
+          "tps": 86.89533184573003,
+          "hit_err": -0.2577276750089368
+        },
+        {
+          "target_s": 20,
+          "gen_s": 8.529364399961196,
+          "duration_s": 9.514555300003849,
+          "tokens": 834,
+          "out_tokens": 747,
+          "think_tokens": 87,
+          "tps": 97.77985332691311,
+          "hit_err": -0.5735317800019402
+        }
+      ]
+    },
+    "speed_count": {
+      "n": 9,
+      "median_abs_hit_err": 0.4057406874926528,
+      "median_gen_s": 6.217007300001569,
+      "median_tokens": 362,
+      "rows": [
+        {
+          "target_s": 3,
+          "gen_s": 4.804737400030717,
+          "duration_s": 5.4923005000455305,
+          "tokens": 273,
+          "out_tokens": 185,
+          "think_tokens": 88,
+          "tps": 56.81892209098768,
+          "hit_err": 0.6015791333435724
+        },
+        {
+          "target_s": 8,
+          "gen_s": 8.578571100020781,
+          "duration_s": 9.710406200028956,
+          "tokens": 362,
+          "out_tokens": 322,
+          "think_tokens": 40,
+          "tps": 42.198169809319765,
+          "hit_err": 0.07232138750259764
+        },
+        {
+          "target_s": 20,
+          "gen_s": 18.53308580000885,
+          "duration_s": 19.615900499979034,
+          "tokens": 1058,
+          "out_tokens": 941,
+          "think_tokens": 117,
+          "tps": 57.08709339701513,
+          "hit_err": -0.07334570999955758
+        },
+        {
+          "target_s": 3,
+          "gen_s": 11.789485299959779,
+          "duration_s": 12.57285909994971,
+          "tokens": 222,
+          "out_tokens": 186,
+          "think_tokens": 36,
+          "tps": 18.83033858999403,
+          "hit_err": 2.9298284333199263
+        },
+        {
+          "target_s": 8,
+          "gen_s": 4.942192999995314,
+          "duration_s": 5.988209499977529,
+          "tokens": 478,
+          "out_tokens": 385,
+          "think_tokens": 93,
+          "tps": 96.71819777180966,
+          "hit_err": -0.3822258750005858
+        },
+        {
+          "target_s": 20,
+          "gen_s": 22.124259499949403,
+          "duration_s": 22.81367559998762,
+          "tokens": 1255,
+          "out_tokens": 1195,
+          "think_tokens": 60,
+          "tps": 56.72506236888381,
+          "hit_err": 0.10621297499747015
+        },
+        {
+          "target_s": 3,
+          "gen_s": 5.644667999935336,
+          "duration_s": 6.761675099958666,
+          "tokens": 205,
+          "out_tokens": 133,
+          "think_tokens": 72,
+          "tps": 36.31745923805411,
+          "hit_err": 0.8815559999784455
+        },
+        {
+          "target_s": 8,
+          "gen_s": 4.754074500058778,
+          "duration_s": 5.4238063000375405,
+          "tokens": 269,
+          "out_tokens": 214,
+          "think_tokens": 55,
+          "tps": 56.5830426083298,
+          "hit_err": -0.4057406874926528
+        },
+        {
+          "target_s": 20,
+          "gen_s": 6.217007300001569,
+          "duration_s": 6.83775509998668,
+          "tokens": 622,
+          "out_tokens": 549,
+          "think_tokens": 73,
+          "tps": 100.04813730874065,
+          "hit_err": -0.6891496349999215
+        }
+      ]
+    },
+    "speed_cum": {
+      "n": 9,
+      "median_abs_hit_err": 0.7005043875105912,
+      "median_gen_s": 9.647592399967834,
+      "median_tokens": 296,
+      "rows": [
+        {
+          "target_s": 3,
+          "gen_s": 19.8639550000662,
+          "duration_s": 20.445734000066295,
+          "tokens": 348,
+          "out_tokens": 278,
+          "think_tokens": 70,
+          "tps": 17.519169772527185,
+          "hit_err": 5.6213183333554
+        },
+        {
+          "target_s": 8,
+          "gen_s": 3.2290679999860004,
+          "duration_s": 4.213983200024813,
+          "tokens": 296,
+          "out_tokens": 248,
+          "think_tokens": 48,
+          "tps": 91.66731700951584,
+          "hit_err": -0.59636650000175
+        },
+        {
+          "target_s": 20,
+          "gen_s": 8.738637199974619,
+          "duration_s": 9.508403000072576,
+          "tokens": 590,
+          "out_tokens": 567,
+          "think_tokens": 23,
+          "tps": 67.51624841476583,
+          "hit_err": -0.563068140001269
+        },
+        {
+          "target_s": 3,
+          "gen_s": 9.647592399967834,
+          "duration_s": 10.562021199963056,
+          "tokens": 134,
+          "out_tokens": 114,
+          "think_tokens": 20,
+          "tps": 13.889475678973207,
+          "hit_err": 2.2158641333226115
+        },
+        {
+          "target_s": 8,
+          "gen_s": 2.3959648999152705,
+          "duration_s": 3.8351756999036297,
+          "tokens": 237,
+          "out_tokens": 152,
+          "think_tokens": 85,
+          "tps": 98.9163071664285,
+          "hit_err": -0.7005043875105912
+        },
+        {
+          "target_s": 20,
+          "gen_s": 12.857880600029603,
+          "duration_s": 13.465761399944313,
+          "tokens": 764,
+          "out_tokens": 730,
+          "think_tokens": 34,
+          "tps": 59.41881277060864,
+          "hit_err": -0.35710596999851985
+        },
+        {
+          "target_s": 3,
+          "gen_s": 12.087798399967141,
+          "duration_s": 12.906673999968916,
+          "tokens": 241,
+          "out_tokens": 213,
+          "think_tokens": 28,
+          "tps": 19.937460240952987,
+          "hit_err": 3.0292661333223805
+        },
+        {
+          "target_s": 8,
+          "gen_s": 2.2780935999471694,
+          "duration_s": 7.890655600000173,
+          "tokens": 162,
+          "out_tokens": 113,
+          "think_tokens": 49,
+          "tps": 71.11209126954085,
+          "hit_err": -0.7152383000066038
+        },
+        {
+          "target_s": 20,
+          "gen_s": 12.953265900025144,
+          "duration_s": 13.588927600067109,
+          "tokens": 642,
+          "out_tokens": 537,
+          "think_tokens": 105,
+          "tps": 49.56279018396077,
+          "hit_err": -0.3523367049987428
+        }
+      ]
+    }
+  },
+  "t2_detail": {
+    "base|3": {
+      "n": 3,
+      "median_gen_s": 7.993812899920158,
+      "median_abs_hit_err": 1.664604299973386,
+      "median_out_tokens": 229,
+      "median_think_tokens": 81
+    },
+    "base|8": {
+      "n": 3,
+      "median_gen_s": 7.207648699986748,
+      "median_abs_hit_err": 0.09904391250165645,
+      "median_out_tokens": 291,
+      "median_think_tokens": 40
+    },
+    "base|20": {
+      "n": 3,
+      "median_gen_s": 18.838876299909316,
+      "median_abs_hit_err": 0.4234918600006495,
+      "median_out_tokens": 780,
+      "median_think_tokens": 16
+    },
+    "elapsed|3": {
+      "n": 3,
+      "median_gen_s": 12.459773499984294,
+      "median_abs_hit_err": 3.153257833328098,
+      "median_out_tokens": 212,
+      "median_think_tokens": 65
+    },
+    "elapsed|8": {
+      "n": 3,
+      "median_gen_s": 7.175374399987049,
+      "median_abs_hit_err": 0.10307820000161882,
+      "median_out_tokens": 309,
+      "median_think_tokens": 43
+    },
+    "elapsed|20": {
+      "n": 3,
+      "median_gen_s": 12.64202769997064,
+      "median_abs_hit_err": 0.367898615001468,
+      "median_out_tokens": 723,
+      "median_think_tokens": 48
+    },
+    "speed|3": {
+      "n": 3,
+      "median_gen_s": 6.984003699966706,
+      "median_abs_hit_err": 1.3280012333222355,
+      "median_out_tokens": 253,
+      "median_think_tokens": 44
+    },
+    "speed|8": {
+      "n": 3,
+      "median_gen_s": 5.938178599928506,
+      "median_abs_hit_err": 0.2577276750089368,
+      "median_out_tokens": 470,
+      "median_think_tokens": 85
+    },
+    "speed|20": {
+      "n": 3,
+      "median_gen_s": 14.12414319999516,
+      "median_abs_hit_err": 0.5735317800019402,
+      "median_out_tokens": 784,
+      "median_think_tokens": 29
+    },
+    "speed_count|3": {
+      "n": 3,
+      "median_gen_s": 5.644667999935336,
+      "median_abs_hit_err": 0.8815559999784455,
+      "median_out_tokens": 185,
+      "median_think_tokens": 72
+    },
+    "speed_count|8": {
+      "n": 3,
+      "median_gen_s": 4.942192999995314,
+      "median_abs_hit_err": 0.3822258750005858,
+      "median_out_tokens": 322,
+      "median_think_tokens": 55
+    },
+    "speed_count|20": {
+      "n": 3,
+      "median_gen_s": 18.53308580000885,
+      "median_abs_hit_err": 0.10621297499747015,
+      "median_out_tokens": 941,
+      "median_think_tokens": 73
+    },
+    "speed_cum|3": {
+      "n": 3,
+      "median_gen_s": 12.087798399967141,
+      "median_abs_hit_err": 3.0292661333223805,
+      "median_out_tokens": 213,
+      "median_think_tokens": 28
+    },
+    "speed_cum|8": {
+      "n": 3,
+      "median_gen_s": 2.3959648999152705,
+      "median_abs_hit_err": 0.7005043875105912,
+      "median_out_tokens": 152,
+      "median_think_tokens": 49
+    },
+    "speed_cum|20": {
+      "n": 3,
+      "median_gen_s": 12.857880600029603,
+      "median_abs_hit_err": 0.35710596999851985,
+      "median_out_tokens": 567,
+      "median_think_tokens": 34
+    }
+  },
+  "t2_plan": {
+    "base": {
+      "n": 9,
+      "median_ratio": 1.4878048780487805,
+      "rows": [
+        {
+          "claimed_tokens": 180,
+          "actual_tokens": 201,
+          "actual_out_tokens": 120,
+          "target_s": 3,
+          "tps": 25.14444640079174,
+          "strategy": "写前规划了长度，按中文模型每秒约生成60个token估算，将正文控制在约180个token。"
+        },
+        {
+          "claimed_tokens": 500,
+          "actual_tokens": 345,
+          "actual_out_tokens": 291,
+          "target_s": 8,
+          "tps": 46.67361350414608,
+          "strategy": "写前规划了长度，按中文模型每秒生成约60个token估算，将正文控制在约480至500个token。"
+        },
+        {
+          "claimed_tokens": 1200,
+          "actual_tokens": 796,
+          "actual_out_tokens": 780,
+          "target_s": 20,
+          "tps": 42.253050942525256,
+          "strategy": "写前规划了长度，按中文模型每秒生成约60个token估算，将正文控制在约1200个token。"
+        },
+        {
+          "claimed_tokens": 650,
+          "actual_tokens": 449,
+          "actual_out_tokens": 367,
+          "target_s": 3,
+          "tps": 20.598499826483025,
+          "strategy": "没有事先规划长度，只根据“约3秒”的生成目标控制篇幅，并凭对中文输出长度的直觉写成约600—700个token。"
+        },
+        {
+          "claimed_tokens": 620,
+          "actual_tokens": 349,
+          "actual_out_tokens": 309,
+          "target_s": 8,
+          "tps": 48.42078388207817,
+          "strategy": "规划了长度，按中文模型每秒约70—90个token粗略估算，将正文控制在约550—700个token，以接近8秒生成时间。"
+        },
+        {
+          "claimed_tokens": 2200,
+          "actual_tokens": 1470,
+          "actual_out_tokens": 1438,
+          "target_s": 20,
+          "tps": 51.23899926121493,
+          "strategy": "规划了长度，按中文模型每秒约100—120个token估算，将正文控制在约2000—2400个token，以接近20秒生成时间。"
+        },
+        {
+          "claimed_tokens": 382,
+          "actual_tokens": 271,
+          "actual_out_tokens": 229,
+          "target_s": 3,
+          "tps": 36.96257439805894,
+          "strategy": "规划了长度，通过控制段落数量和句式，在兼顾雨后街景描写与约3秒生成时间的基础上，将正文控制在约380个token。"
+        },
+        {
+          "claimed_tokens": 427,
+          "actual_tokens": 287,
+          "actual_out_tokens": 287,
+          "target_s": 8,
+          "tps": 55.88024835472021,
+          "strategy": "规划了长度，通过安排约五段内容、涵盖机制、颜色、实例和生态意义，估算为约430个token，以匹配约8秒的生成时间。"
+        },
+        {
+          "claimed_tokens": 1268,
+          "actual_tokens": 613,
+          "actual_out_tokens": 613,
+          "target_s": 20,
+          "tps": 53.16490414174296,
+          "strategy": "规划了长度，通过按日落的连续阶段组织八段内容，并加入大气散射、地球阴影、三种暮光及地面景观变化，将篇幅估算为约1250个token，以匹配约20秒的生成时间。"
+        }
+      ]
+    },
+    "elapsed": {
+      "n": 9,
+      "median_ratio": 1.4246575342465753,
+      "rows": [
+        {
+          "claimed_tokens": 121,
+          "actual_tokens": 170,
+          "actual_out_tokens": 98,
+          "target_s": 3,
+          "tps": 53.19635126879169,
+          "strategy": "规划了长度，按上一轮约4.1秒的生成速度反推，并参考约120个汉字通常可在3秒左右生成来控制篇幅。"
+        },
+        {
+          "claimed_tokens": 520,
+          "actual_tokens": 365,
+          "actual_out_tokens": 309,
+          "target_s": 8,
+          "tps": 97.21123084254033,
+          "strategy": "规划了长度，按目标时长和此前实测的生成速度反推字数，并通过五个短段落控制整体篇幅与阅读节奏。"
+        },
+        {
+          "claimed_tokens": 2050,
+          "actual_tokens": 928,
+          "actual_out_tokens": 876,
+          "target_s": 20,
+          "tps": 57.66847331788835,
+          "strategy": "规划了篇幅和结构，按目标生成时长及此前各周期的实测速度反推篇幅，并以多个连续段落递进描述日落过程。"
+        },
+        {
+          "claimed_tokens": 486,
+          "actual_tokens": 369,
+          "actual_out_tokens": 304,
+          "target_s": 3,
+          "tps": 29.615305607318234,
+          "strategy": "没有事先规划长度；我凭中文正文约每分钟四百至五百字的语感，将篇幅控制在约四百至五百字，以接近三秒的生成耗时。"
+        },
+        {
+          "claimed_tokens": 711,
+          "actual_tokens": 507,
+          "actual_out_tokens": 464,
+          "target_s": 8,
+          "tps": 58.865985453727326,
+          "strategy": "没有事先明确规划字数；我依据中文模型较慢的输出速度，将篇幅自然控制在约七百个 token，以接近八秒生成时间。"
+        },
+        {
+          "claimed_tokens": 1035,
+          "actual_tokens": 771,
+          "actual_out_tokens": 723,
+          "target_s": 20,
+          "tps": 60.987051942766314,
+          "strategy": "有，我先按约一千至一千一百个 token 规划篇幅，再以太阳高度变化、霞光形成和暮光阶段为主线组织内容，以接近二十秒生成时间。"
+        },
+        {
+          "claimed_tokens": 430,
+          "actual_tokens": 249,
+          "actual_out_tokens": 212,
+          "target_s": 3,
+          "tps": 9.844466639017405,
+          "strategy": "否，未事先规划具体长度，只按雨后街道的意象依次描写路面、行人、车辆与街边店铺。"
+        },
+        {
+          "claimed_tokens": 650,
+          "actual_tokens": 340,
+          "actual_out_tokens": 305,
+          "target_s": 8,
+          "tps": 47.384287013735985,
+          "strategy": "否，未事先规划具体长度，只按伪装、捕食、交流、逃逸、共生机制等角度依次展开说明。"
+        },
+        {
+          "claimed_tokens": 1240,
+          "actual_tokens": 604,
+          "actual_out_tokens": 583,
+          "target_s": 20,
+          "tps": 67.20062757389138,
+          "strategy": "是，按太阳下沉、大气散射、云层参与和暮光消退等阶段展开，并以约一千二百个汉字估算长度。"
+        }
+      ]
+    },
+    "speed": {
+      "n": 9,
+      "median_ratio": 1.4619883040935673,
+      "rows": [
+        {
+          "claimed_tokens": 500,
+          "actual_tokens": 342,
+          "actual_out_tokens": 304,
+          "target_s": 3,
+          "tps": 31.305314637249527,
+          "strategy": "规划了长度，依据约31.3 token/秒的实测速度，按约94 token估算并适当展开描写，使生成耗时接近3秒。"
+        },
+        {
+          "claimed_tokens": 950,
+          "actual_tokens": 724,
+          "actual_out_tokens": 505,
+          "target_s": 8,
+          "tps": 109.16258575997404,
+          "strategy": "规划了长度，依据约100 token/秒的生成速度估算8秒约需800 token，并适当扩充案例与描写以控制在目标时长附近。"
+        },
+        {
+          "claimed_tokens": 2000,
+          "actual_tokens": 1102,
+          "actual_out_tokens": 1073,
+          "target_s": 20,
+          "tps": 31.700983527864388,
+          "strategy": "规划了长度，依据约100 token/秒的生成速度估算20秒约需2000 token，并按阶段展开描述以使篇幅与耗时接近目标。"
+        },
+        {
+          "claimed_tokens": 224,
+          "actual_tokens": 231,
+          "actual_out_tokens": 175,
+          "target_s": 3,
+          "tps": 33.075583851867265,
+          "strategy": "没有明确规划长度，主要凭语感和场景完整性控制篇幅。"
+        },
+        {
+          "claimed_tokens": 328,
+          "actual_tokens": 336,
+          "actual_out_tokens": 251,
+          "target_s": 8,
+          "tps": 64.8873173795637,
+          "strategy": "没有规划具体长度，主要按“生物发光的作用—具体例子—科学解释—总结”的结构控制篇幅。"
+        },
+        {
+          "claimed_tokens": 1390,
+          "actual_tokens": 805,
+          "actual_out_tokens": 784,
+          "target_s": 20,
+          "tps": 56.99460764460925,
+          "strategy": "规划了较长篇幅，按“太阳变黄—被地平线切平—暮光与地球影—影响日落时长的因素—总结”的顺序展开，以多个阶段和具体现象达到目标时长。"
+        },
+        {
+          "claimed_tokens": 430,
+          "actual_tokens": 297,
+          "actual_out_tokens": 253,
+          "target_s": 3,
+          "tps": 43.92318388235517,
+          "strategy": "规划了长度，按约43.9 token/秒的生成速度，将3秒对应的目标长度估算为约130 token，但实际输出明显超出该估算。"
+        },
+        {
+          "claimed_tokens": 850,
+          "actual_tokens": 516,
+          "actual_out_tokens": 470,
+          "target_s": 8,
+          "tps": 86.89533184573003,
+          "strategy": "规划了长度，按约91.5 token/秒的生成速度，将8秒对应的目标长度估算为约730 token，并适当扩展内容以保证论述完整。"
+        },
+        {
+          "claimed_tokens": 2100,
+          "actual_tokens": 834,
+          "actual_out_tokens": 747,
+          "target_s": 20,
+          "tps": 97.77985332691311,
+          "strategy": "规划了长度，按约97.8 token/秒的生成速度，将20秒对应的目标长度估算为约1950 token，并预留少量余量以使叙事完整。"
+        }
+      ]
+    },
+    "speed_count": {
+      "n": 9,
+      "median_ratio": 1.1933085501858736,
+      "rows": [
+        {
+          "claimed_tokens": 273,
+          "actual_tokens": 273,
+          "actual_out_tokens": 185,
+          "target_s": 3,
+          "tps": 56.81892209098768,
+          "strategy": "未明确规划长度，而是根据场景描写的节奏控制段落数量，使其接近约3秒的生成时长。"
+        },
+        {
+          "claimed_tokens": 650,
+          "actual_tokens": 362,
+          "actual_out_tokens": 322,
+          "target_s": 8,
+          "tps": 42.198169809319765,
+          "strategy": "规划了长度，按此前约42—56 token/秒的生成速度估算8秒约需340—450个token，并尝试用多个短段落来控制整体篇幅。"
+        },
+        {
+          "claimed_tokens": 1786,
+          "actual_tokens": 1058,
+          "actual_out_tokens": 941,
+          "target_s": 20,
+          "tps": 57.08709339701513,
+          "strategy": "规划了篇幅并按此前约42—57 token/秒的生成速度估算20秒约需840—1140个token，但实际生成明显超出预估。"
+        },
+        {
+          "claimed_tokens": 222,
+          "actual_tokens": 222,
+          "actual_out_tokens": 186,
+          "target_s": 3,
+          "tps": 18.83033858999403,
+          "strategy": "规划了长度，按约200至250个汉字估算，并结合约18.8 token/秒的生成速度控制在3秒左右。"
+        },
+        {
+          "claimed_tokens": 600,
+          "actual_tokens": 478,
+          "actual_out_tokens": 385,
+          "target_s": 8,
+          "tps": 96.71819777180966,
+          "strategy": "规划了长度，按约650个中文字（约700至800 token）估算，并结合前一轮实测约97 token/秒的生成速度，使预计耗时接近8秒。"
+        },
+        {
+          "claimed_tokens": 1255,
+          "actual_tokens": 1255,
+          "actual_out_tokens": 1195,
+          "target_s": 20,
+          "tps": 56.72506236888381,
+          "strategy": "规划了长度，依据此前约1255 token的实测样本，并结合约56.7 token/秒的生成速度，将预计耗时控制在20至22秒。"
+        },
+        {
+          "claimed_tokens": 190,
+          "actual_tokens": 205,
+          "actual_out_tokens": 133,
+          "target_s": 3,
+          "tps": 36.31745923805411,
+          "strategy": "规划了长度，依据约36.3 token/秒的生成速度，将3秒目标估算为约109个token，并控制正文篇幅。"
+        },
+        {
+          "claimed_tokens": 321,
+          "actual_tokens": 269,
+          "actual_out_tokens": 214,
+          "target_s": 8,
+          "tps": 56.5830426083298,
+          "strategy": "规划了长度，按此前实测的生成速度将8秒目标换算为约291个token，并适度扩展至约320个token。"
+        },
+        {
+          "claimed_tokens": 820,
+          "actual_tokens": 622,
+          "actual_out_tokens": 549,
+          "target_s": 20,
+          "tps": 100.04813730874065,
+          "strategy": "规划了长度，依据此前约100 token/秒的生成速度，将20秒目标估算为约2000个token，并通过展开太阳高度、散射、暮光等阶段形成约820个token的正文。"
+        }
+      ]
+    },
+    "speed_cum": {
+      "n": 9,
+      "median_ratio": 1.4691358024691359,
+      "rows": [
+        {
+          "claimed_tokens": 470,
+          "actual_tokens": 348,
+          "actual_out_tokens": 278,
+          "target_s": 3,
+          "tps": 17.519169772527185,
+          "strategy": "没有预先精确规划长度，而是根据约3秒的生成目标控制了篇幅，并采用若干短段落推进描写。"
+        },
+        {
+          "claimed_tokens": 520,
+          "actual_tokens": 296,
+          "actual_out_tokens": 248,
+          "target_s": 8,
+          "tps": 91.66731700951584,
+          "strategy": "没有逐句规划，而是按主题拆成伪装、沟通、警告、荧光原理四个要点，用约五段、每段三四句话的篇幅来把生成时间控制在8秒左右。"
+        },
+        {
+          "claimed_tokens": 1010,
+          "actual_tokens": 590,
+          "actual_out_tokens": 567,
+          "target_s": 20,
+          "tps": 67.51624841476583,
+          "strategy": "有规划长度，我按“日落定义—大气散射—晚霞—暮光—全球视角—总结”的结构展开，并依据约20秒的生成目标控制在约900至1100个token。"
+        },
+        {
+          "claimed_tokens": 151,
+          "actual_tokens": 134,
+          "actual_out_tokens": 114,
+          "target_s": 3,
+          "tps": 13.889475678973207,
+          "strategy": "规划了长度，按约 13.9 token/秒估算 3 秒约生成 42 个 token，并结合中文标点和语义完整度写成一小段。"
+        },
+        {
+          "claimed_tokens": 274,
+          "actual_tokens": 237,
+          "actual_out_tokens": 152,
+          "target_s": 8,
+          "tps": 98.9163071664285,
+          "strategy": "规划了长度，按此前约 34.4 token/秒的生成速度估算 8 秒约需 275 个 token，并围绕深海生物发光的多种作用组织内容。"
+        },
+        {
+          "claimed_tokens": 1024,
+          "actual_tokens": 764,
+          "actual_out_tokens": 730,
+          "target_s": 20,
+          "tps": 59.41881277060864,
+          "strategy": "规划了长度，按此前约 41.9 token/秒的生成速度估算 20 秒约需 838 个 token，并围绕日落的全过程扩展内容。"
+        },
+        {
+          "claimed_tokens": 400,
+          "actual_tokens": 241,
+          "actual_out_tokens": 213,
+          "target_s": 3,
+          "tps": 19.937460240952987,
+          "strategy": "我没有严格规划长度，只是凭感觉写了五个短段；事后估算中文字符约三百五十个、约合400个token，按约20token/秒的生成速度实际需十几秒，明显长于3秒的目标。"
+        },
+        {
+          "claimed_tokens": 238,
+          "actual_tokens": 162,
+          "actual_out_tokens": 113,
+          "target_s": 8,
+          "tps": 71.11209126954085,
+          "strategy": "我没有严格规划长度，只根据约8秒的目标和约20—30token/秒的生成速度，凭感觉将篇幅控制在约160—190个中文字符，估算后生成内容略长于目标。"
+        },
+        {
+          "claimed_tokens": 1030,
+          "actual_tokens": 642,
+          "actual_out_tokens": 537,
+          "target_s": 20,
+          "tps": 49.56279018396077,
+          "strategy": "我没有明确规划长度，只按“完整解释日落过程”的需要分成多个短段，写完后估算全文约一千个中文token。"
+        }
+      ]
+    }
+  },
+  "t4": {
+    "base": {
+      "name": "T4/base",
+      "n": 15,
+      "median_ratio": 1.4182202442203062,
+      "mean_ratio": 1.6333972837166253,
+      "median_logerr": 0.3825159205925301,
+      "mean_logerr": 0.49994266060412185,
+      "bias_log": 0.33412596691326724,
+      "spearman": 0.8464285714285714,
+      "ratio_ci": [
+        1.278869561170988,
+        1.5604067930539518
+      ],
+      "rows": [
+        {
+          "cycle": 1,
+          "estimate_s": 0.0,
+          "actual_s": 6.300047971308231e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 20.0,
+          "actual_s": 3.588326600030996
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 35.0,
+          "actual_s": 14.900898799998686
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 50.0,
+          "actual_s": 38.25577130005695
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 65.0,
+          "actual_s": 41.65580430009868
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 80.0,
+          "actual_s": 44.38718100008555
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 1.0,
+          "actual_s": 4.799920134246349e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 5.0,
+          "actual_s": 3.5255454999860376
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 8.0,
+          "actual_s": 6.32744369993452
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 13.0,
+          "actual_s": 8.867859399993904
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 18.0,
+          "actual_s": 12.00031889998354
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 21.0,
+          "actual_s": 14.908694099984132
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 1.0,
+          "actual_s": 4.700035788118839e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 4.0,
+          "actual_s": 3.127762299962342
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 10.0,
+          "actual_s": 6.561709200032055
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 19.0,
+          "actual_s": 40.4183249999769
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 30.0,
+          "actual_s": 43.43603889993392
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 41.0,
+          "actual_s": 46.16679759998806
+        }
+      ]
+    },
+    "elapsed": {
+      "name": "T4/elapsed",
+      "n": 15,
+      "median_ratio": 1.0470540871583207,
+      "mean_ratio": 0.917837023239571,
+      "median_logerr": 0.4534753135259221,
+      "mean_logerr": 0.8545998709489292,
+      "bias_log": -0.5153831271251751,
+      "spearman": 0.02323504055590503,
+      "ratio_ci": [
+        0.1777807771372591,
+        1.4361588610216993
+      ],
+      "rows": [
+        {
+          "cycle": 1,
+          "estimate_s": 1.0,
+          "actual_s": 4.499917849898338e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 2.0,
+          "actual_s": 28.29359499993734
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 3.0,
+          "actual_s": 31.75226029998157
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 5.0,
+          "actual_s": 35.24708759994246
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 7.0,
+          "actual_s": 39.37433569994755
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 10.0,
+          "actual_s": 42.768450299976394
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 1.0,
+          "actual_s": 3.899913281202316e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 4.0,
+          "actual_s": 3.457666999893263
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 6.0,
+          "actual_s": 5.730362999951467
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 9.0,
+          "actual_s": 8.67253839992918
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 12.0,
+          "actual_s": 11.105683599947952
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 15.0,
+          "actual_s": 17.128061199910007
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 0.0,
+          "actual_s": 4.399917088449001e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 5.0,
+          "actual_s": 3.481508999946527
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 8.0,
+          "actual_s": 5.691010599955916
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 14.0,
+          "actual_s": 8.15891479991842
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 18.0,
+          "actual_s": 10.468670099973679
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 20.0,
+          "actual_s": 12.708320799982175
+        }
+      ]
+    },
+    "speed": {
+      "name": "T4/speed",
+      "n": 15,
+      "median_ratio": 2.409349928133669,
+      "mean_ratio": 3.178209532358453,
+      "median_logerr": 0.91369343812318,
+      "mean_logerr": 1.1209369974036145,
+      "bias_log": 0.6957596310986833,
+      "spearman": 0.3720936186422796,
+      "ratio_ci": [
+        1.7406655071583494,
+        3.000089420668608
+      ],
+      "rows": [
+        {
+          "cycle": 1,
+          "estimate_s": 1.0,
+          "actual_s": 4.499917849898338e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 40.0,
+          "actual_s": 2.9725897000171244
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 45.0,
+          "actual_s": 5.867880899924785
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 50.0,
+          "actual_s": 16.66616989998147
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 55.0,
+          "actual_s": 21.39645539992489
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 1.0,
+          "actual_s": 24.2600325999083
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 0.0,
+          "actual_s": 4.499917849898338e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 12.0,
+          "actual_s": 3.6675314999883994
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 20.0,
+          "actual_s": 12.971424099989235
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 36.0,
+          "actual_s": 15.887304799980484
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 48.0,
+          "actual_s": 19.92238629993517
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 56.0,
+          "actual_s": 22.458254999946803
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 1.0,
+          "actual_s": 4.599918611347675e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 12.0,
+          "actual_s": 4.497915199957788
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 20.0,
+          "actual_s": 17.32741679996252
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 30.0,
+          "actual_s": 20.453920700005256
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 42.0,
+          "actual_s": 24.128702399902977
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 53.0,
+          "actual_s": 27.546557499910705
+        }
+      ]
+    },
+    "speed_count": {
+      "name": "T4/speed_count",
+      "n": 15,
+      "median_ratio": 0.7160455936101354,
+      "mean_ratio": 0.7051503604990206,
+      "median_logerr": 0.46338298087385055,
+      "mean_logerr": 0.9267029373413639,
+      "bias_log": -0.7690288817309225,
+      "spearman": 0.3032668839812683,
+      "ratio_ci": [
+        0.37694636727999403,
+        1.0945840673632745
+      ],
+      "rows": [
+        {
+          "cycle": 1,
+          "estimate_s": 1.0,
+          "actual_s": 4.09991480410099e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 6.0,
+          "actual_s": 3.7749097999185324
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 7.0,
+          "actual_s": 7.2522870999528095
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 4.0,
+          "actual_s": 10.61158919997979
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 15.0,
+          "actual_s": 13.703835499938577
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 30.0,
+          "actual_s": 19.82834789995104
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 2.0,
+          "actual_s": 4.699919372797012e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 5.0,
+          "actual_s": 4.033863799995743
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 1.0,
+          "actual_s": 7.193082199897617
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 1.0,
+          "actual_s": 10.680866799899377
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 1.0,
+          "actual_s": 13.744930599932559
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 1.0,
+          "actual_s": 16.39801050000824
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 1.0,
+          "actual_s": 4.400033503770828e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 3.0,
+          "actual_s": 3.6239903999958187
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 5.0,
+          "actual_s": 6.499351299949922
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 7.0,
+          "actual_s": 9.775913799996488
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 9.0,
+          "actual_s": 15.615736200008541
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 11.0,
+          "actual_s": 20.26969830004964
+        }
+      ]
+    },
+    "speed_cum": {
+      "name": "T4/speed_cum",
+      "n": 15,
+      "median_ratio": 2.3233386306641837,
+      "mean_ratio": 3.88145763702807,
+      "median_logerr": 0.8430052161580436,
+      "mean_logerr": 1.1054396472051033,
+      "bias_log": 1.1054396472051033,
+      "spearman": 0.6565305675082529,
+      "ratio_ci": [
+        1.940009851351312,
+        6.856629537310296
+      ],
+      "rows": [
+        {
+          "cycle": 1,
+          "estimate_s": 0.0,
+          "actual_s": 3.900029696524143e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 12.0,
+          "actual_s": 4.635114700067788
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 20.0,
+          "actual_s": 7.378103600000031
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 28.0,
+          "actual_s": 14.30935600004159
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 40.0,
+          "actual_s": 17.490054300054908
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 47.0,
+          "actual_s": 28.956287399982102
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 1.0,
+          "actual_s": 4.100031219422817e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 8.0,
+          "actual_s": 3.443320699967444
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 12.0,
+          "actual_s": 6.185535600059666
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 15.0,
+          "actual_s": 9.858606499969028
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 18.0,
+          "actual_s": 13.8672751999693
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 24.0,
+          "actual_s": 16.50377519999165
+        },
+        {
+          "cycle": 1,
+          "estimate_s": 0.0,
+          "actual_s": 4.09991480410099e-06
+        },
+        {
+          "cycle": 3,
+          "estimate_s": 20.0,
+          "actual_s": 3.986777599900961
+        },
+        {
+          "cycle": 5,
+          "estimate_s": 45.0,
+          "actual_s": 6.562991299899295
+        },
+        {
+          "cycle": 7,
+          "estimate_s": 95.0,
+          "actual_s": 10.945076399948448
+        },
+        {
+          "cycle": 9,
+          "estimate_s": 120.0,
+          "actual_s": 13.408949499949813
+        },
+        {
+          "cycle": 11,
+          "estimate_s": 150.0,
+          "actual_s": 16.63701459998265
+        }
+      ]
+    }
+  },
+  "t1_split": {
+    "base": {
+      "clean": {
+        "name": "T1clean/base",
+        "n": 17,
+        "median_ratio": 0.6336519631174671,
+        "mean_ratio": 0.5352942972780397,
+        "median_logerr": 0.4562554293487595,
+        "mean_logerr": 0.9349280692722423,
+        "bias_log": -0.9349280692722423,
+        "spearman": null,
+        "ratio_ci": [
+          0.5592918112893718,
+          0.6866998058962107
+        ]
+      },
+      "contam": {
+        "name": "T1contam/base",
+        "n": 18,
+        "median_ratio": 1.5825544251344887,
+        "mean_ratio": 1.972303395861581,
+        "median_logerr": 0.5528893612061985,
+        "mean_logerr": 0.6057709153462116,
+        "bias_log": 0.4316800671803327,
+        "spearman": -0.00857610185121369,
+        "ratio_ci": [
+          1.0316245019560017,
+          2.0970391328361946
+        ]
+      }
+    },
+    "speed": {
+      "clean": {
+        "name": "T1clean/speed",
+        "n": 18,
+        "median_ratio": 0.603214314198689,
+        "mean_ratio": 0.6434583403709938,
+        "median_logerr": 0.5055988393085604,
+        "mean_logerr": 0.5534289487367487,
+        "bias_log": -0.5298455243530741,
+        "spearman": 0.07012230125638468,
+        "ratio_ci": [
+          0.5416894456478533,
+          0.707086326445149
+        ]
+      },
+      "contam": {
+        "name": "T1contam/speed",
+        "n": 18,
+        "median_ratio": 2.308174249418645,
+        "mean_ratio": 2.6936081619731427,
+        "median_logerr": 0.8831604769444679,
+        "mean_logerr": 0.9890046108373376,
+        "bias_log": 0.6393495958149721,
+        "spearman": 0.14072430692719598,
+        "ratio_ci": [
+          1.5202166619107262,
+          2.8713549606882056
+        ]
+      }
+    },
+    "speed_count": {
+      "clean": {
+        "name": "T1clean/speed_count",
+        "n": 18,
+        "median_ratio": 0.5785105906667113,
+        "mean_ratio": 0.5621017601875997,
+        "median_logerr": 0.5503496561001667,
+        "mean_logerr": 0.6501655324016636,
+        "bias_log": -0.6501655324016636,
+        "spearman": null,
+        "ratio_ci": [
+          0.4245034065824479,
+          0.6764063862748069
+        ]
+      },
+      "contam": {
+        "name": "T1contam/speed_count",
+        "n": 18,
+        "median_ratio": 3.457204572059333,
+        "mean_ratio": 4.661132644540484,
+        "median_logerr": 1.239819717962149,
+        "mean_logerr": 1.3707549216157675,
+        "bias_log": 1.2665964074396128,
+        "spearman": -0.19562478232430908,
+        "ratio_ci": [
+          2.6040275259203476,
+          6.091340212409294
+        ]
+      }
+    },
+    "elapsed": {
+      "clean": {
+        "name": "T1clean/elapsed",
+        "n": 18,
+        "median_ratio": 0.8042765496568418,
+        "mean_ratio": 0.689032978756848,
+        "median_logerr": 0.2178217844204796,
+        "mean_logerr": 0.5920050496711584,
+        "bias_log": -0.5669558492646564,
+        "spearman": 0.17036656890909552,
+        "ratio_ci": [
+          0.48059203556684393,
+          0.9052159640847537
+        ]
+      },
+      "contam": {
+        "name": "T1contam/elapsed",
+        "n": 18,
+        "median_ratio": 1.6843471004446537,
+        "mean_ratio": 2.0124491651800924,
+        "median_logerr": 0.7425863311492018,
+        "mean_logerr": 0.7451191189832759,
+        "bias_log": 0.4254953020168862,
+        "spearman": 0.042043245683136644,
+        "ratio_ci": [
+          0.8799902708190475,
+          2.7441150141458133
+        ]
+      }
+    },
+    "speed_cum": {
+      "clean": {
+        "name": "T1clean/speed_cum",
+        "n": 18,
+        "median_ratio": 0.6934915003159415,
+        "mean_ratio": 0.7155905295519113,
+        "median_logerr": 0.3662529847010929,
+        "mean_logerr": 0.467335974134037,
+        "bias_log": -0.4279151830409006,
+        "spearman": 0.3506115062819234,
+        "ratio_ci": [
+          0.6154906691753139,
+          0.7827204549484357
+        ]
+      },
+      "contam": {
+        "name": "T1contam/speed_cum",
+        "n": 18,
+        "median_ratio": 3.3249047942358514,
+        "mean_ratio": 4.595844110194539,
+        "median_logerr": 1.1867417076203244,
+        "mean_logerr": 1.2408498994880826,
+        "bias_log": 1.1769029531751118,
+        "spearman": 0.29912878403611104,
+        "ratio_ci": [
+          1.8301209056305985,
+          5.815491507922907
+        ]
+      }
+    }
+  },
+  "copy_check": {
+    "base": {
+      "n": 18,
+      "copy_rate": 0.2777777777777778,
+      "median_abs_diff": 1.2334683000226505,
+      "median_ratio": 0.8389047806222962
+    },
+    "elapsed": {
+      "n": 18,
+      "copy_rate": 0.3333333333333333,
+      "median_abs_diff": 1.477409949991852,
+      "median_ratio": 0.7300010674594419
+    },
+    "speed": {
+      "n": 18,
+      "copy_rate": 0.2777777777777778,
+      "median_abs_diff": 1.4746189499855973,
+      "median_ratio": 1.0666084538808682
+    },
+    "speed_count": {
+      "n": 18,
+      "copy_rate": 0.1111111111111111,
+      "median_abs_diff": 1.4372984500369057,
+      "median_ratio": 1.2624504514895256
+    },
+    "speed_cum": {
+      "n": 18,
+      "copy_rate": 0.16666666666666666,
+      "median_abs_diff": 3.411722649994772,
+      "median_ratio": 1.2905709560490264
+    }
+  },
+  "self_repeat": {
+    "base": {
+      "n": 18,
+      "repeat_rate": 1.0,
+      "median_abs_diff": 0.0
+    },
+    "elapsed": {
+      "n": 18,
+      "repeat_rate": 0.6666666666666666,
+      "median_abs_diff": 0.0
+    },
+    "speed": {
+      "n": 18,
+      "repeat_rate": 1.0,
+      "median_abs_diff": 0.0
+    },
+    "speed_count": {
+      "n": 18,
+      "repeat_rate": 1.0,
+      "median_abs_diff": 0.0
+    },
+    "speed_cum": {
+      "n": 18,
+      "repeat_rate": 1.0,
+      "median_abs_diff": 0.0
+    }
+  },
+  "tps_noise": {
+    "n": 450,
+    "median": 70.84251341728947,
+    "p10": 22.319186691867944,
+    "p90": 114.98105537466462,
+    "cv": 0.5582119896671618,
+    "n_big": 111,
+    "big_median": 72.99312272341166,
+    "big_p10": 31.305314637249527,
+    "big_p90": 109.16258575997404,
+    "big_ratio_p90_p10": 3.487030461916642
+  },
+  "compare": {
+    "T1|speed": {
+      "n_a": 35,
+      "n_b": 36,
+      "delta": 0.2064150637537122,
+      "ci": [
+        0.03555178694946404,
+        0.3834693605146734
+      ],
+      "p": 0.04379124175164967
+    },
+    "T1|speed_count": {
+      "n_a": 35,
+      "n_b": 36,
+      "delta": 0.42133516559391915,
+      "ci": [
+        0.1722522116139812,
+        0.6584626598934934
+      ],
+      "p": 0.023795240951809637
+    },
+    "T1|elapsed": {
+      "n_a": 35,
+      "n_b": 36,
+      "delta": 0.014652736848518644,
+      "ci": [
+        -0.29665230098441064,
+        0.38413100886444174
+      ],
+      "p": 0.9008198360327935
+    },
+    "T1|speed_cum": {
+      "n_a": 35,
+      "n_b": 36,
+      "delta": 0.005194578444881803,
+      "ci": [
+        -0.12591464433356403,
+        0.24040371687288364
+      ],
+      "p": 0.9534093181363728
+    },
+    "T3|speed": {
+      "n_a": 18,
+      "n_b": 18,
+      "delta": 0.1501685379552899,
+      "ci": [
+        -0.1337057050029501,
+        0.6811755835252452
+      ],
+      "p": 0.21875624875024996
+    },
+    "T3|speed_count": {
+      "n_a": 18,
+      "n_b": 18,
+      "delta": 0.23201858829423477,
+      "ci": [
+        0.07530613732625518,
+        0.5220724278797826
+      ],
+      "p": 0.07598480303939212
+    },
+    "T3|elapsed": {
+      "n_a": 18,
+      "n_b": 18,
+      "delta": -0.12422736510132176,
+      "ci": [
+        -0.31087964415361036,
+        0.2021907854153079
+      ],
+      "p": 0.5660867826434713
+    },
+    "T3|speed_cum": {
+      "n_a": 18,
+      "n_b": 18,
+      "delta": 0.39249138508358755,
+      "ci": [
+        -0.006638323126409051,
+        0.9996441468105128
+      ],
+      "p": 0.009998000399920015
+    },
+    "T4|speed": {
+      "n_a": 15,
+      "n_b": 15,
+      "delta": 0.5311775175306499,
+      "ci": [
+        0.20486477910613743,
+        0.7640538546463798
+      ],
+      "p": 0.0015996800639872025
+    },
+    "T4|speed_count": {
+      "n_a": 15,
+      "n_b": 15,
+      "delta": 0.08086706028132046,
+      "ci": [
+        -0.16780268410503307,
+        1.5281732065363
+      ],
+      "p": 0.3307338532293541
+    },
+    "T4|elapsed": {
+      "n_a": 15,
+      "n_b": 15,
+      "delta": 0.07095939293339198,
+      "ci": [
+        -0.2756336982245562,
+        1.1106376969498957
+      ],
+      "p": 0.47010597880423916
+    },
+    "T4|speed_cum": {
+      "n_a": 15,
+      "n_b": 15,
+      "delta": 0.4604892955655135,
+      "ci": [
+        0.10184431933244675,
+        1.5197774664455985
+      ],
+      "p": 0.009198160367926415
+    }
+  },
+  "data_quality": {
+    "turns": 450,
+    "turns_ok": 450,
+    "turns_err": 0,
+    "usage_present_rate": 1.0,
+    "total_tokens": 483756,
+    "out_tokens": 55320,
+    "think_tokens": 13777,
+    "model_wall_s": 1735.2771485993871
+  },
+  "runtime": {
+    "base": {
+      "n": 90,
+      "median_tps": 73.27175378812244,
+      "p10_tps": 17.07475465752613,
+      "p90_tps": 117.38718582301958,
+      "median_duration_s": 2.7559846499934793,
+      "median_out_tokens": 62.0
+    },
+    "elapsed": {
+      "n": 90,
+      "median_tps": 67.5099426983382,
+      "p10_tps": 26.976742931012588,
+      "p90_tps": 111.52215255145663,
+      "median_duration_s": 1.811112450028304,
+      "median_out_tokens": 62.0
+    },
+    "speed": {
+      "n": 90,
+      "median_tps": 71.60951893652765,
+      "p10_tps": 31.700983527864388,
+      "p90_tps": 121.38394553770374,
+      "median_duration_s": 1.9987511999788694,
+      "median_out_tokens": 63.5
+    },
+    "speed_count": {
+      "n": 90,
+      "median_tps": 70.62758090528042,
+      "p10_tps": 22.319186691867944,
+      "p90_tps": 114.98105537466462,
+      "median_duration_s": 1.96717025001999,
+      "median_out_tokens": 66.0
+    },
+    "speed_cum": {
+      "n": 90,
+      "median_tps": 69.15775951414926,
+      "p10_tps": 25.006407890233856,
+      "p90_tps": 126.64231941614024,
+      "median_duration_s": 1.637145699991379,
+      "median_out_tokens": 64.5
+    }
+  }
+}

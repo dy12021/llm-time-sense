@@ -1,0 +1,1430 @@
+{
+  "serial": {
+    "n": 100,
+    "overlaps": 0,
+    "min_gap_s": 0.00015730003360658884,
+    "median_gap_s": 0.00020359992049634457
+  },
+  "A2": {
+    "base": {
+      "n": 8,
+      "median_actual_gen_s": 18.423559350019787,
+      "median_est_s": 75.0,
+      "median_abs_log_err": 1.3327765200008503,
+      "median_est_over_actual": 3.7930407040182694,
+      "median_implied_tokens": null,
+      "median_content_tokens": 1876.0,
+      "median_actual_rate": 109.83309898883633,
+      "echo_item_count": 0,
+      "rows": [
+        {
+          "trial": 1,
+          "topic": "城市与海洋",
+          "rate": null,
+          "elapsed_hint": 35.33306159998756,
+          "est": 180.0,
+          "actual_gen_s": 11.399115100037307,
+          "actual_dur_s": 12.199607400107197,
+          "content_tokens": 1562,
+          "think_tokens": 55,
+          "out_tokens": 1617,
+          "actual_rate": 137.0281803712016,
+          "err": 2.7594211213063113,
+          "echoes_item_count": false,
+          "think_share": 0.034013605442176874
+        },
+        {
+          "trial": 2,
+          "topic": "候鸟的迁徙",
+          "rate": null,
+          "elapsed_hint": 11.399115100037307,
+          "est": 90.0,
+          "actual_gen_s": 10.193173100007698,
+          "actual_dur_s": 10.942896399996243,
+          "content_tokens": 1762,
+          "think_tokens": 120,
+          "out_tokens": 1882,
+          "actual_rate": 172.86079444669386,
+          "err": 2.178091478044715,
+          "echoes_item_count": false,
+          "think_share": 0.06376195536663125
+        },
+        {
+          "trial": 3,
+          "topic": "森林的水循环",
+          "rate": null,
+          "elapsed_hint": 10.193173100007698,
+          "est": 90.0,
+          "actual_gen_s": 23.08193129999563,
+          "actual_dur_s": 23.985794799984433,
+          "content_tokens": 2125,
+          "think_tokens": 143,
+          "out_tokens": 2268,
+          "actual_rate": 92.06335346819104,
+          "err": 1.3607595536818746,
+          "echoes_item_count": false,
+          "think_share": 0.06305114638447971
+        },
+        {
+          "trial": 4,
+          "topic": "深海的热泉",
+          "rate": null,
+          "elapsed_hint": 23.08193129999563,
+          "est": 60.0,
+          "actual_gen_s": 16.27371249999851,
+          "actual_dur_s": 17.004644599976018,
+          "content_tokens": 1867,
+          "think_tokens": 111,
+          "out_tokens": 1978,
+          "actual_rate": 114.72489759175548,
+          "err": 1.3047934863198263,
+          "echoes_item_count": false,
+          "think_share": 0.05611729019211325
+        },
+        {
+          "trial": 5,
+          "topic": "季风与农业",
+          "rate": null,
+          "elapsed_hint": 16.27371249999851,
+          "est": 180.0,
+          "actual_gen_s": 21.456796299898997,
+          "actual_dur_s": 22.15390869998373,
+          "content_tokens": 1874,
+          "think_tokens": 84,
+          "out_tokens": 1958,
+          "actual_rate": 87.33829476718392,
+          "err": 2.126915411882452,
+          "echoes_item_count": false,
+          "think_share": 0.04290091930541369
+        },
+        {
+          "trial": 6,
+          "topic": "候车的陌生人",
+          "rate": null,
+          "elapsed_hint": 21.456796299898997,
+          "est": 60.0,
+          "actual_gen_s": 20.573406200041063,
+          "actual_dur_s": 22.397793299984187,
+          "content_tokens": 2159,
+          "think_tokens": 153,
+          "out_tokens": 2312,
+          "actual_rate": 104.94130038591717,
+          "err": 1.0703452815978414,
+          "echoes_item_count": false,
+          "think_share": 0.0661764705882353
+        },
+        {
+          "trial": 7,
+          "topic": "古树的年轮",
+          "rate": null,
+          "elapsed_hint": 20.573406200041063,
+          "est": 35.0,
+          "actual_gen_s": 38.45319789997302,
+          "actual_dur_s": 39.59575189999305,
+          "content_tokens": 2052,
+          "think_tokens": 83,
+          "out_tokens": 2135,
+          "actual_rate": 53.36357213612759,
+          "err": 0.09409380135418109,
+          "echoes_item_count": false,
+          "think_share": 0.03887587822014051
+        },
+        {
+          "trial": 8,
+          "topic": "潮汐与港口",
+          "rate": null,
+          "elapsed_hint": 38.45319789997302,
+          "est": 45.0,
+          "actual_gen_s": 14.36171609989833,
+          "actual_dur_s": 16.499366599950008,
+          "content_tokens": 1878,
+          "think_tokens": 57,
+          "out_tokens": 1935,
+          "actual_rate": 130.76431722621885,
+          "err": 1.142096427726512,
+          "echoes_item_count": false,
+          "think_share": 0.02945736434108527
+        }
+      ]
+    },
+    "speed_40": {
+      "n": 8,
+      "median_actual_gen_s": 18.247623850009404,
+      "median_est_s": 70.0,
+      "median_abs_log_err": 1.2359691594893167,
+      "median_est_over_actual": 3.5106446751958003,
+      "median_implied_tokens": 2800.0,
+      "median_content_tokens": 2060.5,
+      "median_actual_rate": 116.88035648391777,
+      "echo_item_count": 0,
+      "rows": [
+        {
+          "trial": 1,
+          "topic": "城市与海洋",
+          "rate": 40.0,
+          "elapsed_hint": 35.33306159998756,
+          "est": 70.0,
+          "actual_gen_s": 24.837032500072382,
+          "actual_dur_s": 26.661355100106448,
+          "content_tokens": 2264,
+          "think_tokens": 115,
+          "out_tokens": 2379,
+          "actual_rate": 91.1542069284405,
+          "err": 1.036159456690896,
+          "echoes_item_count": false,
+          "think_share": 0.04833963850357293
+        },
+        {
+          "trial": 2,
+          "topic": "候鸟的迁徙",
+          "rate": 40.0,
+          "elapsed_hint": 24.837032500072382,
+          "est": 70.0,
+          "actual_gen_s": 16.032216899911873,
+          "actual_dur_s": 17.271397699951194,
+          "content_tokens": 1991,
+          "think_tokens": 124,
+          "out_tokens": 2115,
+          "actual_rate": 124.18744160147585,
+          "err": 1.4738949880523036,
+          "echoes_item_count": false,
+          "think_share": 0.05862884160756501
+        },
+        {
+          "trial": 3,
+          "topic": "森林的水循环",
+          "rate": 40.0,
+          "elapsed_hint": 16.032216899911873,
+          "est": 70.0,
+          "actual_gen_s": 14.933792000054382,
+          "actual_dur_s": 15.887282200041227,
+          "content_tokens": 2000,
+          "think_tokens": 86,
+          "out_tokens": 2086,
+          "actual_rate": 133.92445803401554,
+          "err": 1.5448686774788474,
+          "echoes_item_count": false,
+          "think_share": 0.04122722914669223
+        },
+        {
+          "trial": 4,
+          "topic": "深海的热泉",
+          "rate": 40.0,
+          "elapsed_hint": 14.933792000054382,
+          "est": 50.0,
+          "actual_gen_s": 17.84650430001784,
+          "actual_dur_s": 18.548535999958403,
+          "content_tokens": 2121,
+          "think_tokens": 133,
+          "out_tokens": 2254,
+          "actual_rate": 118.84680407680061,
+          "err": 1.0302153539151864,
+          "echoes_item_count": false,
+          "think_share": 0.059006211180124224
+        },
+        {
+          "trial": 5,
+          "topic": "季风与农业",
+          "rate": 40.0,
+          "elapsed_hint": 17.84650430001784,
+          "est": 90.0,
+          "actual_gen_s": 18.648743400000967,
+          "actual_dur_s": 19.365659400005825,
+          "content_tokens": 2143,
+          "think_tokens": 134,
+          "out_tokens": 2277,
+          "actual_rate": 114.91390889103492,
+          "err": 1.574030904526475,
+          "echoes_item_count": false,
+          "think_share": 0.05884936319718929
+        },
+        {
+          "trial": 6,
+          "topic": "候车的陌生人",
+          "rate": 40.0,
+          "elapsed_hint": 18.648743400000967,
+          "est": 45.0,
+          "actual_gen_s": 20.59040849993471,
+          "actual_dur_s": 22.038424300029874,
+          "content_tokens": 1983,
+          "think_tokens": 78,
+          "out_tokens": 2061,
+          "actual_rate": 96.30697710568917,
+          "err": 0.7818371292025741,
+          "echoes_item_count": false,
+          "think_share": 0.03784570596797671
+        },
+        {
+          "trial": 7,
+          "topic": "古树的年轮",
+          "rate": 40.0,
+          "elapsed_hint": 20.59040849993471,
+          "est": 70.0,
+          "actual_gen_s": 16.6550983999623,
+          "actual_dur_s": 17.553525299998,
+          "content_tokens": 2173,
+          "think_tokens": 94,
+          "out_tokens": 2267,
+          "actual_rate": 130.4705590934797,
+          "err": 1.4357788622877377,
+          "echoes_item_count": false,
+          "think_share": 0.04146449051610057
+        },
+        {
+          "trial": 8,
+          "topic": "潮汐与港口",
+          "rate": 40.0,
+          "elapsed_hint": 16.6550983999623,
+          "est": 35.0,
+          "actual_gen_s": 24.278009200002998,
+          "actual_dur_s": 24.81931470008567,
+          "content_tokens": 1863,
+          "think_tokens": 106,
+          "out_tokens": 1969,
+          "actual_rate": 76.73611063627779,
+          "err": 0.3657770920698502,
+          "echoes_item_count": false,
+          "think_share": 0.05383443372270188
+        }
+      ]
+    },
+    "speed_76": {
+      "n": 8,
+      "median_actual_gen_s": 17.9490099499817,
+      "median_est_s": 46.5,
+      "median_abs_log_err": 0.8058937130417696,
+      "median_est_over_actual": 2.2534793540627884,
+      "median_implied_tokens": 3557.6038382401025,
+      "median_content_tokens": 1949.0,
+      "median_actual_rate": 100.63214902639257,
+      "echo_item_count": 0,
+      "rows": [
+        {
+          "trial": 1,
+          "topic": "城市与海洋",
+          "rate": 76.50760942451834,
+          "elapsed_hint": 35.33306159998756,
+          "est": 75.0,
+          "actual_gen_s": 44.41981160000432,
+          "actual_dur_s": 45.6485604000045,
+          "content_tokens": 2445,
+          "think_tokens": 119,
+          "out_tokens": 2564,
+          "actual_rate": 55.04300698114087,
+          "err": 0.5238025364116592,
+          "echoes_item_count": false,
+          "think_share": 0.046411856474258974
+        },
+        {
+          "trial": 2,
+          "topic": "候鸟的迁徙",
+          "rate": 76.50760942451834,
+          "elapsed_hint": 44.41981160000432,
+          "est": 30.0,
+          "actual_gen_s": 16.293498300015926,
+          "actual_dur_s": 22.269042299943976,
+          "content_tokens": 1729,
+          "think_tokens": 113,
+          "out_tokens": 1842,
+          "actual_rate": 106.1159468742394,
+          "err": 0.6104312307217857,
+          "echoes_item_count": false,
+          "think_share": 0.061346362649294245
+        },
+        {
+          "trial": 3,
+          "topic": "森林的水循环",
+          "rate": 76.50760942451834,
+          "elapsed_hint": 16.293498300015926,
+          "est": 70.0,
+          "actual_gen_s": 17.56862029992044,
+          "actual_dur_s": 18.155298399971798,
+          "content_tokens": 1526,
+          "think_tokens": 2248,
+          "out_tokens": 3774,
+          "actual_rate": 86.85941035488771,
+          "err": 1.3823808688346155,
+          "echoes_item_count": false,
+          "think_share": 0.5956544780074192
+        },
+        {
+          "trial": 4,
+          "topic": "深海的热泉",
+          "rate": 76.50760942451834,
+          "elapsed_hint": 17.56862029992044,
+          "est": 30.0,
+          "actual_gen_s": 15.031700299936347,
+          "actual_dur_s": 15.99053539999295,
+          "content_tokens": 1982,
+          "think_tokens": 126,
+          "out_tokens": 2108,
+          "actual_rate": 131.85467781102534,
+          "err": 0.6910360572207174,
+          "echoes_item_count": false,
+          "think_share": 0.05977229601518026
+        },
+        {
+          "trial": 5,
+          "topic": "季风与农业",
+          "rate": 76.50760942451834,
+          "elapsed_hint": 15.031700299936347,
+          "est": 45.0,
+          "actual_gen_s": 17.42433790001087,
+          "actual_dur_s": 19.426754600019194,
+          "content_tokens": 1743,
+          "think_tokens": 120,
+          "out_tokens": 1863,
+          "actual_rate": 100.03249535231481,
+          "err": 0.9487945309755773,
+          "echoes_item_count": false,
+          "think_share": 0.0644122383252818
+        },
+        {
+          "trial": 6,
+          "topic": "候车的陌生人",
+          "rate": 76.50760942451834,
+          "elapsed_hint": 17.42433790001087,
+          "est": 45.0,
+          "actual_gen_s": 24.131405299995095,
+          "actual_dur_s": 27.81059369991999,
+          "content_tokens": 2054,
+          "think_tokens": 121,
+          "out_tokens": 2175,
+          "actual_rate": 85.11729733371216,
+          "err": 0.6231483731223866,
+          "echoes_item_count": false,
+          "think_share": 0.05563218390804598
+        },
+        {
+          "trial": 7,
+          "topic": "古树的年轮",
+          "rate": 76.50760942451834,
+          "elapsed_hint": 24.131405299995095,
+          "est": 78.0,
+          "actual_gen_s": 18.32939960004296,
+          "actual_dur_s": 18.837726500001736,
+          "content_tokens": 1963,
+          "think_tokens": 109,
+          "out_tokens": 2072,
+          "actual_rate": 107.09570650614214,
+          "err": 1.4482025204184645,
+          "echoes_item_count": false,
+          "think_share": 0.052606177606177605
+        },
+        {
+          "trial": 8,
+          "topic": "潮汐与港口",
+          "rate": 76.50760942451834,
+          "elapsed_hint": 18.32939960004296,
+          "est": 48.0,
+          "actual_gen_s": 19.114546500029974,
+          "actual_dur_s": 19.89304960006848,
+          "content_tokens": 1935,
+          "think_tokens": 105,
+          "out_tokens": 2040,
+          "actual_rate": 101.23180270047033,
+          "err": 0.9207513688628218,
+          "echoes_item_count": false,
+          "think_share": 0.051470588235294115
+        }
+      ]
+    },
+    "speed_120": {
+      "n": 8,
+      "median_actual_gen_s": 16.822169599938206,
+      "median_est_s": 57.5,
+      "median_abs_log_err": 1.300468978319339,
+      "median_est_over_actual": 3.6710259822835876,
+      "median_implied_tokens": 6900.0,
+      "median_content_tokens": 1938.0,
+      "median_actual_rate": 116.19913302278204,
+      "echo_item_count": 0,
+      "rows": [
+        {
+          "trial": 1,
+          "topic": "城市与海洋",
+          "rate": 120.0,
+          "elapsed_hint": 35.33306159998756,
+          "est": 150.0,
+          "actual_gen_s": 15.975213199970312,
+          "actual_dur_s": 16.620127200032584,
+          "content_tokens": 1803,
+          "think_tokens": 141,
+          "out_tokens": 1944,
+          "actual_rate": 112.86234352123392,
+          "err": 2.2395969480706754,
+          "echoes_item_count": false,
+          "think_share": 0.07253086419753087
+        },
+        {
+          "trial": 2,
+          "topic": "候鸟的迁徙",
+          "rate": 120.0,
+          "elapsed_hint": 15.975213199970312,
+          "est": 30.0,
+          "actual_gen_s": 15.836243700003251,
+          "actual_dur_s": 16.54549159994349,
+          "content_tokens": 1893,
+          "think_tokens": 170,
+          "out_tokens": 2063,
+          "actual_rate": 119.53592252433015,
+          "err": 0.6388961635493571,
+          "echoes_item_count": false,
+          "think_share": 0.08240426563257393
+        },
+        {
+          "trial": 3,
+          "topic": "森林的水循环",
+          "rate": 120.0,
+          "elapsed_hint": 15.836243700003251,
+          "est": 75.0,
+          "actual_gen_s": 19.508282299968414,
+          "actual_dur_s": 20.097128900000826,
+          "content_tokens": 2470,
+          "think_tokens": 110,
+          "out_tokens": 2580,
+          "actual_rate": 126.61288995207944,
+          "err": 1.346649004808565,
+          "echoes_item_count": false,
+          "think_share": 0.04263565891472868
+        },
+        {
+          "trial": 4,
+          "topic": "深海的热泉",
+          "rate": 120.0,
+          "elapsed_hint": 19.508282299968414,
+          "est": 65.0,
+          "actual_gen_s": 17.6691259999061,
+          "actual_dur_s": 18.998958899988793,
+          "content_tokens": 1760,
+          "think_tokens": 84,
+          "out_tokens": 1844,
+          "actual_rate": 99.60877521668888,
+          "err": 1.302568447158241,
+          "echoes_item_count": false,
+          "think_share": 0.0455531453362256
+        },
+        {
+          "trial": 5,
+          "topic": "季风与农业",
+          "rate": 120.0,
+          "elapsed_hint": 17.6691259999061,
+          "est": 50.0,
+          "actual_gen_s": 13.64882579992991,
+          "actual_dur_s": 14.387335199979134,
+          "content_tokens": 1983,
+          "think_tokens": 73,
+          "out_tokens": 2056,
+          "actual_rate": 145.28722316978968,
+          "err": 1.298369509480437,
+          "echoes_item_count": false,
+          "think_share": 0.035505836575875485
+        },
+        {
+          "trial": 6,
+          "topic": "候车的陌生人",
+          "rate": 120.0,
+          "elapsed_hint": 13.64882579992991,
+          "est": 45.0,
+          "actual_gen_s": 30.76538100000471,
+          "actual_dur_s": 31.50302070006728,
+          "content_tokens": 2231,
+          "think_tokens": 101,
+          "out_tokens": 2332,
+          "actual_rate": 72.51657309232279,
+          "err": 0.38027242545156886,
+          "echoes_item_count": false,
+          "think_share": 0.043310463121783875
+        },
+        {
+          "trial": 7,
+          "topic": "古树的年轮",
+          "rate": 120.0,
+          "elapsed_hint": 30.76538100000471,
+          "est": 35.0,
+          "actual_gen_s": 35.236732900026254,
+          "actual_dur_s": 36.3009616000345,
+          "content_tokens": 2063,
+          "think_tokens": 92,
+          "out_tokens": 2155,
+          "actual_rate": 58.54685807146618,
+          "err": 0.0067410252928242565,
+          "echoes_item_count": false,
+          "think_share": 0.04269141531322506
+        },
+        {
+          "trial": 8,
+          "topic": "潮汐与港口",
+          "rate": 120.0,
+          "elapsed_hint": 35.236732900026254,
+          "est": 180.0,
+          "actual_gen_s": 13.850910599925555,
+          "actual_dur_s": 14.597059099934995,
+          "content_tokens": 1845,
+          "think_tokens": 33,
+          "out_tokens": 1878,
+          "actual_rate": 133.20423857258282,
+          "err": 2.5646058731310775,
+          "echoes_item_count": false,
+          "think_share": 0.01757188498402556
+        }
+      ]
+    },
+    "elapsed": {
+      "n": 8,
+      "median_actual_gen_s": 14.777486750041135,
+      "median_est_s": 22.5,
+      "median_abs_log_err": 0.26595052080629356,
+      "median_est_over_actual": 1.3063321228609912,
+      "median_implied_tokens": null,
+      "median_content_tokens": 1890.5,
+      "median_actual_rate": 130.3601595262374,
+      "echo_item_count": 0,
+      "rows": [
+        {
+          "trial": 1,
+          "topic": "城市与海洋",
+          "rate": null,
+          "elapsed_hint": 35.33306159998756,
+          "est": 18.0,
+          "actual_gen_s": 13.117627399973571,
+          "actual_dur_s": 14.075266600004397,
+          "content_tokens": 1759,
+          "think_tokens": 92,
+          "out_tokens": 1851,
+          "actual_rate": 134.09437136501865,
+          "err": 0.3164148291501083,
+          "echoes_item_count": false,
+          "think_share": 0.04970286331712588
+        },
+        {
+          "trial": 2,
+          "topic": "候鸟的迁徙",
+          "rate": null,
+          "elapsed_hint": 13.117627399973571,
+          "est": 28.0,
+          "actual_gen_s": 23.7233530000085,
+          "actual_dur_s": 24.47848409996368,
+          "content_tokens": 1995,
+          "think_tokens": 48,
+          "out_tokens": 2043,
+          "actual_rate": 84.0943520926104,
+          "err": 0.16574458853113552,
+          "echoes_item_count": false,
+          "think_share": 0.023494860499265784
+        },
+        {
+          "trial": 3,
+          "topic": "森林的水循环",
+          "rate": null,
+          "elapsed_hint": 23.7233530000085,
+          "est": 26.0,
+          "actual_gen_s": 18.264574200031348,
+          "actual_dur_s": 19.101346800103784,
+          "content_tokens": 1912,
+          "think_tokens": 221,
+          "out_tokens": 2133,
+          "actual_rate": 104.68352445887945,
+          "err": 0.3531331903902739,
+          "echoes_item_count": false,
+          "think_share": 0.10360993905297702
+        },
+        {
+          "trial": 4,
+          "topic": "深海的热泉",
+          "rate": null,
+          "elapsed_hint": 18.264574200031348,
+          "est": 25.0,
+          "actual_gen_s": 16.05708310008049,
+          "actual_dur_s": 17.016554399975576,
+          "content_tokens": 2093,
+          "think_tokens": 71,
+          "out_tokens": 2164,
+          "actual_rate": 130.34746018033053,
+          "err": 0.4427257579960846,
+          "echoes_item_count": false,
+          "think_share": 0.032809611829944546
+        },
+        {
+          "trial": 5,
+          "topic": "季风与农业",
+          "rate": null,
+          "elapsed_hint": 16.05708310008049,
+          "est": 20.0,
+          "actual_gen_s": 16.122987699927762,
+          "actual_dur_s": 17.426839099964127,
+          "content_tokens": 2102,
+          "think_tokens": 79,
+          "out_tokens": 2181,
+          "actual_rate": 130.37285887214426,
+          "err": 0.2154862124624788,
+          "echoes_item_count": false,
+          "think_share": 0.03622191655204035
+        },
+        {
+          "trial": 6,
+          "topic": "候车的陌生人",
+          "rate": null,
+          "elapsed_hint": 16.122987699927762,
+          "est": 35.0,
+          "actual_gen_s": 12.641553199966438,
+          "actual_dur_s": 13.265264700050466,
+          "content_tokens": 1567,
+          "think_tokens": 73,
+          "out_tokens": 1640,
+          "actual_rate": 123.95628727047244,
+          "err": 1.0183588005756194,
+          "echoes_item_count": false,
+          "think_share": 0.04451219512195122
+        },
+        {
+          "trial": 7,
+          "topic": "古树的年轮",
+          "rate": null,
+          "elapsed_hint": 12.641553199966438,
+          "est": 12.0,
+          "actual_gen_s": 13.49789040000178,
+          "actual_dur_s": 14.523350100032985,
+          "content_tokens": 1869,
+          "think_tokens": 79,
+          "out_tokens": 1948,
+          "actual_rate": 138.46608207751885,
+          "err": 0.11762675677894095,
+          "echoes_item_count": false,
+          "think_share": 0.04055441478439425
+        },
+        {
+          "trial": 8,
+          "topic": "潮汐与港口",
+          "rate": null,
+          "elapsed_hint": 13.49789040000178,
+          "est": 15.0,
+          "actual_gen_s": 12.448449000017717,
+          "actual_dur_s": 13.415829500067048,
+          "content_tokens": 1754,
+          "think_tokens": 90,
+          "out_tokens": 1844,
+          "actual_rate": 140.90108735614402,
+          "err": 0.18645416426384578,
+          "echoes_item_count": false,
+          "think_share": 0.04880694143167028
+        }
+      ]
+    }
+  },
+  "A2_dose": {
+    "doses": [
+      {
+        "rate": 40.0,
+        "median_est": 70.0,
+        "arm": "speed_40"
+      },
+      {
+        "rate": 76.50760942451834,
+        "median_est": 46.5,
+        "arm": "speed_76"
+      },
+      {
+        "rate": 120.0,
+        "median_est": 57.5,
+        "arm": "speed_120"
+      }
+    ],
+    "spearman_rate_vs_est": -0.033444541255852285,
+    "loglog_slope": 0.04265573011299286,
+    "spearman_rate_vs_implied_tokens": 0.7836601978157224,
+    "implied_tokens_median_by_arm": {
+      "speed_40": 2800.0,
+      "speed_76": 3557.6038382401025,
+      "speed_120": 6900.0
+    }
+  },
+  "A2_compare": {
+    "speed_40": {
+      "n_a": 8,
+      "n_b": 8,
+      "delta": -0.0968073605115336,
+      "ci": [
+        -1.141932021353819,
+        0.367674133390127
+      ],
+      "p": 0.823635272945411
+    },
+    "speed_76": {
+      "n_a": 8,
+      "n_b": 8,
+      "delta": -0.5268828069590807,
+      "ci": [
+        -1.5037670387600655,
+        0.04960434883376519
+      ],
+      "p": 0.10917816436712657
+    },
+    "speed_120": {
+      "n_a": 8,
+      "n_b": 8,
+      "delta": -0.03230754168151129,
+      "ci": [
+        -1.3387705105787122,
+        0.7007374160166169
+      ],
+      "p": 0.7450509898020395
+    },
+    "elapsed": {
+      "n_a": 8,
+      "n_b": 8,
+      "delta": -1.0668259991945568,
+      "ci": [
+        -1.9611708233513165,
+        -0.7266505610890801
+      ],
+      "p": 0.009398120375924815
+    }
+  },
+  "B2": {
+    "base": {
+      "n": 12,
+      "median_implied_rate": 50.0,
+      "injected_rate": null,
+      "implied_over_injected": null,
+      "by_tokens": {
+        "500": 50.0,
+        "1500": 50.0,
+        "3000": 50.0,
+        "4500": 50.0
+      },
+      "rows": [
+        {
+          "tokens": 500,
+          "rate": null,
+          "est": 10.0,
+          "implied_rate": 50.0,
+          "gen_s": 1.3516004000557587
+        },
+        {
+          "tokens": 1500,
+          "rate": null,
+          "est": 30.0,
+          "implied_rate": 50.0,
+          "gen_s": 1.247974699945189
+        },
+        {
+          "tokens": 3000,
+          "rate": null,
+          "est": 60.0,
+          "implied_rate": 50.0,
+          "gen_s": 0.6478675999678671
+        },
+        {
+          "tokens": 4500,
+          "rate": null,
+          "est": 90.0,
+          "implied_rate": 50.0,
+          "gen_s": 1.3378952000057325
+        },
+        {
+          "tokens": 500,
+          "rate": null,
+          "est": 10.0,
+          "implied_rate": 50.0,
+          "gen_s": 2.789730399963446
+        },
+        {
+          "tokens": 1500,
+          "rate": null,
+          "est": 300.0,
+          "implied_rate": 5.0,
+          "gen_s": 1.7376323000062257
+        },
+        {
+          "tokens": 3000,
+          "rate": null,
+          "est": 60.0,
+          "implied_rate": 50.0,
+          "gen_s": 1.0709987999871373
+        },
+        {
+          "tokens": 4500,
+          "rate": null,
+          "est": 90.0,
+          "implied_rate": 50.0,
+          "gen_s": 2.1093578999862075
+        },
+        {
+          "tokens": 500,
+          "rate": null,
+          "est": 10.0,
+          "implied_rate": 50.0,
+          "gen_s": 0.7487265999661759
+        },
+        {
+          "tokens": 1500,
+          "rate": null,
+          "est": 30.0,
+          "implied_rate": 50.0,
+          "gen_s": 1.4745867000892758
+        },
+        {
+          "tokens": 3000,
+          "rate": null,
+          "est": 100.0,
+          "implied_rate": 30.0,
+          "gen_s": 0.8004646999761462
+        },
+        {
+          "tokens": 4500,
+          "rate": null,
+          "est": 90.0,
+          "implied_rate": 50.0,
+          "gen_s": 1.3373561000917107
+        }
+      ]
+    },
+    "speed_40": {
+      "n": 12,
+      "median_implied_rate": 39.91150442477876,
+      "injected_rate": 40.0,
+      "implied_over_injected": 0.9977876106194691,
+      "by_tokens": {
+        "500": 40.0,
+        "1500": 39.473684210526315,
+        "3000": 40.0,
+        "4500": 39.823008849557525
+      },
+      "rows": [
+        {
+          "tokens": 500,
+          "rate": 40.0,
+          "est": 12.5,
+          "implied_rate": 40.0,
+          "gen_s": 0.28709610004443675
+        },
+        {
+          "tokens": 1500,
+          "rate": 40.0,
+          "est": 37.5,
+          "implied_rate": 40.0,
+          "gen_s": 0.31819489994086325
+        },
+        {
+          "tokens": 3000,
+          "rate": 40.0,
+          "est": 75.0,
+          "implied_rate": 40.0,
+          "gen_s": 0.14203790004830807
+        },
+        {
+          "tokens": 4500,
+          "rate": 40.0,
+          "est": 113.0,
+          "implied_rate": 39.823008849557525,
+          "gen_s": 0.3114783000200987
+        },
+        {
+          "tokens": 500,
+          "rate": 40.0,
+          "est": 13.0,
+          "implied_rate": 38.46153846153846,
+          "gen_s": 0.16978160000871867
+        },
+        {
+          "tokens": 1500,
+          "rate": 40.0,
+          "est": 38.0,
+          "implied_rate": 39.473684210526315,
+          "gen_s": 0.1763727000216022
+        },
+        {
+          "tokens": 3000,
+          "rate": 40.0,
+          "est": 75.0,
+          "implied_rate": 40.0,
+          "gen_s": 0.19463469996117055
+        },
+        {
+          "tokens": 4500,
+          "rate": 40.0,
+          "est": 113.0,
+          "implied_rate": 39.823008849557525,
+          "gen_s": 0.43153010006062686
+        },
+        {
+          "tokens": 500,
+          "rate": 40.0,
+          "est": 12.5,
+          "implied_rate": 40.0,
+          "gen_s": 0.3984584000427276
+        },
+        {
+          "tokens": 1500,
+          "rate": 40.0,
+          "est": 38.0,
+          "implied_rate": 39.473684210526315,
+          "gen_s": 0.3650183000136167
+        },
+        {
+          "tokens": 3000,
+          "rate": 40.0,
+          "est": 75.0,
+          "implied_rate": 40.0,
+          "gen_s": 0.3162670999299735
+        },
+        {
+          "tokens": 4500,
+          "rate": 40.0,
+          "est": 113.0,
+          "implied_rate": 39.823008849557525,
+          "gen_s": 0.32644640002399683
+        }
+      ]
+    },
+    "speed_76": {
+      "n": 12,
+      "median_implied_rate": 76.92307692307692,
+      "injected_rate": 76.50760942451834,
+      "implied_over_injected": 1.0054304075331026,
+      "by_tokens": {
+        "500": 76.92307692307692,
+        "1500": 76.92307692307692,
+        "3000": 76.92307692307692,
+        "4500": 77.58620689655173
+      },
+      "rows": [
+        {
+          "tokens": 500,
+          "rate": 76.50760942451834,
+          "est": 6.5,
+          "implied_rate": 76.92307692307692,
+          "gen_s": 1.3078917999519035
+        },
+        {
+          "tokens": 1500,
+          "rate": 76.50760942451834,
+          "est": 19.0,
+          "implied_rate": 78.94736842105263,
+          "gen_s": 0.9651533999713138
+        },
+        {
+          "tokens": 3000,
+          "rate": 76.50760942451834,
+          "est": 39.0,
+          "implied_rate": 76.92307692307692,
+          "gen_s": 0.4560734999831766
+        },
+        {
+          "tokens": 4500,
+          "rate": 76.50760942451834,
+          "est": 58.0,
+          "implied_rate": 77.58620689655173,
+          "gen_s": 0.39393609995022416
+        },
+        {
+          "tokens": 500,
+          "rate": 76.50760942451834,
+          "est": 6.5,
+          "implied_rate": 76.92307692307692,
+          "gen_s": 0.4569148999871686
+        },
+        {
+          "tokens": 1500,
+          "rate": 76.50760942451834,
+          "est": 19.5,
+          "implied_rate": 76.92307692307692,
+          "gen_s": 0.6465583000099286
+        },
+        {
+          "tokens": 3000,
+          "rate": 76.50760942451834,
+          "est": 39.0,
+          "implied_rate": 76.92307692307692,
+          "gen_s": 0.2396623999811709
+        },
+        {
+          "tokens": 4500,
+          "rate": 76.50760942451834,
+          "est": 58.0,
+          "implied_rate": 77.58620689655173,
+          "gen_s": 0.17305670003406703
+        },
+        {
+          "tokens": 500,
+          "rate": 76.50760942451834,
+          "est": 6.5,
+          "implied_rate": 76.92307692307692,
+          "gen_s": 0.7131682999897748
+        },
+        {
+          "tokens": 1500,
+          "rate": 76.50760942451834,
+          "est": 19.5,
+          "implied_rate": 76.92307692307692,
+          "gen_s": 0.3193623999832198
+        },
+        {
+          "tokens": 3000,
+          "rate": 76.50760942451834,
+          "est": 39.0,
+          "implied_rate": 76.92307692307692,
+          "gen_s": 0.4050998999737203
+        },
+        {
+          "tokens": 4500,
+          "rate": 76.50760942451834,
+          "est": 58.0,
+          "implied_rate": 77.58620689655173,
+          "gen_s": 0.31342339992988855
+        }
+      ]
+    },
+    "speed_120": {
+      "n": 12,
+      "median_implied_rate": 119.95203836930456,
+      "injected_rate": 120.0,
+      "implied_over_injected": 0.9996003197442047,
+      "by_tokens": {
+        "500": 125.0,
+        "1500": 115.38461538461539,
+        "3000": 120.0,
+        "4500": 118.42105263157895
+      },
+      "rows": [
+        {
+          "tokens": 500,
+          "rate": 120.0,
+          "est": 4.0,
+          "implied_rate": 125.0,
+          "gen_s": 0.17653090006206185
+        },
+        {
+          "tokens": 1500,
+          "rate": 120.0,
+          "est": 13.0,
+          "implied_rate": 115.38461538461539,
+          "gen_s": 0.13467199995648116
+        },
+        {
+          "tokens": 3000,
+          "rate": 120.0,
+          "est": 25.0,
+          "implied_rate": 120.0,
+          "gen_s": 0.3031940000364557
+        },
+        {
+          "tokens": 4500,
+          "rate": 120.0,
+          "est": 38.0,
+          "implied_rate": 118.42105263157895,
+          "gen_s": 0.17897709994576871
+        },
+        {
+          "tokens": 500,
+          "rate": 120.0,
+          "est": 4.17,
+          "implied_rate": 119.90407673860912,
+          "gen_s": 0.6501775999786332
+        },
+        {
+          "tokens": 1500,
+          "rate": 120.0,
+          "est": 13.0,
+          "implied_rate": 115.38461538461539,
+          "gen_s": 0.729236499988474
+        },
+        {
+          "tokens": 3000,
+          "rate": 120.0,
+          "est": 25.0,
+          "implied_rate": 120.0,
+          "gen_s": 0.15668719995301217
+        },
+        {
+          "tokens": 4500,
+          "rate": 120.0,
+          "est": 38.0,
+          "implied_rate": 118.42105263157895,
+          "gen_s": 0.19639589998405427
+        },
+        {
+          "tokens": 500,
+          "rate": 120.0,
+          "est": 4.0,
+          "implied_rate": 125.0,
+          "gen_s": 0.3805671000154689
+        },
+        {
+          "tokens": 1500,
+          "rate": 120.0,
+          "est": 12.5,
+          "implied_rate": 120.0,
+          "gen_s": 0.48263870005030185
+        },
+        {
+          "tokens": 3000,
+          "rate": 120.0,
+          "est": 25.0,
+          "implied_rate": 120.0,
+          "gen_s": 0.1703394999494776
+        },
+        {
+          "tokens": 4500,
+          "rate": 120.0,
+          "est": 38.0,
+          "implied_rate": 118.42105263157895,
+          "gen_s": 0.2090872999979183
+        }
+      ]
+    },
+    "elapsed": {
+      "n": 12,
+      "median_implied_rate": 3750.0,
+      "injected_rate": null,
+      "implied_over_injected": null,
+      "by_tokens": {
+        "500": 217.3913043478261,
+        "1500": 2500.0,
+        "3000": 6000.0,
+        "4500": 5625.0
+      },
+      "rows": [
+        {
+          "tokens": 500,
+          "rate": null,
+          "est": 12.4,
+          "implied_rate": 40.32258064516129,
+          "gen_s": 0.5994455999461934
+        },
+        {
+          "tokens": 1500,
+          "rate": null,
+          "est": 0.6,
+          "implied_rate": 2500.0,
+          "gen_s": 0.5021339999511838
+        },
+        {
+          "tokens": 3000,
+          "rate": null,
+          "est": 0.5,
+          "implied_rate": 6000.0,
+          "gen_s": 0.6408205999759957
+        },
+        {
+          "tokens": 4500,
+          "rate": null,
+          "est": 0.6,
+          "implied_rate": 7500.0,
+          "gen_s": 1.1024398000445217
+        },
+        {
+          "tokens": 500,
+          "rate": null,
+          "est": 1.1,
+          "implied_rate": 454.5454545454545,
+          "gen_s": 0.35978000005707145
+        },
+        {
+          "tokens": 1500,
+          "rate": null,
+          "est": 0.4,
+          "implied_rate": 3750.0,
+          "gen_s": 0.41276370000559837
+        },
+        {
+          "tokens": 3000,
+          "rate": null,
+          "est": 0.4,
+          "implied_rate": 7500.0,
+          "gen_s": 0.790445200051181
+        },
+        {
+          "tokens": 4500,
+          "rate": null,
+          "est": null,
+          "implied_rate": null,
+          "gen_s": 2.330771299893968
+        },
+        {
+          "tokens": 500,
+          "rate": null,
+          "est": 2.3,
+          "implied_rate": 217.3913043478261,
+          "gen_s": 1.0202379999682307
+        },
+        {
+          "tokens": 1500,
+          "rate": null,
+          "est": 1.0,
+          "implied_rate": 1500.0,
+          "gen_s": 0.5288870999356732
+        },
+        {
+          "tokens": 3000,
+          "rate": null,
+          "est": 0.5,
+          "implied_rate": 6000.0,
+          "gen_s": 1.1622922000242397
+        },
+        {
+          "tokens": 4500,
+          "rate": null,
+          "est": 1.2,
+          "implied_rate": 3750.0,
+          "gen_s": 1.02772879996337
+        }
+      ]
+    }
+  },
+  "B2_dose": {
+    "spearman_rate_vs_implied": 0.952036204509623,
+    "pairs": [
+      {
+        "injected": 40.0,
+        "implied": 40.0
+      },
+      {
+        "injected": 40.0,
+        "implied": 40.0
+      },
+      {
+        "injected": 40.0,
+        "implied": 40.0
+      },
+      {
+        "injected": 40.0,
+        "implied": 39.823008849557525
+      },
+      {
+        "injected": 40.0,
+        "implied": 38.46153846153846
+      },
+      {
+        "injected": 40.0,
+        "implied": 39.473684210526315
+      },
+      {
+        "injected": 40.0,
+        "implied": 40.0
+      },
+      {
+        "injected": 40.0,
+        "implied": 39.823008849557525
+      },
+      {
+        "injected": 40.0,
+        "implied": 40.0
+      },
+      {
+        "injected": 40.0,
+        "implied": 39.473684210526315
+      },
+      {
+        "injected": 40.0,
+        "implied": 40.0
+      },
+      {
+        "injected": 40.0,
+        "implied": 39.823008849557525
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 76.92307692307692
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 78.94736842105263
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 76.92307692307692
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 77.58620689655173
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 76.92307692307692
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 76.92307692307692
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 76.92307692307692
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 77.58620689655173
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 76.92307692307692
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 76.92307692307692
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 76.92307692307692
+      },
+      {
+        "injected": 76.50760942451834,
+        "implied": 77.58620689655173
+      },
+      {
+        "injected": 120.0,
+        "implied": 125.0
+      },
+      {
+        "injected": 120.0,
+        "implied": 115.38461538461539
+      },
+      {
+        "injected": 120.0,
+        "implied": 120.0
+      },
+      {
+        "injected": 120.0,
+        "implied": 118.42105263157895
+      },
+      {
+        "injected": 120.0,
+        "implied": 119.90407673860912
+      },
+      {
+        "injected": 120.0,
+        "implied": 115.38461538461539
+      },
+      {
+        "injected": 120.0,
+        "implied": 120.0
+      },
+      {
+        "injected": 120.0,
+        "implied": 118.42105263157895
+      },
+      {
+        "injected": 120.0,
+        "implied": 125.0
+      },
+      {
+        "injected": 120.0,
+        "implied": 120.0
+      },
+      {
+        "injected": 120.0,
+        "implied": 120.0
+      },
+      {
+        "injected": 120.0,
+        "implied": 118.42105263157895
+      }
+    ]
+  },
+  "v1_echo": {
+    "n": 32,
+    "echo": 32,
+    "rate": 1.0
+  }
+}

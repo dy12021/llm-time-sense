@@ -1,0 +1,387 @@
+{
+  "n_with_arithmetic": 33,
+  "n_rate_arm": 24,
+  "n_base_arm": 9,
+  "items": [
+    {
+      "arm": "speed_40",
+      "trial": 1,
+      "injected_rate": 40.0,
+      "estimate_s": 70.0,
+      "actual_gen_s": 24.837032500072382,
+      "content_tokens": 2264,
+      "snippets": [
+        "city and ocean. Need ensure count. Chinese concise. Time estimate probably 400 sec? 133 lines maybe 2000 Chinese tokens at 40 tok/sec ~50 sec. Say 70 sec. Mu",
+        "re count. Chinese concise. Time estimate probably 400 sec? 133 lines maybe 2000 Chinese tokens at 40 tok/sec ~50 sec. Say 70 sec. Must list 1-133. Each one sentence. Need only content. Ensure",
+        "ly 400 sec? 133 lines maybe 2000 Chinese tokens at 40 tok/sec ~50 sec. Say 70 sec. Must list 1-133. Each one sentence. Need only content. Ensure exactly eac"
+      ]
+    },
+    {
+      "arm": "speed_76",
+      "trial": 1,
+      "injected_rate": 76.50760942451834,
+      "estimate_s": 75.0,
+      "actual_gen_s": 44.41981160000432,
+      "content_tokens": 2445,
+      "snippets": [
+        "s and ocean. Need estimate seconds. We can generate ~5000 tokens, speed 77 tok/sec maybe Chinese tokens? 133 sentences ~3500 tokens, 45 sec. Need ensure exac",
+        "onds. We can generate ~5000 tokens, speed 77 tok/sec maybe Chinese tokens? 133 sentences ~3500 tokens, 45 sec. Need ensure exact count. First line estimate integer. Then 1. ... 133. Ea",
+        "rst line not item. Count sequentially carefully.  Let's produce. Estimated 75 sec maybe. Need exactly 133."
+      ]
+    },
+    {
+      "arm": "speed_120",
+      "trial": 1,
+      "injected_rate": 120.0,
+      "estimate_s": 150.0,
+      "actual_gen_s": 15.975213199970312,
+      "content_tokens": 1803,
+      "snippets": [
+        "nt carefully. Could draft groups 1-133. Need no extra. Time estimate maybe 120 sec given 120 tok/s but Chinese output perhaps 2 min. Say 150. Ensure every li",
+        "d draft groups 1-133. Need no extra. Time estimate maybe 120 sec given 120 tok/s but Chinese output perhaps 2 min. Say 150. Ensure every line sentence, pun"
+      ]
+    },
+    {
+      "arm": "speed_40",
+      "trial": 2,
+      "injected_rate": 40.0,
+      "estimate_s": 70.0,
+      "actual_gen_s": 16.032216899911873,
+      "content_tokens": 1991,
+      "snippets": [
+        "Need statements about bird migration. Concise enough. Need estimate maybe 500 sec at 40 tok/s. Chinese 133 lines each ~15 chars = 2000 chars, tokens perhaps",
+        "ts about bird migration. Concise enough. Need estimate maybe 500 sec at 40 tok/s. Chinese 133 lines each ~15 chars = 2000 chars, tokens perhaps 2500, 65 se",
+        "e enough. Need estimate maybe 500 sec at 40 tok/s. Chinese 133 lines each ~15 chars = 2000 chars, tokens perhaps 2500, 65 sec. Say 70 sec. Must only output. Ensure numbering 1-133, no blank. Each one",
+        "se 133 lines each ~15 chars = 2000 chars, tokens perhaps 2500, 65 sec. Say 70 sec. Must only output. Ensure numbering 1-133, no blank. Each one sentence. Le"
+      ]
+    },
+    {
+      "arm": "speed_76",
+      "trial": 2,
+      "injected_rate": 76.50760942451834,
+      "estimate_s": 30.0,
+      "actual_gen_s": 16.293498300015926,
+      "content_tokens": 1729,
+      "snippets": [
+        "mbered entries, each line. First line separate format. Need estimate maybe 25 sec. Generate 133 concise Chinese sentences. Ensure numbering 1-133, each one"
+      ]
+    },
+    {
+      "arm": "speed_120",
+      "trial": 2,
+      "injected_rate": 120.0,
+      "estimate_s": 30.0,
+      "actual_gen_s": 15.836243700003251,
+      "content_tokens": 1893,
+      "snippets": [
+        "tinct statements. Need estimate seconds integer likely 60? 133 lines maybe 1800 Chinese tokens at 120 token/s around 15 sec, but total output maybe 3000 tokens. Say 30.  Need generate and count care"
+      ]
+    },
+    {
+      "arm": "elapsed",
+      "trial": 2,
+      "injected_rate": null,
+      "estimate_s": 28.0,
+      "actual_gen_s": 23.7233530000085,
+      "content_tokens": 1995,
+      "snippets": [
+        "timate. One sentence each. Chinese. Need ensure count. Time estimate maybe 25 sec. Generate numbered items concise. Count carefully."
+      ]
+    },
+    {
+      "arm": "base",
+      "trial": 2,
+      "injected_rate": null,
+      "estimate_s": 90.0,
+      "actual_gen_s": 10.193173100007698,
+      "content_tokens": 1762,
+      "snippets": [
+        "e about migration. Need no blank. First line exact Chinese. Estimate maybe 80 sec. Need ensure 133 items. Each one sentence. Could be repetitive but valid."
+      ]
+    },
+    {
+      "arm": "speed_76",
+      "trial": 3,
+      "injected_rate": 76.50760942451834,
+      "estimate_s": 70.0,
+      "actual_gen_s": 17.56862029992044,
+      "content_tokens": 1526,
+      "snippets": [
+        "Estimate: 133 items × ~20 tokens = ~2660 tokens plus Chinese chars. At 77 tokens/s, Chinese chars ~ maybe 1.5 tokens each... roughly 133 lines × 25 chars = 3",
+        "77 tokens/s, Chinese chars ~ maybe 1.5 tokens each... roughly 133 lines × 25 chars = 3325 chars ≈ 4000 tokens → ~55 sec. Let's estimate 60.  Need 133 distinct statements about forest water cycle",
+        "rst line: 预计耗时：55 — I'll estimate. Output ~133 lines × ~22 Chinese chars ≈ 3000 chars → tokens maybe 4500-6000 → 60-80 sec. Say 70."
+      ]
+    },
+    {
+      "arm": "speed_120",
+      "trial": 3,
+      "injected_rate": 120.0,
+      "estimate_s": 75.0,
+      "actual_gen_s": 19.508282299968414,
+      "content_tokens": 2470,
+      "snippets": [
+        "ine one sentence. Could generate systematic. Need no blank. Estimate maybe 70 sec? Need independent. First line alone strict format. Then sentences. Let's c"
+      ]
+    },
+    {
+      "arm": "base",
+      "trial": 3,
+      "injected_rate": null,
+      "estimate_s": 90.0,
+      "actual_gen_s": 23.08193129999563,
+      "content_tokens": 2125,
+      "snippets": [
+        "ly 133. Need ensure sentence each one. First line format. Estimate perhaps 90 sec. Then 133 lines each one sentence. Concise but varied. Count carefully. We"
+      ]
+    },
+    {
+      "arm": "speed_40",
+      "trial": 3,
+      "injected_rate": 40.0,
+      "estimate_s": 70.0,
+      "actual_gen_s": 14.933792000054382,
+      "content_tokens": 2000,
+      "snippets": [
+        "timate integer. Then 133 numbered statements. Need Chinese. Ensure count 1-133. Estimate maybe 200 sec at 40 token/s, output ~2000 Chinese tokens, 50 sec. Say 70. Need only no b",
+        "ed statements. Need Chinese. Ensure count 1-133. Estimate maybe 200 sec at 40 token/s, output ~2000 Chinese tokens, 50 sec. Say 70. Need only no blank."
+      ]
+    },
+    {
+      "arm": "speed_120",
+      "trial": 4,
+      "injected_rate": 120.0,
+      "estimate_s": 65.0,
+      "actual_gen_s": 17.6691259999061,
+      "content_tokens": 1760,
+      "snippets": [
+        "ach one line sentence. Need ensure count. Generate concise. Estimate maybe 70 sec. Need 133 lines. Let's construct numbered 1-133. Each sentence about deep-"
+      ]
+    },
+    {
+      "arm": "elapsed",
+      "trial": 4,
+      "injected_rate": null,
+      "estimate_s": 25.0,
+      "actual_gen_s": 16.05708310008049,
+      "content_tokens": 2093,
+      "snippets": [
+        "hinese. Ensure exactly 133 numbered entries, each one line. Estimate maybe 20 sec. Need count carefully. We'll generate 1-133. Statements about deep-sea hyd"
+      ]
+    },
+    {
+      "arm": "speed_40",
+      "trial": 4,
+      "injected_rate": 40.0,
+      "estimate_s": 50.0,
+      "actual_gen_s": 17.84650430001784,
+      "content_tokens": 2121,
+      "snippets": [
+        "nce about deep-sea hydrothermal vents. Estimate generation 133 lines maybe 1000 Chinese chars, 40 tok/s ~ 40 sec. Need no blank lines. Ensure exactly. Number format maybe 1. Each sentence"
+      ]
+    },
+    {
+      "arm": "speed_76",
+      "trial": 4,
+      "injected_rate": 76.50760942451834,
+      "estimate_s": 30.0,
+      "actual_gen_s": 15.031700299936347,
+      "content_tokens": 1982,
+      "snippets": [
+        "e about deep sea hydrothermal vents. Need exactly. Must ensure numbering 1-133. First line estimate likely 20 sec? Chinese 133 sentences, 77 tok/s perhaps 1500 Chinese tokens ~20 sec. Say",
+        "numbering 1-133. First line estimate likely 20 sec? Chinese 133 sentences, 77 tok/s perhaps 1500 Chinese tokens ~20 sec. Say 25. Then lines. Each sentence one statement. Need only items. Let's c"
+      ]
+    },
+    {
+      "arm": "elapsed",
+      "trial": 5,
+      "injected_rate": null,
+      "estimate_s": 20.0,
+      "actual_gen_s": 16.122987699927762,
+      "content_tokens": 2102,
+      "snippets": [
+        "rhaps 1. etc. Let's compose with varied factual statements. First estimate 20 sec. Then count. Ensure each line one sentence, likely ending 。 Need no blank."
+      ]
+    },
+    {
+      "arm": "base",
+      "trial": 5,
+      "injected_rate": null,
+      "estimate_s": 180.0,
+      "actual_gen_s": 21.456796299898997,
+      "content_tokens": 1874,
+      "snippets": [
+        "h one sentence. Topic monsoon and agriculture. Avoid blank. Estimate maybe 180 sec. Must comply first line exact. Let's craft concise varied statements, each"
+      ]
+    },
+    {
+      "arm": "speed_40",
+      "trial": 5,
+      "injected_rate": 40.0,
+      "estimate_s": 90.0,
+      "actual_gen_s": 18.648743400000967,
+      "content_tokens": 2143,
+      "snippets": [
+        "entence statement. Need ensure 133 items. Chinese numbered. Estimate maybe 180 sec at 40 tok/s, likely 1800 Chinese chars = 45 sec? Tokenization Chinese 1-2",
+        "tement. Need ensure 133 items. Chinese numbered. Estimate maybe 180 sec at 40 tok/s, likely 1800 Chinese chars = 45 sec? Tokenization Chinese 1-2 chars token, 133 lines maybe ~2500 tokens, 65 se",
+        "ec at 40 tok/s, likely 1800 Chinese chars = 45 sec? Tokenization Chinese 1-2 chars token, 133 lines maybe ~2500 tokens, 65 sec. Estimate 90 sec. First line then exactly lines. Must each one sentence. L",
+        "on Chinese 1-2 chars token, 133 lines maybe ~2500 tokens, 65 sec. Estimate 90 sec. First line then exactly lines. Must each one sentence. Let's craft 133 va"
+      ]
+    },
+    {
+      "arm": "speed_76",
+      "trial": 5,
+      "injected_rate": 76.50760942451834,
+      "estimate_s": 45.0,
+      "actual_gen_s": 17.42433790001087,
+      "content_tokens": 1743,
+      "snippets": [
+        "ctured batches and count. Need no blank lines. First line estimate perhaps 35 sec. Then 133 sentences. Let's generate numbered sequentially. Ensure each end"
+      ]
+    },
+    {
+      "arm": "speed_120",
+      "trial": 5,
+      "injected_rate": 120.0,
+      "estimate_s": 50.0,
+      "actual_gen_s": 13.64882579992991,
+      "content_tokens": 1983,
+      "snippets": [
+        "条一行\" numbered. Need no blank. Ensure count 133. We can craft. Time perhaps 50 sec. Need first line then 133 lines. Each sentence one sentence. Let's enumera"
+      ]
+    },
+    {
+      "arm": "base",
+      "trial": 6,
+      "injected_rate": null,
+      "estimate_s": 60.0,
+      "actual_gen_s": 20.573406200041063,
+      "content_tokens": 2159,
+      "snippets": [
+        "y entries, no title etc. Ensure one sentence each. Chinese numbered 1. ... 133. Estimate perhaps 60 seconds? generation maybe 45. Need first line exact. Every item one sentence a"
+      ]
+    },
+    {
+      "arm": "speed_40",
+      "trial": 6,
+      "injected_rate": 40.0,
+      "estimate_s": 45.0,
+      "actual_gen_s": 20.59040849993471,
+      "content_tokens": 1983,
+      "snippets": [
+        "ces about stranger waiting. Each one line. Need no blank. Generate ~ maybe 1000 Chinese chars, 40 tok/s perhaps 30 sec. Need ensure numbering 1-133. First line estimate integer. Then each item"
+      ]
+    },
+    {
+      "arm": "speed_76",
+      "trial": 6,
+      "injected_rate": 76.50760942451834,
+      "estimate_s": 45.0,
+      "actual_gen_s": 24.131405299995095,
+      "content_tokens": 2054,
+      "snippets": [
+        "ies, each one line sentence. Chinese. Need count carefully. Estimate maybe 35 sec. Each one sentence. Need first line separately then entries. 133 lines. Us"
+      ]
+    },
+    {
+      "arm": "speed_120",
+      "trial": 6,
+      "injected_rate": 120.0,
+      "estimate_s": 45.0,
+      "actual_gen_s": 30.76538100000471,
+      "content_tokens": 2231,
+      "snippets": [
+        "nce Chinese with 。 Each distinct. \"候车的陌生人\". Need exactly. Estimate perhaps 50 sec. Then entries 1-133. Must be careful count. I'll craft grouped mentally bu"
+      ]
+    },
+    {
+      "arm": "elapsed",
+      "trial": 6,
+      "injected_rate": null,
+      "estimate_s": 35.0,
+      "actual_gen_s": 12.641553199966438,
+      "content_tokens": 1567,
+      "snippets": [
+        "s. Each one sentence about waiting stranger. Need numbered. Estimate maybe 30 sec. Ensure each line sentence. Chinese numbering. Exactly 133 after line. Eac"
+      ]
+    },
+    {
+      "arm": "speed_40",
+      "trial": 7,
+      "injected_rate": 40.0,
+      "estimate_s": 70.0,
+      "actual_gen_s": 16.6550983999623,
+      "content_tokens": 2173,
+      "snippets": [
+        "t line timing. Need ensure each line one sentence. Chinese. Estimate maybe 200 sec at 40 t/s, output perhaps 3000 Chinese tokens, 75 sec. First line alone co",
+        "ne one sentence. Chinese. Estimate maybe 200 sec at 40 t/s, output perhaps 3000 Chinese tokens, 75 sec. First line alone conflicts \"only entries\" but explicitly format. Need cou"
+      ]
+    },
+    {
+      "arm": "speed_76",
+      "trial": 7,
+      "injected_rate": 76.50760942451834,
+      "estimate_s": 78.0,
+      "actual_gen_s": 18.32939960004296,
+      "content_tokens": 1963,
+      "snippets": [
+        "y lines 2-134. Each a sentence about tree rings. Estimate generation maybe 70 sec. Need count accurately. Chinese numbered list. Ensure each one sentence. 1"
+      ]
+    },
+    {
+      "arm": "speed_120",
+      "trial": 7,
+      "injected_rate": 120.0,
+      "estimate_s": 35.0,
+      "actual_gen_s": 35.236732900026254,
+      "content_tokens": 2063,
+      "snippets": [
+        "s. Need each one line one sentence. Chinese concise. Time estimate perhaps 25 sec. Need ensure exactly 133 numbered entries. Generate sequentially. Each sen"
+      ]
+    },
+    {
+      "arm": "speed_76",
+      "trial": 8,
+      "injected_rate": 76.50760942451834,
+      "estimate_s": 48.0,
+      "actual_gen_s": 19.114546500029974,
+      "content_tokens": 1935,
+      "snippets": [
+        "ed items, one line each, no blanks. Need ensure count. Estimate generation 133 lines perhaps 2500 tokens at 77 t/s ~35 sec, Chinese tokens maybe 3500 /77=45. Say 48秒. First line then items. Each se"
+      ]
+    },
+    {
+      "arm": "speed_120",
+      "trial": 8,
+      "injected_rate": 120.0,
+      "estimate_s": 180.0,
+      "actual_gen_s": 13.850910599925555,
+      "content_tokens": 1845,
+      "snippets": [
+        "then 133 numbered items. Need exactly. Chinese statements. Estimate maybe 120 sec. Ensure 133."
+      ]
+    },
+    {
+      "arm": "elapsed",
+      "trial": 8,
+      "injected_rate": null,
+      "estimate_s": 15.0,
+      "actual_gen_s": 12.448449000017717,
+      "content_tokens": 1754,
+      "snippets": [
+        "tence. Let's compose with themes. Need no blank lines. First line estimate 15 sec. Then 133 lines. Count."
+      ]
+    },
+    {
+      "arm": "speed_40",
+      "trial": 8,
+      "injected_rate": 40.0,
+      "estimate_s": 35.0,
+      "actual_gen_s": 24.278009200002998,
+      "content_tokens": 1863,
+      "snippets": [
+        "mate. Need output lines second onward 133 entries. Chinese. Estimate maybe 35 sec given 40 tok/s. Need ensure numbering 1-133. Each sentence about tides and",
+        "t lines second onward 133 entries. Chinese. Estimate maybe 35 sec given 40 tok/s. Need ensure numbering 1-133. Each sentence about tides and ports. First l"
+      ]
+    }
+  ]
+}

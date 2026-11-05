@@ -1,0 +1,1554 @@
+{
+  "rows": [
+    {
+      "arm": "base",
+      "trial": 1,
+      "spec": null,
+      "gen_s": 22.93721949995961,
+      "out_tokens": 2284,
+      "content_tokens": 2201,
+      "think_tokens": 83,
+      "chars": 3464,
+      "tps": 99.57614958535065,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": null,
+      "injected_elapsed_s": null,
+      "pairs": [
+        {
+          "t": 2.536485,
+          "v": 55.0,
+          "char_end": 254
+        },
+        {
+          "t": 4.317673999999999,
+          "v": 110.0,
+          "char_end": 517
+        },
+        {
+          "t": 6.093283999999999,
+          "v": 165.0,
+          "char_end": 792
+        },
+        {
+          "t": 7.729534999999999,
+          "v": 220.0,
+          "char_end": 1071
+        },
+        {
+          "t": 9.581962500000001,
+          "v": 275.0,
+          "char_end": 1353
+        },
+        {
+          "t": 11.455904000000002,
+          "v": 330.0,
+          "char_end": 1636
+        },
+        {
+          "t": 13.416400000000007,
+          "v": 385.0,
+          "char_end": 1931
+        },
+        {
+          "t": 15.063431363636372,
+          "v": 440.0,
+          "char_end": 2231
+        },
+        {
+          "t": 17.122549000000006,
+          "v": 495.0,
+          "char_end": 2540
+        },
+        {
+          "t": 19.221155999999993,
+          "v": 550.0,
+          "char_end": 2850
+        },
+        {
+          "t": 21.10962599999999,
+          "v": 605.0,
+          "char_end": 3175
+        },
+        {
+          "t": 22.791299999999993,
+          "v": 660.0,
+          "char_end": 3464
+        }
+      ],
+      "mark_positions_rel": [
+        0.07332563510392609,
+        0.14924942263279445,
+        0.22863741339491916,
+        0.3091801385681293,
+        0.39058891454965355,
+        0.4722863741339492,
+        0.5574480369515011,
+        0.64405311778291,
+        0.733256351039261,
+        0.8227482678983834,
+        0.9165704387990762,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9266743648960739,
+      "implied_rate": 5.248484848484848,
+      "actual_rate": 151.0209203868891,
+      "rate_ratio": 0.03475336287872668,
+      "rate_logerr": 3.3594789381650503,
+      "slope_t": 29.594340277566406,
+      "slope_c": 0.18731662176139166,
+      "r2_t": 0.9993886601514734,
+      "r2_c": 0.9992442698818752,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": null,
+      "const_frac": 0.0,
+      "last_logerr": 3.3594789381650503,
+      "last_ratio": 28.774193838148612,
+      "last_mark": 660.0,
+      "first_mark": 55.0,
+      "implied_tps": 3.334848484848485,
+      "expect_s_from_rate": null,
+      "reasoning": "We need produce 12 sections 300-500 Chinese chars/words likely Chinese characters. Need timestamps after each. Need ensure lengths. Long output ~4500 Chinese chars. Time estimates plausible. Must only body. Need continuous numbering. Avoid title. Let's craft each ~350-430 Chinese characters, time cumulative perhaps 60 sec increments. Need count approximate. Section 1 ending timestamp. Ensure exactly 12."
+    },
+    {
+      "arm": "speed",
+      "trial": 1,
+      "spec": null,
+      "gen_s": 133.7092523999745,
+      "out_tokens": 5213,
+      "content_tokens": 3334,
+      "think_tokens": 1879,
+      "chars": 5250,
+      "tps": 38.9875786935519,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": 76.50760942451834,
+      "injected_elapsed_s": 22.93721949995961,
+      "pairs": [
+        {
+          "t": 60.315376666666694,
+          "v": 9.0,
+          "char_end": 458
+        },
+        {
+          "t": 70.54945333333337,
+          "v": 17.0,
+          "char_end": 838
+        },
+        {
+          "t": 75.54221000000001,
+          "v": 25.0,
+          "char_end": 1292
+        },
+        {
+          "t": 82.18921699999994,
+          "v": 33.0,
+          "char_end": 1676
+        },
+        {
+          "t": 87.37910833333326,
+          "v": 41.0,
+          "char_end": 2109
+        },
+        {
+          "t": 94.22833099999997,
+          "v": 49.0,
+          "char_end": 2562
+        },
+        {
+          "t": 101.99959999999999,
+          "v": 57.0,
+          "char_end": 3049
+        },
+        {
+          "t": 107.12252909090907,
+          "v": 65.0,
+          "char_end": 3527
+        },
+        {
+          "t": 111.95557666666669,
+          "v": 72.0,
+          "char_end": 3942
+        },
+        {
+          "t": 121.98898181818186,
+          "v": 79.0,
+          "char_end": 4370
+        },
+        {
+          "t": 127.55123500000006,
+          "v": 86.0,
+          "char_end": 4804
+        },
+        {
+          "t": 133.59586000000013,
+          "v": 94.0,
+          "char_end": 5250
+        }
+      ],
+      "mark_positions_rel": [
+        0.08723809523809524,
+        0.15961904761904763,
+        0.2460952380952381,
+        0.31923809523809527,
+        0.4017142857142857,
+        0.488,
+        0.5807619047619048,
+        0.6718095238095239,
+        0.7508571428571429,
+        0.8323809523809523,
+        0.915047619047619,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9127619047619048,
+      "implied_rate": 55.851063829787236,
+      "actual_rate": 39.264298511633896,
+      "rate_ratio": 1.4224388553188778,
+      "rate_logerr": 0.3523729021359025,
+      "slope_t": 1.18419710273337,
+      "slope_c": 0.017519663045402083,
+      "r2_t": 0.9962843740517767,
+      "r2_c": 0.9988044819572335,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": 0.12909944487358055,
+      "const_frac": 0.0,
+      "last_logerr": 0.35237290213590244,
+      "last_ratio": 0.7030179162083021,
+      "last_mark": 94.0,
+      "first_mark": 9.0,
+      "implied_tps": 35.46808510638298,
+      "expect_s_from_rate": 43.57736472329974,
+      "used_rate_ratio": 2.15708316913759,
+      "implied_vs_injected_tps": 0.4635889864180823,
+      "reasoning": "The user wants a long article with 12 numbered sections, each 300-500 characters (字 = Chinese characters presumably), with a time marker at the end of each section. Let me write it carefully.\n\nI need to estimate elapsed time. Generation speed ~77 tokens/sec. Each section 300-500 Chinese chars ≈ maybe 400-600 tokens. Plus markers. Let's estimate: 12 sections, each ~500-700 tokens → roughly 6-8 seconds per section? Actually Chinese characters often ~1 token each or slightly more for some. Let's say each section ~450 chars → ~500-600 tokens → ~7 seconds per section. Cumulative: 7, 14, 21... Let me be plausible: I'll increment around 7-8 seconds each, total ~95 seconds.\n\nLet me write content on deep-sea hydrothermal vents: discovery history (1977 Galápagos Rift, Argo, geologists Jack Corliss and Robert Ballard), types (black smokers, white smokers), chemistry (chemosynthesis), organisms (tube worms, giant clams, vent crabs, mussels, shrimp, vent anemones, Pompeii worms), symbiosis (Riftia pachyptila, sulfur-oxidizing bacteria), fluid chemistry (350-400°C, sulfide, metals, methane, hydrogen), global distribution (Atlantic, Pacific, Indian, Arctic; 700+ vent fields; ~350-500 known active",
+      "reasoning_cites_rate": true,
+      "reasoning_cites_elapsed": true
+    },
+    {
+      "arm": "elapsed",
+      "trial": 1,
+      "spec": null,
+      "gen_s": 31.988339700037614,
+      "out_tokens": 2757,
+      "content_tokens": 2660,
+      "think_tokens": 97,
+      "chars": 4339,
+      "tps": 86.18765543485704,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": null,
+      "injected_elapsed_s": 22.93721949995961,
+      "pairs": [
+        {
+          "t": 4.198623125,
+          "v": 8.0,
+          "char_end": 333
+        },
+        {
+          "t": 7.21517,
+          "v": 16.0,
+          "char_end": 710
+        },
+        {
+          "t": 9.876144545454544,
+          "v": 24.0,
+          "char_end": 1065
+        },
+        {
+          "t": 12.456538484848485,
+          "v": 32.0,
+          "char_end": 1414
+        },
+        {
+          "t": 14.84977,
+          "v": 40.0,
+          "char_end": 1773
+        },
+        {
+          "t": 17.541979411764707,
+          "v": 48.0,
+          "char_end": 2144
+        },
+        {
+          "t": 19.931082727272734,
+          "v": 56.0,
+          "char_end": 2502
+        },
+        {
+          "t": 22.47521,
+          "v": 64.0,
+          "char_end": 2857
+        },
+        {
+          "t": 24.6682935483871,
+          "v": 72.0,
+          "char_end": 3220
+        },
+        {
+          "t": 27.089536666666675,
+          "v": 80.0,
+          "char_end": 3587
+        },
+        {
+          "t": 29.43892875000001,
+          "v": 88.0,
+          "char_end": 3950
+        },
+        {
+          "t": 31.988160000000004,
+          "v": 96.0,
+          "char_end": 4339
+        }
+      ],
+      "mark_positions_rel": [
+        0.07674579396174233,
+        0.163632173311823,
+        0.2454482599677345,
+        0.32588153952523624,
+        0.4086194975800876,
+        0.49412306983175847,
+        0.5766305600368749,
+        0.6584466466927864,
+        0.7421064761465775,
+        0.8266881769993086,
+        0.9103480064530998,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9232542060382577,
+      "implied_rate": 45.197916666666664,
+      "actual_rate": 135.64317625384282,
+      "rate_ratio": 0.3332118718753918,
+      "rate_logerr": 1.0989767394460517,
+      "slope_t": 3.2085378391720663,
+      "slope_c": 0.022100632922033195,
+      "r2_t": 0.9991856302204332,
+      "r2_c": 0.9999377273115719,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": null,
+      "const_frac": 0.0,
+      "last_logerr": 1.098976739446052,
+      "last_ratio": 3.001093551594587,
+      "last_mark": 96.0,
+      "first_mark": 8.0,
+      "implied_tps": 27.708333333333332,
+      "expect_s_from_rate": null,
+      "expect_s_from_elapsed": 22.93721949995961,
+      "used_elapsed_ratio": 4.185337285548889,
+      "reasoning": "We need produce 12*300-500 Chinese chars/words? Long. Need time markers after each section only, cumulative estimated. Need likely 12 sections around 350 Chinese characters. Must ensure exact structure. We can write 12 numbered sections, each 300-500 Chinese characters likely Chinese characters. Need not title. Time markers. Need perhaps ~400 each = 4800 Chinese chars. Let's craft. Ensure section 1 marker at end, etc. No extra.",
+      "reasoning_cites_elapsed": false
+    },
+    {
+      "arm": "speed",
+      "trial": 2,
+      "spec": null,
+      "gen_s": 37.49694400001317,
+      "out_tokens": 2665,
+      "content_tokens": 2475,
+      "think_tokens": 190,
+      "chars": 4203,
+      "tps": 71.07245859820107,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": 76.50760942451834,
+      "injected_elapsed_s": 133.7092523999745,
+      "pairs": [
+        {
+          "t": 5.412872345679013,
+          "v": 12.0,
+          "char_end": 295
+        },
+        {
+          "t": 8.361186551724138,
+          "v": 24.0,
+          "char_end": 646
+        },
+        {
+          "t": 11.392932875000001,
+          "v": 36.0,
+          "char_end": 978
+        },
+        {
+          "t": 14.322188313253013,
+          "v": 48.0,
+          "char_end": 1323
+        },
+        {
+          "t": 17.236136136363637,
+          "v": 60.0,
+          "char_end": 1664
+        },
+        {
+          "t": 20.056699625,
+          "v": 72.0,
+          "char_end": 2013
+        },
+        {
+          "t": 23.1089975,
+          "v": 84.0,
+          "char_end": 2368
+        },
+        {
+          "t": 25.99683604938272,
+          "v": 96.0,
+          "char_end": 2737
+        },
+        {
+          "t": 28.998137750000005,
+          "v": 108.0,
+          "char_end": 3077
+        },
+        {
+          "t": 31.989358795180724,
+          "v": 120.0,
+          "char_end": 3439
+        },
+        {
+          "t": 35.05892271604939,
+          "v": 132.0,
+          "char_end": 3817
+        },
+        {
+          "t": 37.31626000000001,
+          "v": 144.0,
+          "char_end": 4203
+        }
+      ],
+      "mark_positions_rel": [
+        0.0701879609802522,
+        0.1536997382821794,
+        0.23269093504639543,
+        0.3147751605995717,
+        0.3959076849869141,
+        0.47894361170592437,
+        0.5634070901736855,
+        0.6512015227218654,
+        0.7320961218177492,
+        0.8182250773257197,
+        0.9081608374970259,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9298120390197477,
+      "implied_rate": 29.1875,
+      "actual_rate": 112.08913451716288,
+      "rate_ratio": 0.26039544444453594,
+      "rate_logerr": 1.3455538632533797,
+      "slope_t": 4.094017690604713,
+      "slope_c": 0.03393684094313387,
+      "r2_t": 0.9997729766201503,
+      "r2_c": 0.9996931077123975,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": null,
+      "const_frac": 0.0,
+      "last_logerr": 1.3455538632533797,
+      "last_ratio": 3.8403129599027968,
+      "last_mark": 144.0,
+      "first_mark": 12.0,
+      "implied_tps": 17.1875,
+      "expect_s_from_rate": 32.34972336237758,
+      "used_rate_ratio": 4.451351821062885,
+      "implied_vs_injected_tps": 0.22465085668317764,
+      "reasoning": "We need produce 12 sections 300-500 Chinese chars/words? likely chars. Time markers after each section. Need estimate increasing. Long output ~5000 chars. Ensure 12 numbered sections. \"每写完第1个小节，就在那节末尾...\" Ambiguity every section likely add marker each. They specify after first, perhaps all sections. Do all. Need only正文. Must count roughly 300-500 Chinese characters each. Aim ~380 Chinese characters. Need no title. Let's draft substantial. Time markers maybe 45,90... though actual external 77 token/s. We should estimate generation to marker. 12* maybe 400 chars = 4800 Chinese tokens? Chinese token maybe 1 char; at 77 tokens/s ~62 sec. Markers increments 8 sec maybe. But system generating perhaps 5k tokens, ~65 sec. Use 10,18 etc. Need exact format.",
+      "reasoning_cites_rate": true,
+      "reasoning_cites_elapsed": false
+    },
+    {
+      "arm": "elapsed",
+      "trial": 2,
+      "spec": null,
+      "gen_s": 43.84973220003303,
+      "out_tokens": 2331,
+      "content_tokens": 2187,
+      "think_tokens": 144,
+      "chars": 3672,
+      "tps": 53.15881951950083,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": null,
+      "injected_elapsed_s": 31.988339700037614,
+      "pairs": [
+        {
+          "t": 5.184866153846154,
+          "v": 18.0,
+          "char_end": 286
+        },
+        {
+          "t": 8.191481428571427,
+          "v": 36.0,
+          "char_end": 585
+        },
+        {
+          "t": 12.157365714285715,
+          "v": 54.0,
+          "char_end": 882
+        },
+        {
+          "t": 15.372706666666666,
+          "v": 72.0,
+          "char_end": 1191
+        },
+        {
+          "t": 19.123720000000002,
+          "v": 90.0,
+          "char_end": 1495
+        },
+        {
+          "t": 22.380784583333337,
+          "v": 108.0,
+          "char_end": 1791
+        },
+        {
+          "t": 25.536584117647063,
+          "v": 126.0,
+          "char_end": 2073
+        },
+        {
+          "t": 29.204226000000013,
+          "v": 144.0,
+          "char_end": 2391
+        },
+        {
+          "t": 32.2284930769231,
+          "v": 162.0,
+          "char_end": 2700
+        },
+        {
+          "t": 36.233701481481496,
+          "v": 180.0,
+          "char_end": 3029
+        },
+        {
+          "t": 39.75957909090911,
+          "v": 198.0,
+          "char_end": 3348
+        },
+        {
+          "t": 43.84967000000001,
+          "v": 216.0,
+          "char_end": 3672
+        }
+      ],
+      "mark_positions_rel": [
+        0.07788671023965142,
+        0.15931372549019607,
+        0.24019607843137256,
+        0.3243464052287582,
+        0.4071350762527233,
+        0.4877450980392157,
+        0.5645424836601307,
+        0.6511437908496732,
+        0.7352941176470589,
+        0.8248910675381264,
+        0.9117647058823529,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9221132897603486,
+      "implied_rate": 17.0,
+      "actual_rate": 83.74053422376964,
+      "rate_ratio": 0.20300801944459737,
+      "rate_logerr": 1.594509796067449,
+      "slope_t": 5.167476834488646,
+      "slope_c": 0.0587119153672768,
+      "r2_t": 0.9994031906573665,
+      "r2_c": 0.9997106381797557,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": null,
+      "const_frac": 0.0,
+      "last_logerr": 1.594509796067449,
+      "last_ratio": 4.925913777868803,
+      "last_mark": 216.0,
+      "first_mark": 18.0,
+      "implied_tps": 10.125,
+      "expect_s_from_rate": null,
+      "expect_s_from_elapsed": 31.988339700037614,
+      "used_elapsed_ratio": 6.75246049108782,
+      "reasoning": "We need produce 12 sections Chinese 300-500 chars/words? likely Chinese characters. Need time markers after each section, likely estimate actual generation elapsed. We cannot accurately know, but use plausible increasing seconds. \"每写完第1个小节，就在那节末尾另起一行加一个时间标记\" likely each section needs marker, wording says after each first section? Interpret each section end. Need only article, starts 1. Must ensure 300-500 Chinese chars each. This is long ~5000 chars. Need concise but comply. Time markers perhaps external measured generation? We can estimate. Let's formulate each 350-450 Chinese characters. Ensure 12 sections numbered. No title.",
+      "reasoning_cites_elapsed": false
+    },
+    {
+      "arm": "base",
+      "trial": 2,
+      "spec": null,
+      "gen_s": 38.09121049998794,
+      "out_tokens": 2033,
+      "content_tokens": 1922,
+      "think_tokens": 111,
+      "chars": 3225,
+      "tps": 53.37189271001623,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": null,
+      "injected_elapsed_s": 22.93721949995961,
+      "pairs": [
+        {
+          "t": 5.983403999999996,
+          "v": 18.0,
+          "char_end": 274
+        },
+        {
+          "t": 9.089907999999989,
+          "v": 38.0,
+          "char_end": 543
+        },
+        {
+          "t": 12.284906666666647,
+          "v": 57.0,
+          "char_end": 800
+        },
+        {
+          "t": 14.713810999999984,
+          "v": 78.0,
+          "char_end": 1085
+        },
+        {
+          "t": 17.50548899999997,
+          "v": 98.0,
+          "char_end": 1344
+        },
+        {
+          "t": 20.262676999999947,
+          "v": 120.0,
+          "char_end": 1617
+        },
+        {
+          "t": 23.128497499999938,
+          "v": 143.0,
+          "char_end": 1870
+        },
+        {
+          "t": 25.989446923076848,
+          "v": 165.0,
+          "char_end": 2141
+        },
+        {
+          "t": 29.158793636363555,
+          "v": 187.0,
+          "char_end": 2401
+        },
+        {
+          "t": 31.58119909090901,
+          "v": 210.0,
+          "char_end": 2676
+        },
+        {
+          "t": 34.98642818181811,
+          "v": 234.0,
+          "char_end": 2952
+        },
+        {
+          "t": 37.91939999999995,
+          "v": 259.0,
+          "char_end": 3225
+        }
+      ],
+      "mark_positions_rel": [
+        0.08496124031007751,
+        0.16837209302325581,
+        0.24806201550387597,
+        0.3364341085271318,
+        0.41674418604651164,
+        0.5013953488372093,
+        0.57984496124031,
+        0.6638759689922481,
+        0.7444961240310077,
+        0.8297674418604651,
+        0.9153488372093024,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9150387596899225,
+      "implied_rate": 12.451737451737452,
+      "actual_rate": 84.66520117550535,
+      "rate_ratio": 0.14707031081076424,
+      "rate_logerr": 1.9168445017195657,
+      "slope_t": 7.626751432456181,
+      "slope_c": 0.08176973834035595,
+      "r2_t": 0.9989235253195005,
+      "r2_c": 0.998949419401271,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": 0.004608735379818358,
+      "const_frac": 0.0,
+      "last_logerr": 1.9168445017195657,
+      "last_ratio": 6.799468869598723,
+      "last_mark": 259.0,
+      "first_mark": 18.0,
+      "implied_tps": 7.420849420849421,
+      "expect_s_from_rate": null,
+      "reasoning": "We need produce 12 sections 300-500 Chinese chars each, timestamps after each section line, estimated integer. Need only正文. Ensure length. This is long ~5k chars. Need satisfy. We can compose each 350-ish Chinese chars. Time markers after every section. \"每写完第1个小节，就在那节末尾另起一行加一个时间标记\" likely each section. Need continuous numbering. Avoid title. Let's draft carefully, each section 300-500 Chinese chars (Chinese characters likely). We can estimate 350.",
+      "reasoning_cites_elapsed": false
+    },
+    {
+      "arm": "elapsed",
+      "trial": 3,
+      "spec": null,
+      "gen_s": 45.81556470005307,
+      "out_tokens": 2590,
+      "content_tokens": 2456,
+      "think_tokens": 134,
+      "chars": 3871,
+      "tps": 56.53100680863156,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": null,
+      "injected_elapsed_s": 43.84973220003303,
+      "pairs": [
+        {
+          "t": 4.972046666666665,
+          "v": 4.0,
+          "char_end": 278
+        },
+        {
+          "t": 8.485952222222203,
+          "v": 8.0,
+          "char_end": 589
+        },
+        {
+          "t": 11.408589999999977,
+          "v": 12.0,
+          "char_end": 905
+        },
+        {
+          "t": 15.365721249999966,
+          "v": 16.0,
+          "char_end": 1244
+        },
+        {
+          "t": 18.556703333333285,
+          "v": 20.0,
+          "char_end": 1562
+        },
+        {
+          "t": 21.573760999999944,
+          "v": 24.0,
+          "char_end": 1875
+        },
+        {
+          "t": 25.393269999999912,
+          "v": 28.0,
+          "char_end": 2186
+        },
+        {
+          "t": 29.52251833333324,
+          "v": 32.0,
+          "char_end": 2497
+        },
+        {
+          "t": 33.22964999999997,
+          "v": 36.0,
+          "char_end": 2834
+        },
+        {
+          "t": 37.52310000000006,
+          "v": 40.0,
+          "char_end": 3149
+        },
+        {
+          "t": 41.346328461538604,
+          "v": 44.0,
+          "char_end": 3493
+        },
+        {
+          "t": 45.640480000000224,
+          "v": 48.0,
+          "char_end": 3871
+        }
+      ],
+      "mark_positions_rel": [
+        0.07181606819943168,
+        0.1521570653577887,
+        0.23378971841901316,
+        0.3213639886334281,
+        0.40351330405579955,
+        0.4843709635753035,
+        0.5647119607336606,
+        0.6450529578920176,
+        0.7321105657452854,
+        0.8134848876259364,
+        0.9023508137432188,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9281839318005684,
+      "implied_rate": 80.64583333333333,
+      "actual_rate": 84.49093720317096,
+      "rate_ratio": 0.9544909312511055,
+      "rate_logerr": 0.0465771369079807,
+      "slope_t": 1.0850465321373783,
+      "slope_c": 0.01237236663441106,
+      "r2_t": 0.9977252504994134,
+      "r2_c": 0.9996634310476551,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": null,
+      "const_frac": 0.0,
+      "last_logerr": 0.046577136907980564,
+      "last_ratio": 1.0476788906618977,
+      "last_mark": 48.0,
+      "first_mark": 4.0,
+      "implied_tps": 51.166666666666664,
+      "expect_s_from_rate": null,
+      "expect_s_from_elapsed": 43.84973220003303,
+      "used_elapsed_ratio": 1.0946475061930674,
+      "reasoning": "We need produce Chinese 12 sections 300-500 chars/Chinese words? likely Chinese characters. Time markers cumulative. Need satisfy exact format. Need only article. Need estimate seconds. 43.8 sec for similar long. We can assign plausible cumulative times, increments around 4 sec each? But 12*400 Chinese chars = 4800, generation maybe 44 sec. Markers from start to line. Use increasing integers, perhaps 4,8,...48. Need ensure each section 300-500 Chinese chars. We can draft ~350-420 Chinese chars each. Need not title. Count roughly. Ensure marker each end. Let's compose.",
+      "reasoning_cites_elapsed": true
+    },
+    {
+      "arm": "base",
+      "trial": 3,
+      "spec": null,
+      "gen_s": 44.89399999997113,
+      "out_tokens": 2728,
+      "content_tokens": 2611,
+      "think_tokens": 117,
+      "chars": 4164,
+      "tps": 60.76535839982524,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": null,
+      "injected_elapsed_s": 38.09121049998794,
+      "pairs": [
+        {
+          "t": 7.401354999999991,
+          "v": 18.0,
+          "char_end": 325
+        },
+        {
+          "t": 11.62252999999998,
+          "v": 38.0,
+          "char_end": 673
+        },
+        {
+          "t": 15.057616666666647,
+          "v": 58.0,
+          "char_end": 1010
+        },
+        {
+          "t": 18.1435133333333,
+          "v": 79.0,
+          "char_end": 1359
+        },
+        {
+          "t": 20.87136899999994,
+          "v": 101.0,
+          "char_end": 1725
+        },
+        {
+          "t": 23.61148749999994,
+          "v": 123.0,
+          "char_end": 2063
+        },
+        {
+          "t": 26.134633333333277,
+          "v": 145.0,
+          "char_end": 2401
+        },
+        {
+          "t": 30.16960749999994,
+          "v": 168.0,
+          "char_end": 2775
+        },
+        {
+          "t": 34.47025272727267,
+          "v": 191.0,
+          "char_end": 3113
+        },
+        {
+          "t": 37.45494500000003,
+          "v": 215.0,
+          "char_end": 3446
+        },
+        {
+          "t": 41.85438818181832,
+          "v": 239.0,
+          "char_end": 3799
+        },
+        {
+          "t": 44.69963000000021,
+          "v": 264.0,
+          "char_end": 4164
+        }
+      ],
+      "mark_positions_rel": [
+        0.07804995196926033,
+        0.16162343900096063,
+        0.2425552353506244,
+        0.32636887608069165,
+        0.4142651296829971,
+        0.49543707973102785,
+        0.5766090297790586,
+        0.6664265129682997,
+        0.7475984630163305,
+        0.8275696445725265,
+        0.9123439000960615,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9219500480307397,
+      "implied_rate": 15.772727272727273,
+      "actual_rate": 92.75181538741653,
+      "rate_ratio": 0.17005303030292096,
+      "rate_logerr": 1.7716449476176055,
+      "slope_t": 6.707405252845347,
+      "slope_c": 0.06417908847316185,
+      "r2_t": 0.9972663592970473,
+      "r2_c": 0.9989973140788025,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": 0.06467357874979233,
+      "const_frac": 0.0,
+      "last_logerr": 1.7716449476176057,
+      "last_ratio": 5.880518554821798,
+      "last_mark": 264.0,
+      "first_mark": 18.0,
+      "implied_tps": 9.890151515151516,
+      "expect_s_from_rate": null,
+      "reasoning": "We need produce Chinese article 12 sections each 300-500 Chinese chars likely. Need time markers after each section, odd requirement says each first section? \"每写完第1个小节，就在那节末尾... 每写完...\" means every section likely marker. Need only正文 starting 1. Need ensure 12 sections and length. This is substantial 3600-6000 Chinese chars. We can do ~350 each. Time estimates increasing. Need no title. Let's draft 12 sections, each 300-500 Chinese chars. Count roughly. Ensure continuous numbering.",
+      "reasoning_cites_elapsed": false
+    },
+    {
+      "arm": "speed",
+      "trial": 3,
+      "spec": null,
+      "gen_s": 45.224716599914245,
+      "out_tokens": 2426,
+      "content_tokens": 2257,
+      "think_tokens": 169,
+      "chars": 3584,
+      "tps": 53.64323278047032,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": 76.50760942451834,
+      "injected_elapsed_s": 37.49694400001317,
+      "pairs": [
+        {
+          "t": 5.925670000000003,
+          "v": 20.0,
+          "char_end": 293
+        },
+        {
+          "t": 10.059830000000002,
+          "v": 40.0,
+          "char_end": 606
+        },
+        {
+          "t": 15.962255000000019,
+          "v": 60.0,
+          "char_end": 896
+        },
+        {
+          "t": 19.76995363636366,
+          "v": 80.0,
+          "char_end": 1194
+        },
+        {
+          "t": 23.455970000000008,
+          "v": 100.0,
+          "char_end": 1487
+        },
+        {
+          "t": 26.05461250000001,
+          "v": 120.0,
+          "char_end": 1778
+        },
+        {
+          "t": 29.3698,
+          "v": 140.0,
+          "char_end": 2068
+        },
+        {
+          "t": 32.82406818181821,
+          "v": 160.0,
+          "char_end": 2372
+        },
+        {
+          "t": 36.171980909090976,
+          "v": 180.0,
+          "char_end": 2683
+        },
+        {
+          "t": 38.7059330000001,
+          "v": 200.0,
+          "char_end": 2979
+        },
+        {
+          "t": 41.58153250000014,
+          "v": 220.0,
+          "char_end": 3271
+        },
+        {
+          "t": 45.06553000000019,
+          "v": 240.0,
+          "char_end": 3584
+        }
+      ],
+      "mark_positions_rel": [
+        0.08175223214285714,
+        0.16908482142857142,
+        0.25,
+        0.33314732142857145,
+        0.41489955357142855,
+        0.49609375,
+        0.5770089285714286,
+        0.6618303571428571,
+        0.7486049107142857,
+        0.8311941964285714,
+        0.9126674107142857,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9182477678571429,
+      "implied_rate": 14.933333333333334,
+      "actual_rate": 79.24870003512186,
+      "rate_ratio": 0.18843631916630935,
+      "rate_logerr": 1.668995158527713,
+      "slope_t": 5.743436339103695,
+      "slope_c": 0.06716620729822123,
+      "r2_t": 0.9909126084436991,
+      "r2_c": 0.9999427823242352,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": null,
+      "const_frac": 0.0,
+      "last_logerr": 1.668995158527713,
+      "last_ratio": 5.306832591637624,
+      "last_mark": 240.0,
+      "first_mark": 20.0,
+      "implied_tps": 9.404166666666667,
+      "expect_s_from_rate": 29.500333587428766,
+      "used_rate_ratio": 8.135501223697121,
+      "implied_vs_injected_tps": 0.12291805661428654,
+      "reasoning": "We need produce Chinese long, 12 sections each 300-500 Chinese chars likely. Time markers after each section with integer estimated. Need only article. Need ensure continuous numbering. We can craft around 350 chars each. This is huge ~4500 Chinese chars. Token budget okay. Time markers estimate perhaps 15 sec each but generation actual maybe total 500 sec? User asks estimate from start to line. We can assign cumulative seconds: 1 20, 2 40 etc. \"每写完第1...就在那节末尾...\" Means every section marker, wording perhaps \"每写完第1个小节\" likely after each. Need markers. Ensure 300-500 chars each section. Let's draft 12 sections with concrete info and no title. Need count approximate. Each section paragraphs maybe 350 Chinesechars.",
+      "reasoning_cites_rate": false,
+      "reasoning_cites_elapsed": true
+    },
+    {
+      "arm": "base",
+      "trial": 4,
+      "spec": null,
+      "gen_s": 165.31060300010722,
+      "out_tokens": 6816,
+      "content_tokens": 6658,
+      "think_tokens": 158,
+      "chars": 10510,
+      "tps": 41.23147503125119,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": null,
+      "injected_elapsed_s": 44.89399999997113,
+      "pairs": [
+        {
+          "t": 12.800511999999987,
+          "v": 24.0,
+          "char_end": 658
+        },
+        {
+          "t": 23.459119999999974,
+          "v": 47.0,
+          "char_end": 1433
+        },
+        {
+          "t": 34.256363,
+          "v": 71.0,
+          "char_end": 2229
+        },
+        {
+          "t": 45.20678000000008,
+          "v": 95.0,
+          "char_end": 3020
+        },
+        {
+          "t": 57.3510775000002,
+          "v": 119.0,
+          "char_end": 3904
+        },
+        {
+          "t": 70.07210333333353,
+          "v": 143.0,
+          "char_end": 4793
+        },
+        {
+          "t": 82.61346000000037,
+          "v": 167.0,
+          "char_end": 5706
+        },
+        {
+          "t": 94.44885000000046,
+          "v": 191.0,
+          "char_end": 6636
+        },
+        {
+          "t": 107.07967000000089,
+          "v": 215.0,
+          "char_end": 7586
+        },
+        {
+          "t": 138.17849900000115,
+          "v": 239.0,
+          "char_end": 8505
+        },
+        {
+          "t": 151.32466181818336,
+          "v": 263.0,
+          "char_end": 9460
+        },
+        {
+          "t": 165.10796000000153,
+          "v": 287.0,
+          "char_end": 10510
+        }
+      ],
+      "mark_positions_rel": [
+        0.06260704091341579,
+        0.13634633682207423,
+        0.2120837297811608,
+        0.2873453853472883,
+        0.3714557564224548,
+        0.4560418648905804,
+        0.5429115128449096,
+        0.6313986679352998,
+        0.7217887725975262,
+        0.8092293054234063,
+        0.9000951474785919,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9373929590865842,
+      "implied_rate": 36.62020905923345,
+      "actual_rate": 63.5772891106881,
+      "rate_ratio": 0.5759951324045548,
+      "rate_logerr": 0.5516560690084898,
+      "slope_t": 1.6909869366364276,
+      "slope_c": 0.026682037513288837,
+      "r2_t": 0.9839036405680117,
+      "r2_c": 0.9986868807836907,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": 0.5,
+      "const_frac": 0.0,
+      "last_logerr": 0.5516560690084898,
+      "last_ratio": 1.736125782565888,
+      "last_mark": 287.0,
+      "first_mark": 24.0,
+      "implied_tps": 23.198606271777003,
+      "expect_s_from_rate": null,
+      "reasoning": "We need produce 12 sections each 300-500 Chinese chars likely. Must time markers after each, elapsed estimates increasing. Need only正文. Need ensure each section length. This is long ~5k chars. We can craft ~350-450 each. Number heading perhaps \"1. ...\" Counts. Time markers exact. No title. Need not literally real time but estimates. Let's draft carefully. Each section 300-500 Chinese characters. Need perhaps 12*350 = 4200 Chinese. Ensure no overlap/repetition. Theme literary/scientific. Time seconds e.g. 18,36,... Could mark every section. User says after each first section, likely each section. Do so.\n\nNeed watch Chinese char counts under 500. Let's formulatearound 380 chars each.",
+      "reasoning_cites_elapsed": false
+    },
+    {
+      "arm": "speed",
+      "trial": 4,
+      "spec": null,
+      "gen_s": 23.48147220001556,
+      "out_tokens": 2339,
+      "content_tokens": 2206,
+      "think_tokens": 133,
+      "chars": 3612,
+      "tps": 99.61044946740819,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": 76.50760942451834,
+      "injected_elapsed_s": 45.224716599914245,
+      "pairs": [
+        {
+          "t": 2.7862604347826085,
+          "v": 8.0,
+          "char_end": 264
+        },
+        {
+          "t": 4.496422000000001,
+          "v": 16.0,
+          "char_end": 548
+        },
+        {
+          "t": 6.482380000000003,
+          "v": 24.0,
+          "char_end": 850
+        },
+        {
+          "t": 8.402540000000004,
+          "v": 32.0,
+          "char_end": 1141
+        },
+        {
+          "t": 10.295914000000005,
+          "v": 40.0,
+          "char_end": 1447
+        },
+        {
+          "t": 12.126464000000004,
+          "v": 48.0,
+          "char_end": 1745
+        },
+        {
+          "t": 13.833772000000003,
+          "v": 56.0,
+          "char_end": 2037
+        },
+        {
+          "t": 15.737517000000002,
+          "v": 64.0,
+          "char_end": 2344
+        },
+        {
+          "t": 17.728446666666677,
+          "v": 72.0,
+          "char_end": 2671
+        },
+        {
+          "t": 19.505367500000016,
+          "v": 80.0,
+          "char_end": 2979
+        },
+        {
+          "t": 21.232628000000012,
+          "v": 88.0,
+          "char_end": 3278
+        },
+        {
+          "t": 23.140260000000012,
+          "v": 96.0,
+          "char_end": 3612
+        }
+      ],
+      "mark_positions_rel": [
+        0.07308970099667775,
+        0.15171650055370986,
+        0.2353266888150609,
+        0.31589147286821706,
+        0.400609080841639,
+        0.48311184939091917,
+        0.563953488372093,
+        0.6489479512735327,
+        0.7394795127353266,
+        0.824750830564784,
+        0.907530454042082,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9269102990033222,
+      "implied_rate": 37.625,
+      "actual_rate": 153.82340464996938,
+      "rate_ratio": 0.24459866875016206,
+      "rate_logerr": 1.4081364983024938,
+      "slope_t": 4.313601333015134,
+      "slope_c": 0.026312721573638006,
+      "r2_t": 0.9998626466680371,
+      "r2_c": 0.9997684166445132,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": null,
+      "const_frac": 0.0,
+      "last_logerr": 1.4081364983024935,
+      "last_ratio": 4.088329691693538,
+      "last_mark": 96.0,
+      "first_mark": 8.0,
+      "implied_tps": 22.979166666666668,
+      "expect_s_from_rate": 28.83373322723432,
+      "used_rate_ratio": 3.3294335923634453,
+      "implied_vs_injected_tps": 0.30035138778369086,
+      "reasoning": "We need write 12 sections 300-500 Chinese chars/words? likely Chinese characters, each 300-500字. Need time markers after each section estimating elapsed. Must ensure markers. Long output ~5000 chars. Need only article. Time increments perhaps 7 sec each? At 77 tokens/sec, Chinese output maybe 12 sections, each 400 chars ~500 tokens, 6.5 sec. Set 8, 15, 22... but generation actual. Format exact. Need count sections and each 300-500 Chinese chars. Let's craft ~350-420 Chinese chars each, markers. No title. Ensure only正文.",
+      "reasoning_cites_rate": true,
+      "reasoning_cites_elapsed": false
+    },
+    {
+      "arm": "elapsed",
+      "trial": 4,
+      "spec": null,
+      "gen_s": 25.590392400044948,
+      "out_tokens": 2009,
+      "content_tokens": 1946,
+      "think_tokens": 63,
+      "chars": 2965,
+      "tps": 78.50602556592573,
+      "n_marks": 12,
+      "finish": "stop",
+      "injected_rate": null,
+      "injected_elapsed_s": 45.81556470005307,
+      "pairs": [
+        {
+          "t": 2.7328104,
+          "v": 8.0,
+          "char_end": 238
+        },
+        {
+          "t": 4.525995714285715,
+          "v": 16.0,
+          "char_end": 474
+        },
+        {
+          "t": 6.462320476190478,
+          "v": 24.0,
+          "char_end": 719
+        },
+        {
+          "t": 8.481296666666669,
+          "v": 32.0,
+          "char_end": 950
+        },
+        {
+          "t": 10.807526666666666,
+          "v": 40.0,
+          "char_end": 1195
+        },
+        {
+          "t": 12.997726000000002,
+          "v": 48.0,
+          "char_end": 1455
+        },
+        {
+          "t": 15.134870000000003,
+          "v": 56.0,
+          "char_end": 1715
+        },
+        {
+          "t": 17.36775,
+          "v": 64.0,
+          "char_end": 1959
+        },
+        {
+          "t": 19.322474347826095,
+          "v": 72.0,
+          "char_end": 2209
+        },
+        {
+          "t": 21.550044444444445,
+          "v": 80.0,
+          "char_end": 2473
+        },
+        {
+          "t": 23.81492,
+          "v": 88.0,
+          "char_end": 2734
+        },
+        {
+          "t": 25.410169999999997,
+          "v": 96.0,
+          "char_end": 2965
+        }
+      ],
+      "mark_positions_rel": [
+        0.08026981450252951,
+        0.15986509274873525,
+        0.24249578414839798,
+        0.32040472175379425,
+        0.403035413153457,
+        0.49072512647554806,
+        0.5784148397976391,
+        0.66070826306914,
+        0.7450252951096121,
+        0.8340640809443508,
+        0.9220910623946037,
+        1.0
+      ],
+      "inline_frac": 0.8333333333333334,
+      "mark_spread": 0.9197301854974704,
+      "implied_rate": 30.885416666666668,
+      "actual_rate": 115.86379582029356,
+      "rate_ratio": 0.26656658750046824,
+      "rate_logerr": 1.32213120729706,
+      "slope_t": 3.78148756185202,
+      "slope_c": 0.03201041003511259,
+      "r2_t": 0.9993986451121634,
+      "r2_c": 0.9997936721718601,
+      "spearman_t_v": 1.0,
+      "spearman_c_v": 1.0,
+      "d_spearman": null,
+      "const_frac": 0.0,
+      "last_logerr": 1.3221312072970601,
+      "last_ratio": 3.7514078916520006,
+      "last_mark": 96.0,
+      "first_mark": 8.0,
+      "implied_tps": 20.270833333333332,
+      "expect_s_from_rate": null,
+      "expect_s_from_elapsed": 45.81556470005307,
+      "used_elapsed_ratio": 2.0953577813237954,
+      "reasoning": "We need answer Chinese article, 12 sections each 300-500 Chinese chars likely. Need time marker after each, only body. Need substantial ~4800 chars. Ensure continuous numbering. We can provide. Need estimate times cumulative perhaps 8,16 etc. Let's draft each ~350 chars. Count rough.",
+      "reasoning_cites_elapsed": false
+    }
+  ],
+  "arms": {
+    "base": {
+      "n": 4,
+      "median_gen_s": 41.49260524997953,
+      "median_marks": 12.0,
+      "median_slope_t": 7.167078342650764,
+      "median_r2_t": 0.9980949423082739,
+      "median_r2_c": 0.9989733667400368,
+      "median_d_spearman": 0.06467357874979233,
+      "median_const_frac": 0.0,
+      "median_last_ratio": 6.33999371221026,
+      "median_last_logerr": 1.8442447246685858,
+      "median_inline_frac": 0.8333333333333334,
+      "median_rate_ratio": 0.15856167055684262,
+      "n_zero_marks": 0,
+      "n_runs": 4,
+      "n_marks_total": 48,
+      "median_marked_over_real": 6.33999371221026,
+      "median_implied_tps": 8.655500468000469,
+      "median_implied_vs_injected_tps": null,
+      "median_used_rate_ratio": null,
+      "median_used_elapsed_ratio": null
+    },
+    "speed": {
+      "n": 4,
+      "median_gen_s": 41.36083029996371,
+      "median_marks": 12.0,
+      "median_slope_t": 4.203809511809924,
+      "median_r2_t": 0.9980286753359635,
+      "median_r2_c": 0.9997307621784554,
+      "median_d_spearman": 0.12909944487358055,
+      "median_const_frac": 0.0,
+      "median_last_ratio": 3.964321325798167,
+      "median_last_logerr": 1.3768451807779365,
+      "median_inline_frac": 0.8333333333333334,
+      "median_rate_ratio": 0.252497056597349,
+      "n_zero_marks": 0,
+      "n_runs": 4,
+      "n_marks_total": 48,
+      "median_marked_over_real": 3.964321325798167,
+      "median_implied_tps": 20.083333333333336,
+      "median_implied_vs_injected_tps": 0.26250112223343425,
+      "median_used_rate_ratio": 3.890392706713165,
+      "median_used_elapsed_ratio": null
+    },
+    "elapsed": {
+      "n": 4,
+      "median_gen_s": 37.91903595003532,
+      "median_marks": 12.0,
+      "median_slope_t": 3.495012700512043,
+      "median_r2_t": 0.9992921376662982,
+      "median_r2_c": 0.999752155175808,
+      "median_d_spearman": null,
+      "median_const_frac": 0.0,
+      "median_last_ratio": 3.3762507216232938,
+      "median_last_logerr": 1.210553973371556,
+      "median_inline_frac": 0.8333333333333334,
+      "median_rate_ratio": 0.29988922968793,
+      "n_zero_marks": 0,
+      "n_runs": 4,
+      "n_marks_total": 48,
+      "median_marked_over_real": 3.3762507216232938,
+      "median_implied_tps": 23.989583333333332,
+      "median_implied_vs_injected_tps": null,
+      "median_used_rate_ratio": null,
+      "median_used_elapsed_ratio": 3.1403475334363424
+    }
+  },
+  "cross_run": {
+    "全部": {
+      "n": 12,
+      "spearman_marked_vs_real": -0.07042428152039987,
+      "spearman_step_vs_real": 0.007131495823206692,
+      "n_step": 12
+    },
+    "基线（无反馈）": {
+      "n": 4,
+      "spearman_marked_vs_real": -0.19999999999999996,
+      "spearman_step_vs_real": -0.31622776601683794,
+      "n_step": 4
+    },
+    "注入实测速率": {
+      "n": 4,
+      "spearman_marked_vs_real": -0.19999999999999996,
+      "spearman_step_vs_real": 0.10540925533894598,
+      "n_step": 4
+    },
+    "注入真实实测耗时": {
+      "n": 4,
+      "spearman_marked_vs_real": -0.31622776601683794,
+      "spearman_step_vs_real": -0.31622776601683794,
+      "n_step": 4
+    }
+  },
+  "implied_rate": {
+    "全部": {
+      "n": 12,
+      "median_implied_tps": 18.729166666666664,
+      "median_real_tps": 58.648182604228396,
+      "cv_implied": 0.657746298148851,
+      "cv_real": 0.30227743878979296,
+      "spearman_implied_vs_real": -0.15384615384615385
+    },
+    "base": {
+      "n": 4,
+      "median_implied_tps": 8.655500468000469,
+      "median_real_tps": 57.068625554920736,
+      "cv_implied": 0.6790423115783228,
+      "cv_real": 0.3425964807053152,
+      "spearman_implied_vs_real": -0.7999999999999998
+    },
+    "speed": {
+      "n": 4,
+      "median_implied_tps": 20.083333333333336,
+      "median_real_tps": 62.35784568933569,
+      "cv_implied": 0.44745494320890983,
+      "cv_real": 0.34286227636359873,
+      "spearman_implied_vs_real": -0.19999999999999996
+    },
+    "elapsed": {
+      "n": 4,
+      "median_implied_tps": 23.989583333333332,
+      "median_real_tps": 67.51851618727864,
+      "cv_implied": 0.5534010157641039,
+      "cv_real": 0.20507369102768294,
+      "spearman_implied_vs_real": 0.3999999999999999
+    }
+  },
+  "transport": {
+    "(未标注=旧代理)": {
+      "n": 12
+    }
+  },
+  "compare": {
+    "last_logerr|speed": {
+      "n_a": 4,
+      "n_b": 4,
+      "delta": -0.4673995438906493,
+      "ci": [
+        -2.0139250749116706,
+        0.8251891117694466
+      ],
+      "p": 0.40751849630073983
+    },
+    "last_logerr|elapsed": {
+      "n_a": 4,
+      "n_b": 4,
+      "delta": -0.6336907512970298,
+      "ci": [
+        -2.2605021987189984,
+        0.547320670437562
+      ],
+      "p": 0.3153369326134773
+    },
+    "rate_logerr|speed": {
+      "n_a": 4,
+      "n_b": 4,
+      "delta": -0.46739954389064886,
+      "ci": [
+        -2.0139250749116706,
+        0.8251891117694469
+      ],
+      "p": 0.40751849630073983
+    },
+    "rate_logerr|elapsed": {
+      "n_a": 4,
+      "n_b": 4,
+      "delta": -0.6336907512970298,
+      "ci": [
+        -2.2605021987189984,
+        0.5473206704375618
+      ],
+      "p": 0.3153369326134773
+    }
+  }
+}
