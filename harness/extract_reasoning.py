@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""从 Phase B2 的思维链里抽出「速率→秒数」换算的自述原文。
+r"""从 Phase B2 的思维链里抽出「速率→秒数」换算的自述原文。
 
 模型常在 reasoning 里把自己的算式写出来，例如：
     "133 lines maybe 2000 Chinese tokens at 40 tok/sec ~50 sec. Say 70 sec."
