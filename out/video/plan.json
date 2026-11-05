@@ -38,11 +38,11 @@
       "sec": 4,
       "id": "s4",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s4.mp3",
-      "container_dur": 50.652,
-      "voice_dur": 50.635,
+      "container_dur": 47.952,
+      "voice_dur": 47.935,
       "gap": 0.35,
-      "clip_dur": 50.985,
-      "still_dur": 48.285
+      "clip_dur": 48.285,
+      "still_dur": 45.585
     },
     {
       "idx": 4,
@@ -82,11 +82,11 @@
       "sec": 8,
       "id": "s8",
       "mp3": "D:\\coding\\llm-time-sense\\out\\voice\\s8.mp3",
-      "container_dur": 30.528,
-      "voice_dur": 30.511,
+      "container_dur": 32.544,
+      "voice_dur": 32.527,
       "gap": 0.35,
-      "clip_dur": 30.861,
-      "still_dur": 28.161
+      "clip_dur": 32.877,
+      "still_dur": 30.177
     },
     {
       "idx": 8,
@@ -100,8 +100,8 @@
       "still_dur": 10.7
     }
   ],
-  "total_voice": 291.097,
-  "total_clip": 293.897,
+  "total_voice": 290.413,
+  "total_clip": 293.213,
   "reveal": 2.7,
   "gap": 0.35
 }

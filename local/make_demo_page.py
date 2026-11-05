@@ -193,6 +193,7 @@ def main():
     # ---------- 5 事后预估 ----------
     if post:
         arms = (post.get("arms") or {})
+        ds = post.get("duration_span") or {}
         rows = []
         for arm, label in (("base", "不注入"), ("speed", "注入稳定速率"), ("elapsed", "直接给秒数")):
             a = arms.get(arm)
@@ -213,7 +214,8 @@ def main():
   <h2>这次它能算准了</h2>
   <table><tr><th>实验臂</th><th>估/实际</th><th>误差倍数</th><th>对数误差</th><th>跨轮相关(预估,真实耗时)</th></tr>
   {''.join(rows)}</table>
-  <p style="margin-top:32px">长度从 500 字拉到 3000 字，真实耗时变化 6 倍——
+  <p style="margin-top:32px">长度从 {ds.get('words_min', 500)} 字拉到 {ds.get('words_max', 3000)} 字，
+     真实耗时从 {ds.get('actual_min_s', 0):.1f} 秒涨到 {ds.get('actual_max_s', 0):.1f} 秒（{ds.get('time_ratio', 0):.1f} 倍）——
      它报出的数字跟着真实耗时一起动，才算「有感觉」，而不是喊一个常数。<br>
      <span class="tag">误差倍数 = e^对数误差，就是旁白里说的「差 X 倍」；
      「估/实际」是方向（小于 1 是低估）。<br>

@@ -23,7 +23,7 @@ import urllib.request
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-CFG = r"os.environ.get("MINIMAX_CONFIG", "")"
+CFG = os.environ.get("MINIMAX_CONFIG", "")
 BASE = "https://api.minimax.cn/v1"
 MODEL = "speech-02-hd"
 

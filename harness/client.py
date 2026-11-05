@@ -98,7 +98,12 @@ class TurnMetrics:
         return asdict(self)
 
 
-def load_llm_config(path: str = r"os.environ.get("MINIMAX_CONFIG", "")") -> dict:
+def load_llm_config(path: str = "") -> dict:
+    path = path or os.environ.get("MINIMAX_CONFIG", "")
+    if not path or not os.path.exists(path):
+        raise RuntimeError(
+            "找不到 MiniMax 配置文件：请设置环境变量 MINIMAX_CONFIG 指向 config.toml"
+            "（需要其中的 [llm] api_key）")
     with open(path, "rb") as f:
         cfg = tomllib.load(f)
     llm = cfg["llm"]

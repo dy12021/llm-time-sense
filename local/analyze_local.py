@@ -195,6 +195,19 @@ def analyze_posthoc():
             "think": r["write_metrics"]["think_tokens"],
         })
     out = {"n_records": len(recs), "arms": {}}
+    # 真实耗时跨度：写回复那一轮的实际生成时间（gen_s）
+    flat = [x for rows in arms.values() for x in rows]
+    words_all = [x["words"] for x in flat if x.get("words")]
+    acts_all = [x["actual"] for x in flat if x.get("actual")]
+    if words_all and acts_all:
+        out["duration_span"] = {
+            "words_min": min(words_all),
+            "words_max": max(words_all),
+            "length_ratio": max(words_all) / min(words_all),
+            "actual_min_s": min(acts_all),
+            "actual_max_s": max(acts_all),
+            "time_ratio": max(acts_all) / min(acts_all),
+        }
     for arm, rows in arms.items():
         errs = [x["log_err"] for x in rows]
         tk = [x["token_ratio"] for x in rows if x.get("token_ratio")]

@@ -455,6 +455,14 @@
      }
     ]
    }
+  },
+  "duration_span": {
+   "words_min": 500,
+   "words_max": 3000,
+   "length_ratio": 6.0,
+   "actual_min_s": 4.977742799906991,
+   "actual_max_s": 16.675547399907373,
+   "time_ratio": 3.3500219015371693
   }
  },
  "process": {

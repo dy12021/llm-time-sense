@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import json
+import math
 import os
 import sys
 
@@ -190,20 +191,29 @@ def main():
         W("## 3. 第三步：让它回看自己刚写的东西（粗略时间感）")
         W("")
         arms = post.get("arms") or {}
-        W("设计：先写一篇长文（**每轮长度不同**：500→3000 字，真实耗时变化 6 倍），"
+        ds = post.get("duration_span") or {}
+        W(f"设计：先写一篇长文（**每轮长度不同**：{ds.get('words_min', 500)}→{ds.get('words_max', 3000)} 字，"
+          f"真实耗时 {ds.get('actual_min_s', 0):.1f}→{ds.get('actual_max_s', 0):.1f} 秒，"
+          f"变化 {ds.get('time_ratio', 0):.2f} 倍），"
           "然后**保留上下文**问它「刚才那条用了多少秒」。"
-          "长度必须拉开，否则真实耗时几乎是常数，「预估是否跟着现实走」根本没法测。")
+          "长度必须拉开，否则真实耗时几乎是常数，「预估是否跟着现实走」根本没法测。"
+          "注意：长度比 6× 与耗时比 3.35× 是两个量，引用时别混着说。")
         W("")
-        W("| 实验臂 | n | 估/实际 | 对数误差 | 跨轮 Spearman(预估, 真实耗时) | 模型自估 token/真实 token |")
-        W("|---|---|---|---|---|---|")
+        W("| 实验臂 | n | 估/实际 | 误差倍数 | 对数误差 | 跨轮 Spearman(预估, 真实耗时) | 模型自估 token/真实 token |")
+        W("|---|---|---|---|---|---|---|")
         for arm, label in (("base", "不注入"), ("speed", "注入稳定速率"), ("elapsed", "直接给秒数")):
             a = arms.get(arm)
             if not a:
                 continue
+            err = a.get("median_log_err")
+            factor = math.exp(err) if err is not None else None
             W(f"| {label} | {a.get('n')} | {fmt(a.get('median_ratio'))}× | "
+              f"{fmt(factor)}× | "
               f"{fmt(a.get('median_log_err'), 3)} | "
               f"**{fmt(a.get('spearman_est_vs_actual'), 3)}** | "
               f"{fmt(a.get('median_token_ratio_est_over_real'))} |")
+        W("")
+        W("误差倍数 = e^对数误差（对称口径，即「差多少倍」）；估/实际 是中位比值（小于 1 为低估）。")
         W("")
         if c3:
             W(f"**C3 判定：{'通过 ✅' if c3.get('pass') else '未通过 ❌'}** —— "

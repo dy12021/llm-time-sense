@@ -101,7 +101,8 @@ td.bad{color:var(--bad)}
   <h2>这次它能算准了</h2>
   <table><tr><th>实验臂</th><th>估/实际</th><th>误差倍数</th><th>对数误差</th><th>跨轮相关(预估,真实耗时)</th></tr>
   <tr><td>不注入</td><td>0.40×</td><td class='bad'>2.52×</td><td>0.923</td><td class='good'>+1.000</td></tr><tr><td>注入稳定速率</td><td>1.34×</td><td class='good'>1.34×</td><td>0.295</td><td class='bad'>+0.486</td></tr><tr><td>直接给秒数</td><td>0.89×</td><td class='good'>1.13×</td><td>0.121</td><td class='good'>+1.000</td></tr></table>
-  <p style="margin-top:32px">长度从 500 字拉到 3000 字，真实耗时变化 6 倍——
+  <p style="margin-top:32px">长度从 500 字拉到 3000 字，
+     真实耗时从 5.0 秒涨到 16.7 秒（3.4 倍）——
      它报出的数字跟着真实耗时一起动，才算「有感觉」，而不是喊一个常数。<br>
      <span class="tag">误差倍数 = e^对数误差，就是旁白里说的「差 X 倍」；
      「估/实际」是方向（小于 1 是低估）。<br>
@@ -179,7 +180,7 @@ td.bad{color:var(--bad)}
 <span class="tag" id="pg"></span></div>
 <div id="prog"></div>
 <script>
-const DURS = [12.7, 22.88, 23.64, 51.25, 48.08, 46.25, 46.68, 31.13, 14.0];
+const DURS = [12.7, 22.88, 23.64, 48.55, 48.08, 46.25, 46.68, 33.14, 14.0];
 let idx = 0, t0 = 0;
 const stage = document.getElementById('stage');
 const prog = document.getElementById('prog');
