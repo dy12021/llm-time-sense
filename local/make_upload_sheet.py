@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
+import subprocess
 import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -17,8 +19,25 @@ video = os.path.join(VDIR, "final.mp4")
 cover = os.path.join(VDIR, "cover.png")
 dst = os.path.join(VDIR, "投稿物料.md")
 
+FFPROBE = os.environ.get("FFPROBE") or shutil.which("ffprobe") or "ffprobe"
+
+
+def probe_duration(path):
+    """从成片里探测真实时长（不手抄）。"""
+    if not os.path.exists(path):
+        return 0.0
+    p = subprocess.run(
+        [FFPROBE, "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=nw=1:nk=1", path],
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
+    try:
+        return float(p.stdout.strip())
+    except ValueError:
+        return 0.0
+
+
 size_mb = os.path.getsize(video) / 1e6 if os.path.exists(video) else 0
-dur = 293.9
+dur = probe_duration(video)
 
 lines = [
     "# B 站投稿物料",

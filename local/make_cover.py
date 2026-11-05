@@ -80,13 +80,22 @@ def main():
     opt_arm = (opt.get("arms") or {}).get("speed_unit") or {}
     last_ratio = opt_arm.get("median_last_ratio", 0.807)
 
-    # 真实调用次数 = 所有 raw/*.jsonl 的行数（不手抄）
-    calls = 0
+    # 真实调用次数 = raw/*.jsonl 的行数（不手抄）
+    # 本轮 = local_*.jsonl；上一轮云端 = 主轮 + 长程 B/B2（与幻灯片「450 轮 + 长程 148 次」同口径）
     rawdir = os.path.join(ROOT, "raw")
-    for fn in os.listdir(rawdir):
-        if fn.startswith("local_") and fn.endswith(".jsonl"):
-            with open(os.path.join(rawdir, fn), encoding="utf-8") as fh:
-                calls += sum(1 for line in fh if line.strip())
+
+    def count_lines(fn):
+        p = os.path.join(rawdir, fn)
+        if not os.path.exists(p):
+            return 0
+        with open(p, encoding="utf-8") as fh:
+            return sum(1 for line in fh if line.strip())
+
+    calls_local = sum(count_lines(fn) for fn in os.listdir(rawdir)
+                      if fn.startswith("local_") and fn.endswith(".jsonl"))
+    calls_cloud = sum(count_lines(fn) for fn in
+                      ("records.jsonl", "phase_b_30s.jsonl", "phase_b2.jsonl"))
+    calls = calls_local + calls_cloud
 
     img = bg()
     d = ImageDraw.Draw(img)
@@ -131,7 +140,7 @@ def main():
     # 底部条
     d.rectangle([0, H - 96, W, H], fill=(8, 11, 20))
     d.text((118, H - 74),
-           f"google/gemma-4-e2b  ·  {calls} 次真实调用  ·  严格串行  ·  数字全部由脚本生成",
+           f"google/gemma-4-e2b  ·  本轮 {calls_local} 次真实调用  ·  累计 {calls} 次  ·  严格串行  ·  数字全部由脚本生成",
            font=font(FR, 30), fill=(110, 124, 148))
 
     dst = os.path.join(VDIR, "cover.png")
@@ -144,10 +153,13 @@ def main():
         "cover": dst,
         "video": os.path.join(VDIR, "final.mp4"),
         "calls": calls,
+        "calls_local": calls_local,
+        "calls_cloud": calls_cloud,
         "description": (
             "大模型不知道自己有多快。\n"
             "\n"
-            f"我花了 {calls} 次真实调用去验证一件事：只要告诉它上一轮每秒能生成多少 token，"
+            f"我花了 {calls} 次真实调用去验证一件事（上一轮云端 {calls_cloud} 次，"
+            f"这一轮本机 {calls_local} 次）：只要告诉它上一轮每秒能生成多少 token，"
             "它能不能因此知道，自己这条回复要写多久。\n"
             "\n"
             "【为什么上一轮说「注入速度没用」】\n"
