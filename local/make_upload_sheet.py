@@ -39,6 +39,11 @@ def probe_duration(path):
 size_mb = os.path.getsize(video) / 1e6 if os.path.exists(video) else 0
 dur = probe_duration(video)
 
+
+def rel(path):
+    """仓库相对路径，统一用正斜杠（跨平台可读，且不含本机绝对路径）。"""
+    return os.path.relpath(path, ROOT).replace(os.sep, "/")
+
 lines = [
     "# B 站投稿物料",
     "",
@@ -61,11 +66,11 @@ lines = [
     "## 分区 / 封面 / 文件",
     "",
     f"- 分区建议：{meta['category']}",
-    f"- 视频文件：`{os.path.relpath(video, ROOT)}`（1920×1080，{dur:.1f} 秒，{size_mb:.1f} MB，H.264 + AAC）",
-    f"- 封面文件：`{os.path.relpath(cover, ROOT)}`（1920×1080 PNG，B 站封面比例刚好 16:9）",
+    f"- 视频文件：`{rel(video)}`（1920×1080，{dur:.1f} 秒，{size_mb:.1f} MB，H.264 + AAC）",
+    f"- 封面文件：`{rel(cover)}`（1920×1080 PNG，B 站封面比例刚好 16:9）",
     "- 幻灯片（视频同款，自包含单文件）："
-    f"`{os.path.relpath(os.path.join(VDIR, 'demo.html'), ROOT)}`",
-    "（以上路径均相对于仓库根目录）",
+    f"`{rel(os.path.join(VDIR, 'demo.html'))}`",
+    "（以上路径均相对于仓库根目录，用正斜杠）",
     "",
     "## 发布后",
     "",
